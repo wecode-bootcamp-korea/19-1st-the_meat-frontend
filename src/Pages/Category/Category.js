@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Catagory.scss';
+import './Category.scss';
 
-class Catagory extends Component {
+class Category extends Component {
   render() {
-    return <div className="Catagory"></div>;
+    return <div className="Category"></div>;
   }
 }
 
-export default Catagory;
+export default Category;
