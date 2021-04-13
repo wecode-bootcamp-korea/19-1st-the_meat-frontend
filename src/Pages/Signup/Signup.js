@@ -4,12 +4,15 @@ class Signup extends Component {
   constructor() {
     super();
     this.state = {
-      id: '',
       idMessage: true,
       idMessageValue: '아이디를 입력해 주세요.',
-      pw: '',
       pwMessage: true,
       pwMessageValue: '응애 나 아기 비밀번호',
+      phoneMessageValue: '휴대전화 번호는 숫자만 가능하다.',
+      id: '',
+      pw: '',
+      name: '',
+      phone: '',
     };
   }
   changeIdMessageValue = e => {
@@ -36,7 +39,7 @@ class Signup extends Component {
   };
   inputPw = e => {
     let pwLength = /\w{10,}/g;
-    let pwTest = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,}$/g;
+    let pwTest = /^(?=.*[a-zA-Z])(?=.*[0-9]).{11,}$/g;
     if (!pwLength.test(e.target.value)) {
       this.setState({
         pwMessageValue: '비밀번호는 10자 이상 영어, 숫자 다 섞어야함',
@@ -62,6 +65,22 @@ class Signup extends Component {
       this.setState({
         pwMessage: true,
         pwMessageValue: '비밀번호를 확인해주세요',
+      });
+    }
+  };
+
+  phoneNumber = e => {
+    let phoneTest = /^(\d{10,})/;
+    if (phoneTest.test(e.target.value)) {
+      this.setState({
+        phoneMessageValue: '',
+        phone: e.target.value,
+      });
+    }
+    if (!phoneTest.test(e.target.value)) {
+      this.setState({
+        phoneMessageValue: '휴대전화 번호는 숫자만 가능하다.',
+        phone: '',
       });
     }
   };
@@ -102,7 +121,12 @@ class Signup extends Component {
             {this.state.pwMessageValue}
           </p>
           <input className="SignupName" placeholder="이름"></input>
-          <input className="SignupEmail" placeholder="휴대전화 번호"></input>
+          <input
+            onChange={this.phoneNumber}
+            className="SignupPhone"
+            placeholder="휴대전화 번호"
+          ></input>
+          <p className="SignupPhMessage">{this.state.phoneMessageValue}</p>
           <button className="SignupBtn">가입하기</button>
         </form>
       </div>

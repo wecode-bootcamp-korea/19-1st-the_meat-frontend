@@ -45,11 +45,17 @@ $realOrange: #f7702e;
       font-weight: bold;
     }
     .SignupName {
-      margin-top: 50px;
+      margin-top: 40px;
       margin-bottom: 50px;
     }
-    .SignupEmail {
-      margin-bottom: 50px;
+    .SignupPhone {
+      margin-bottom: 5px;
+    }
+    .SignupPhMessage {
+      margin-bottom: 25px;
+      color: $realOrange;
+      font-size: 12px;
+      font-weight: bold;
     }
     .SignupBtn {
       width: 360px;
@@ -62,6 +68,7 @@ $realOrange: #f7702e;
       font-weight: bold;
     }
   }
+
   .SignupForm > input {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     width: 522px;
