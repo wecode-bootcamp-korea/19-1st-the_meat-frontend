@@ -3,20 +3,24 @@ import './Nav.scss';
 class Nav extends Component {
   render() {
     return (
-      <nav className="Nav">
+      <nav className="nav">
         <div className="navBox">
           <div className="navSearch">
             <input
               className="inputSearch"
               type="text"
               placeholder="이제, 장보기는 더고기&"
-            ></input>
+            />
             <button className="navSearchButton">
               <i className="fas fa-search"></i>
             </button>
           </div>
-          <div className="Logo">
-            <img className="logoImg" src="/images/meatimg/MainLogo.jpg"></img>
+          <div className="logo">
+            <img
+              className="logoImg"
+              src="/images/meatimg/MainLogo.jpg"
+              alt="메인 이미지"
+            />
           </div>
           <div className="myMeat">
             <i className="far fa-user"></i>

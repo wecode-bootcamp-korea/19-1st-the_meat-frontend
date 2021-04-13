@@ -1,0 +1,11 @@
+@import '../../../Style/common.scss';
+
+.articleImg {
+  width: 1440px;
+  height: 400px;
+  .mainImg {
+    width: 1440px;
+    height: 400px;
+    object-fit: cover;
+  }
+}

@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-//Sort
-%boxsizing {
-  box-sizing: border-box;
-}
 
 %flexCenter {
   display: flex;
@@ -15,9 +11,8 @@
   justify-content: space-between;
   align-items: center;
 }
-//font
+
 $fontFamily: 'Noto Sans KR', sans-serif;
 
-//Color
 $greenColor: #46b66f;
 $orangeColor: #ff4b00;
