@@ -1,13 +1,15 @@
-//Sort
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 %flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-//font
-$fontFamily: "Noto Sans KR", sans-serif;
-
-//Color
+%flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+$fontFamily: 'Noto Sans KR', sans-serif;
 $greenColor: #46b66f;
 $orangeColor: #ff4b00;
