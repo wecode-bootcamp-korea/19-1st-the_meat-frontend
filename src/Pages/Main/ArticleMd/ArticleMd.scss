@@ -1,6 +1,7 @@
 @import '../../../Style/common.scss';
 
 .articleMd {
+  font-family: $fontFamily;
   width: 1440px;
   height: 713px;
   padding: 82px 0 50px;
@@ -34,7 +35,6 @@
         .middleLink {
           color: #888;
           font-size: 22px;
-          font-family: fontFamily;
           text-align: center;
           text-decoration: none;
         }
@@ -54,6 +54,7 @@
       border: 1px solid black;
       border-radius: 10px;
       .mdImgCartBox {
+        position: relative;
         width: 300px;
         height: 300px;
         border-radius: 10px 10px 0 0;
@@ -61,15 +62,41 @@
           position: absolute;
           width: 70px;
           height: 43px;
-          background-color: #37b469;
+          background-color: #51b06a;
           border-radius: 8px 0;
           opacity: 0.9;
+          .mdDiscount {
+            position: absolute;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            top: 13px;
+            left: 16px;
+          }
         }
         .mdContentsImg {
           width: 299px;
           height: 300px;
           border-radius: 10px 10px 0 0;
           object-fit: cover;
+        }
+        .mdCartButton {
+          position: absolute;
+          width: 44px;
+          height: 44px;
+          background-color: #ebedea;
+          border: 0;
+          border-radius: 50%;
+          top: 240px;
+          left: 240px;
+          opacity: 0.9;
+          .fa-shopping-cart {
+            position: absolute;
+            color: #787878;
+            font-size: 20px;
+            top: 13px;
+            left: 10px;
+          }
         }
       }
     }

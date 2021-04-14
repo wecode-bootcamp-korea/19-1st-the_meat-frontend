@@ -21,12 +21,17 @@ class ArticleMd extends Component {
         <div className="mdContentsBox">
           <div className="mdContents">
             <div className="mdImgCartBox">
-              <span className="mdSale"></span>
+              <span className="mdSale">
+                <p className="mdDiscount">20 %</p>
+              </span>
               <img
                 className="mdContentsImg"
                 src="/images/meatimg/pig.jpg"
                 alt="추천상품"
               />
+              <div className="mdCartButton">
+                <i className="fas fa-shopping-cart"></i>
+              </div>
             </div>
           </div>
         </div>
