@@ -1,8 +1,7 @@
 @import '../../../Style/common.scss';
 
 .articleMd {
-  border: 1px solid black;
-  width: 1425px;
+  width: 1440px;
   height: 713px;
   padding: 82px 0 50px;
   background-color: #f7f7f7;
@@ -20,14 +19,12 @@
   }
   .mdMiddleTitle {
     @extend %flexCenter;
-    border: 1px solid black;
     width: 1280px;
     height: 46px;
     margin: 0 auto;
     .middleUl {
       margin-left: 50px;
       .middleLi {
-        border: 1px solid black;
         display: inline-block;
         width: auto;
         height: 46px;
@@ -40,6 +37,39 @@
           font-family: fontFamily;
           text-align: center;
           text-decoration: none;
+        }
+      }
+    }
+  }
+  .mdContentsBox {
+    border: 1px solid black;
+    width: 1280px;
+    height: 440px;
+    margin: 22px auto 0 auto;
+    .mdContents {
+      position: relative;
+      width: 300px;
+      height: 440px;
+      margin: 0 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+      .mdImgCartBox {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+        .mdSale {
+          position: absolute;
+          width: 70px;
+          height: 43px;
+          background-color: #37b469;
+          border-radius: 8px 0;
+          opacity: 0.9;
+        }
+        .mdContentsImg {
+          width: 299px;
+          height: 300px;
+          border-radius: 10px 10px 0 0;
+          object-fit: cover;
         }
       }
     }
