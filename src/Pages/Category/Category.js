@@ -12,6 +12,7 @@ class Category extends Component {
             <div className="ctgTitle">
               <img src="/images/meatimg/cow.jpg" alt="cow img"></img>
             </div>
+
             <div className="sortBox">
               <div className="LeftCtgType">
                 <ul className="ctgType">
