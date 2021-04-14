@@ -2,9 +2,6 @@
 
 .nav {
   border-bottom: 2px solid #f7f7f7;
-  * {
-    box-sizing: border-box;
-  }
   .navBox {
     @extend %flexSpaceBetween;
     width: 1280px;
