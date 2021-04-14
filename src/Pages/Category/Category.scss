@@ -1,0 +1,54 @@
+@import '../../Style/common.scss';
+
+.ctgListWrap {
+  @extend %boxsizing;
+  background-color: aqua;
+  width: 1280px;
+  height: 90px;
+  margin: 0 auto;
+
+  .ctgTitle {
+    padding: 10px 0 10px;
+    align-items: center;
+    font-family: $fontFamily;
+
+    strong {
+      padding-left: 20px;
+      font-family: $fontFamily;
+      font-weight: 500;
+    }
+  }
+}
+
+.sortBox {
+  display: flex;
+  justify-content: space-between;
+  background-color: bisque;
+  padding: 10px 0 15px;
+}
+
+.LeftCtgType {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .ctgType {
+    list-style: none;
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  span {
+    padding-left: 10px;
+    font-family: $fontFamily;
+  }
+}
+
+.LightCtgType {
+  a {
+    text-decoration: none;
+    font-family: $fontFamily;
+    color: black;
+  }
+}
