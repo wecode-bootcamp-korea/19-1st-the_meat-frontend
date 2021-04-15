@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import ArticleImg from '../Main/ArticleImg/ArticleImg';
 import ArticleMd from '../Main/ArticleMd/ArticleMd';
+import ArticleDiscount from '../Main/ArticleDiscount/ArticleDiscount';
 import './Main.scss';
 
 class Main extends Component {
@@ -11,6 +12,7 @@ class Main extends Component {
         <Nav />
         <ArticleImg />
         <ArticleMd />
+        <ArticleDiscount />
       </div>
     );
   }

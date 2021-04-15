@@ -1,7 +1,25 @@
 import React, { Component } from 'react';
+import Card from '../Component/Card';
 import './ArticleMd.scss';
 class ArticleMd extends Component {
+  constructor() {
+    super();
+    this.state = { cardData: [] };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/Card.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          cardData: data,
+        });
+      });
+  }
   render() {
+    const { cardData } = this.state;
     return (
       <article className="articleMd">
         <div className="mdTitle">
@@ -19,37 +37,9 @@ class ArticleMd extends Component {
           </ul>
         </div>
         <div className="mdContentsBox">
-          <div className="mdContents">
-            <div className="mdImgCartBox">
-              <span className="mdSale">
-                <p className="mdDiscount">
-                  20 %
-                  {/* {this.props.data.discount ? this.props.data.discount : null} */}
-                </p>
-              </span>
-              <img
-                className="mdContentsImg"
-                src="/images/meatimg/pig.jpg"
-                alt="추천상품"
-              />
-              <div className="mdCartButton">
-                <a className="cartLink" href="#">
-                  <i className="fas fa-shopping-cart"></i>
-                </a>
-              </div>
-            </div>
-            <div className="mdInfo">
-              <div className="mdSubjectBox">
-                <p className="mdSubject">당근은 왜 고기를 감싸고 있을까?</p>
-              </div>
-              <div className="mdPriceBox">
-                <p className="mdPrice">
-                  <span className="fontBold">6,380</span>원
-                </p>
-                <span className="priceDiscount">7,980원</span>
-              </div>
-            </div>
-          </div>
+          {cardData.map((data, id) => {
+            return <Card key={id} data={data} />;
+          })}
         </div>
       </article>
     );
