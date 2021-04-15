@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LeftSortBox from './Component/LeftSortBox';
 import RightSortBox from './Component/RightSortBox';
 import ProductBox from './Component/ProductBox';
-// import prdBoxData from './prdBoxData';
+// import PrdBoxData from './PrdBoxData';
 import './Category.scss';
 
 class Category extends Component {

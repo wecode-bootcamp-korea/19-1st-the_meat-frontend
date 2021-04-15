@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PrdBoxData from './PrdBoxData';
 import './ProductBox.scss';
 
 class ProductBox extends Component {
@@ -16,7 +17,7 @@ class ProductBox extends Component {
                       <strong>%</strong>
                     </div>
                   </div>
-                  <img src="/images/meatimg/food.jpg" alt="food img"></img>
+                  <img src="/images/meatimg/bossam.jpg" alt="food img"></img>
                   <div className="cartBox">
                     <div className="cartCircle">
                       <a href="http://www.naver.com">
@@ -28,7 +29,7 @@ class ProductBox extends Component {
               </div>
               <div className="prdInfo">
                 <a href=" ">
-                  <p className="prdName">[고기반찬] 진아가 좋아하는 차돌박이</p>
+                  <p className="prdName">[고기반찬] 진아가 좋아하는 보쌈정식</p>
                   <div className="PriceBox">
                     <div className="realPrice">
                       <strong>9,000</strong>
