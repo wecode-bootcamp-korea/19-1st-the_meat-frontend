@@ -1,7 +1,7 @@
 import { Component } from 'react';
-// import './prdBox.scss';
+import './prdBox.scss';
 
-class Category prdBox Component {
+class PrdBox extends Component {
   render() {
     return (
       <div>
@@ -10,22 +10,22 @@ class Category prdBox Component {
             <div className="prdBox">
               <div className="imgBox">
                 <div className="cartBox">
-                  <a href="#">
+                  <a href=" ">
                     <i class="ico-cart2"></i>
                     "장바구니"
                   </a>
                 </div>
-                <a href="#">
-                  <img src=""></img>
+                <a href=" ">
+                  <img src="/images/meatimg/food.jpg" alt="food img"></img>
                   <span className="tagSale">
                     <span></span>
-                    <strong>25</strong>
+                    <strong>10</strong>
                     "%"
                   </span>
                 </a>
               </div>
               <div className="prdInfo">
-                <a href="">
+                <a href=" ">
                   <p className="prdName">진아가 좋아하는 차돌박이</p>
                   <div className="realPrice">
                     <p>
@@ -47,4 +47,4 @@ class Category prdBox Component {
   }
 }
 
-export default prdBox;
+export default PrdBox;

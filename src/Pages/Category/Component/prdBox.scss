@@ -1,0 +1,31 @@
+.prdBox {
+  width: 296px;
+  height: 493px;
+  background-color: bisque;
+
+  .cartBox {
+    width: 38px;
+    height: 38px;
+  }
+
+  img {
+    width: 296px;
+    height: 296px;
+  }
+
+  .tagSale {
+    background-color: #46b66f;
+    width: 70px;
+    height: 43px;
+
+    strong {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  .prdInfo {
+    width: 296px;
+    height: 197px;
+  }
+}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import LeftSortBox from './Commponent/LeftSortBox';
-import RightSortBox from './Commponent/RightSortBox';
-import prdBox from './Commponent/prdBox';
-import prdBoxData from './prdBoxData';
+import LeftSortBox from './Component/LeftSortBox';
+import RightSortBox from './Component/RightSortBox';
+import PrdBox from './Component/PrdBox';
+// import prdBoxData from './prdBoxData';
 import './Category.scss';
 
 class Category extends Component {
@@ -14,7 +14,6 @@ class Category extends Component {
             <div className="ctgTitle">
               <img src="/images/meatimg/cow.jpg" alt="cow img"></img>
             </div>
-
             <div className="sortBox">
               <div className="LeftCtgType">
                 <ul className="ctgType">
@@ -38,13 +37,8 @@ class Category extends Component {
               </div>
             </div>
           </div>
-          <prdBox type="prdBox" text="카테고리 제품" data={prdBoxData} />
-          <div className="ctgArea">
-            <ul>
-              <li></li>
-            </ul>
-          </div>
         </div>
+        <PrdBox />
       </div>
     );
   }
