@@ -1,7 +1,6 @@
 @import '../../Style/common.scss';
 
 .ctgListWrap {
-  @extend %boxsizing;
   // background-color: aquamarine;
   width: 1280px;
   height: 90px;
@@ -14,6 +13,7 @@
     img {
       width: 100px;
       height: 50px;
+      margin-left: 10px;
     }
   }
 }
