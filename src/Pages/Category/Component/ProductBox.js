@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import './prdBox.scss';
+import './ProductBox.scss';
 
-class PrdBox extends Component {
+class ProductBox extends Component {
   render() {
     return (
       <div>
@@ -47,4 +47,4 @@ class PrdBox extends Component {
   }
 }
 
-export default PrdBox;
+export default ProductBox;

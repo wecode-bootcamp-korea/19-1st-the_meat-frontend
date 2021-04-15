@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LeftSortBox from './Component/LeftSortBox';
 import RightSortBox from './Component/RightSortBox';
-import PrdBox from './Component/PrdBox';
+import ProductBox from './Component/ProductBox';
 // import prdBoxData from './prdBoxData';
 import './Category.scss';
 
@@ -38,7 +38,7 @@ class Category extends Component {
             </div>
           </div>
         </div>
-        <PrdBox />
+        <ProductBox />
       </div>
     );
   }

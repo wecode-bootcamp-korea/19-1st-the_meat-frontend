@@ -1,4 +1,5 @@
 .prdBox {
+  @extend %boxsizing;
   width: 296px;
   height: 493px;
   background-color: bisque;
