@@ -1,0 +1,23 @@
+%inputCenter {
+  display: flex;
+  align-items: center;
+}
+%inputSize {
+  width: 280px;
+  height: 40px;
+  padding: 0 20px 0 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.idInput {
+  @extend %inputSize;
+  @extend %inputCenter;
+}
+.pwInput {
+  @extend %inputSize;
+  @extend %inputCenter;
+}
+.idInput::placeholder,
+.pwInput::placeholder {
+  font-size: 18px;
+}
