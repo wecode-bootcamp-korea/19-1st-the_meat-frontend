@@ -1,16 +1,23 @@
 import { Component } from 'react';
 import Input from './Input';
+import Ptag from './Ptag';
+import './Form.scss';
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       id: '',
-      pw: '',
+      password: '',
+      passwordVerify: '',
       name: '',
       phone: '',
     };
   }
+  handleInput = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
   render() {
     const { data } = this.props;
     return (
@@ -21,8 +28,15 @@ class Form extends Component {
             type={elements.type}
             text={elements.text}
             classN={elements.class}
+            state={elements.state}
+            handleInput={this.handleInput}
           />
         ))}
+        <Ptag
+          password={this.state.password}
+          passwordVerify={this.state.passwordVerify}
+          classN="Ptag"
+        />
       </>
     );
   }

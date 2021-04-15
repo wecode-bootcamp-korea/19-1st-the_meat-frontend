@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Form from './Form';
+import './Layout.scss';
 
 class Layout extends Component {
   render() {
@@ -22,25 +23,30 @@ const inputData = [
     type: 'text',
     text: '아이디',
     class: 'SignUpId',
+    state: 'id',
   },
   {
     type: 'password',
     text: '비밀번호',
     class: 'SignUpPw',
+    state: 'password',
   },
   {
     type: 'password',
     text: '비밀번호 확인',
     class: 'SignUpPwVerify',
+    state: 'passwordVerify',
   },
   {
     type: 'text',
     text: '이름',
     class: 'SignUpName',
+    state: 'name',
   },
   {
     type: 'text',
     text: '번호',
     class: 'SignUpPhone',
+    state: 'phone',
   },
 ];

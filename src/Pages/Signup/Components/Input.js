@@ -1,10 +1,17 @@
 import { Component } from 'react';
+import './Input.scss';
 
 class Input extends Component {
   render() {
-    const { type, text, classN } = this.props;
+    const { type, state, text, classN, handleInput } = this.props;
     return (
-      <input name={text} type={type} className={classN} placeholder={text} />
+      <input
+        type={type}
+        name={state}
+        placeholder={text}
+        className={classN}
+        onChange={handleInput}
+      />
     );
   }
 }

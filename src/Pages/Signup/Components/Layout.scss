@@ -1,0 +1,31 @@
+@import '../SignUp.scss';
+
+.SignUpForm {
+  margin: 0 auto;
+  background-color: white;
+  width: 562px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 54px 0 54px;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  .SignUpTitle {
+    padding: 40px 0 40px 0;
+    font-size: 30px;
+    font-weight: bold;
+    em {
+      color: $realOrange;
+    }
+  }
+  .SignUpBtn {
+    width: 360px;
+    height: 56px;
+    margin: 0 auto;
+    background-color: $realOrange;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
