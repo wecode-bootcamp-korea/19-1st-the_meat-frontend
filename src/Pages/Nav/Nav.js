@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Nav.scss';
 class Nav extends Component {
-  goToMain = () => {
-    this.props.history.push('/');
-  };
   render() {
     return (
       <nav className="nav">
@@ -20,13 +17,15 @@ class Nav extends Component {
             </button>
           </div>
           <div className="logo">
-            <a className="mainLogo" href="#" onClick={this.goToMain}>
-              <img
-                className="logoImg"
-                src="/images/meatimg/MainLogo.jpg"
-                alt="로고 이미지"
-              />
-            </a>
+            <div className="mainLogo">
+              <Link to="/">
+                <img
+                  className="logoImg"
+                  src="/images/meatimg/MainLogo.jpg"
+                  alt="로고 이미지"
+                />
+              </Link>
+            </div>
           </div>
           <div className="myMeat">
             <i className="far fa-user"></i>
@@ -72,7 +71,7 @@ class Nav extends Component {
   }
 }
 
-export default withRouter(Nav);
+export default Nav;
 
 const CATEGORYLEFT = [
   { id: 1, content: '카테고리' },
