@@ -3,8 +3,16 @@ import './Input.scss';
 
 class Input extends Component {
   render() {
-    const { type, text, classN } = this.props;
-    return <input type={type} placeholder={text} className={classN} />;
+    const { type, text, classN, inputHandling, name } = this.props;
+    return (
+      <input
+        onChange={inputHandling}
+        type={type}
+        placeholder={text}
+        className={classN}
+        name={name}
+      />
+    );
   }
 }
 

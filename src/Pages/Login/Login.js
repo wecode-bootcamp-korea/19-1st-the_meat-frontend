@@ -6,7 +6,11 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <Form inputData={inputData} buttonData={buttonData} />
+        <Form
+          inputData={inputData}
+          buttonData={buttonData}
+          history={this.props.history}
+        />
       </div>
     );
   }

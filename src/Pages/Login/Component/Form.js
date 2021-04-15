@@ -4,6 +4,26 @@ import Input from './Input';
 import Button from './Button';
 
 class Form extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: '',
+      pw: '',
+    };
+  }
+
+  buttonClick = e => {
+    if (e.target.id == 1) {
+      this.props.history.push('/signup');
+    }
+  };
+
+  inputHandling = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
   render() {
     const { inputData, buttonData } = this.props;
     return (
@@ -13,15 +33,23 @@ class Form extends Component {
           {inputData.map((elements, id) => (
             <Input
               key={id}
-              type={elements.types}
+              type={elements.type}
               text={elements.text}
               classN={elements.classN}
+              name={elements.state}
+              inputHandling={this.inputHandling}
             />
           ))}
         </div>
         <div className="LoginButton">
           {buttonData.map((elements, id) => (
-            <Button key={id} text={elements.text} classN={elements.classN} />
+            <Button
+              key={id}
+              id={id}
+              text={elements.text}
+              classN={elements.classN}
+              click={this.buttonClick}
+            />
           ))}
         </div>
       </div>
