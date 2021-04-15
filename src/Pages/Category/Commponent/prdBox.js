@@ -1,39 +1,50 @@
 import { Component } from 'react';
-import './prdBox.scss';
+// import './prdBox.scss';
 
-export default class prdBox extends Component {
+class Category prdBox Component {
   render() {
-    const { data } = this.props;
     return (
-      <div className="prdimg">
-        {data.map((input, idx) => (
-          <div className="greenBox"></div>
-        ))}
+      <div>
+        <ul>
+          <li>
+            <div className="prdBox">
+              <div className="imgBox">
+                <div className="cartBox">
+                  <a href="#">
+                    <i class="ico-cart2"></i>
+                    "장바구니"
+                  </a>
+                </div>
+                <a href="#">
+                  <img src=""></img>
+                  <span className="tagSale">
+                    <span></span>
+                    <strong>25</strong>
+                    "%"
+                  </span>
+                </a>
+              </div>
+              <div className="prdInfo">
+                <a href="">
+                  <p className="prdName">진아가 좋아하는 차돌박이</p>
+                  <div className="realPrice">
+                    <p>
+                      <strong>9,000</strong>
+                      <span className="won">원</span>
+                    </p>
+                    <p className="price">
+                      "10,000"
+                      <span className="won">원</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     );
   }
 }
 
-return (
-    <div className="prdimg">
-      {data.map((input, idx) => (
-        
-        <Input
-          key={idx}
-          type={input.type}
-          text={input.text}
-          // value={this.state[input.type]}
-          // handleInput={this.handleInput}
-          // handleValid={validator[input.type]}
-        />
-      ))}
-    </div>
-    <Button value={text} />
-    {type === "signUp" && (
-      <p className="isAlreadyLogin">
-        이미 가입하셨나요? <span>로그인</span>
-      </p>
-    )}
-);
-}
-}
+export default prdBox;
