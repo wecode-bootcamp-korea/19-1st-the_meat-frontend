@@ -3,7 +3,7 @@ import '../Banner/Banner.scss';
 class Banner extends Component {
   constructor() {
     super();
-    this.state = { bannerImg: [], currentImage: 0 };
+    this.state = { bannerImg: [], changeImage: 0 };
   }
   componentDidMount() {
     fetch('http://localhost:3000/data/Banner.json', {
@@ -15,28 +15,36 @@ class Banner extends Component {
           bannerImg: data,
         });
       });
+    setInterval(this.leftClick, 4000);
   }
+
   leftClick = () => {
-    let { currentImage } = this.state;
-    if (currentImage === 0) {
-      currentImage = 4;
+    let { changeImage } = this.state;
+    if (changeImage === 0) {
+      changeImage = 4;
     }
     this.setState({
-      currentImage: currentImage - 1,
+      changeImage: changeImage - 1,
     });
   };
 
   rightClick = () => {
-    let { currentImage } = this.state;
-    if (currentImage === 3) {
-      currentImage = -1;
+    let { changeImage } = this.state;
+    if (changeImage === 3) {
+      changeImage = -1;
     }
     this.setState({
-      currentImage: currentImage + 1,
+      changeImage: changeImage + 1,
     });
   };
 
   render() {
+    console.log('초기상태:', this.state.bannerImg);
+    console.log('currentImage:', this.state.changeImage);
+    const { bannerImg, changeImage } = this.state;
+    {
+      bannerImg[0] && console.log(bannerImg[changeImage].image_url);
+    }
     return (
       <article className="banner">
         <button className="leftButton" onClick={this.leftClick}>
@@ -45,10 +53,10 @@ class Banner extends Component {
         <button className="rightButton" onClick={this.rightClick}>
           <i className="fas fa-angle-right"></i>
         </button>
-        {this.state.bannerImg[0] && (
+        {bannerImg[0] && (
           <img
             className="bannerImg"
-            src={this.state.bannerImg[this.state.currentImage].image_url}
+            src={bannerImg[changeImage].image_url}
             alt="메인 이미지"
           />
         )}

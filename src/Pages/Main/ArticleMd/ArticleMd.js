@@ -21,7 +21,6 @@ class ArticleMd extends Component {
   }
   render() {
     const { cardData } = this.state;
-    console.log(cardData);
     return (
       <article className="articleMd">
         <div className="mdTitle">
