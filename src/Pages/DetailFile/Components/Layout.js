@@ -17,7 +17,16 @@ class Layout extends Component {
     };
   }
   buttonHandler = e => {
-    console.log(e);
+    if (e.target.className === 'minusButton') {
+      this.setState({
+        count: this.state.count - 1,
+      });
+    }
+    if (e.target.className === 'plusButton') {
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }
   };
   componentDidMount() {
     fetch('data/Data.json', {})
@@ -32,12 +41,23 @@ class Layout extends Component {
       );
   }
   render() {
+    if (this.state.count < 0) {
+      this.setState({
+        count: 0,
+      });
+      alert('수량은 0이하로 안됩니다.');
+    }
     return (
       <div className="productDetail">
         <Image image={this.state.image_url} />
         <div className="productContent">
           <Title name={this.state.name} />
-          <Content unit={this.state.unit} real_price={this.state.real_price} />
+          <Content
+            buttonHandler={this.buttonHandler}
+            unit={this.state.unit}
+            real_price={this.state.real_price}
+            count={this.state.count}
+          />
           {buttonInfo.map((elements, id) => (
             <Button
               key={id}
