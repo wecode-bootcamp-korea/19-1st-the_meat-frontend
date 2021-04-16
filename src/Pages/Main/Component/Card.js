@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Card.scss';
 
 class Card extends Component {
@@ -14,9 +15,9 @@ class Card extends Component {
           ) : null}
           <img className="mdContentsImg" src={data.image_url} alt="추천상품" />
           <div className="mdCartButton">
-            <a className="cartLink" href="#">
+            <Link to="/">
               <i className="fas fa-shopping-cart"></i>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mdInfo">

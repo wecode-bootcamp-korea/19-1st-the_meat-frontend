@@ -44,14 +44,12 @@
       top: 240px;
       left: 240px;
       opacity: 0.9;
-      .cartLink {
-        .fa-shopping-cart {
-          position: absolute;
-          color: #787878;
-          font-size: 20px;
-          top: 13px;
-          left: 10px;
-        }
+      .fa-shopping-cart {
+        position: absolute;
+        color: #787878;
+        font-size: 20px;
+        top: 13px;
+        left: 10px;
       }
     }
   }
