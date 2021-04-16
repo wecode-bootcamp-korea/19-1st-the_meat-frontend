@@ -20,6 +20,7 @@ class ProductBox extends Component {
   }
   render() {
     const { PrdBoxData } = this.state;
+    console.log(PrdBoxData);
     return (
       <div className="bodyCenter">
         <ul>
@@ -28,12 +29,13 @@ class ProductBox extends Component {
               <div className="prdBox" key={id}>
                 <div className="imgBox">
                   <a href=" ">
-                    <div className="tagSale">
-                      <div className="slaeText">
-                        <strong>{el.discount_rate}</strong>
-                        <strong>%</strong>
+                    {!!el.discount_rate && (
+                      <div className="tagSale">
+                        <div className="slaeText">
+                          <strong>{el.discount_rate}%</strong>
+                        </div>
                       </div>
-                    </div>
+                    )}
                     <img src={el.image_url} alt="food img"></img>
                     <div className="cartBox">
                       <div className="cartCircle">
@@ -52,10 +54,12 @@ class ProductBox extends Component {
                         <strong>{el.real_price}</strong>
                         <span className="won">원</span>
                       </div>
-                      <div className="price">
-                        <strong>{el.price}</strong>
-                        <span className="won">원</span>
-                      </div>
+                      {!!el.price && (
+                        <div className="price">
+                          <strong>{el.price}</strong>
+                          <span className="won">원</span>
+                        </div>
+                      )}
                     </div>
                   </a>
                 </div>
