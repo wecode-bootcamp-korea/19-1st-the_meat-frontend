@@ -16,6 +16,17 @@ class Form extends Component {
     if (e.target.id == 1) {
       this.props.history.push('/signup');
     }
+    if (e.target.id == 0) {
+      fetch('', {
+        method: 'POST',
+        body: JSON.stringify({
+          id: this.state.id,
+          pw: this.state.pw,
+        }),
+      })
+        .then(res => res.json())
+        .then(res => console.log('test'));
+    }
   };
 
   inputHandling = e => {
