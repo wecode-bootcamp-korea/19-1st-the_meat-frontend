@@ -1,13 +1,17 @@
 @import '../../../Style/common.scss';
 
 .bodyCenter {
-  // margin: 20px 90px 20px 90px;
-  @extend %flexCenter;
+  margin: 20px 90px 20px 90px;
+  // @extend %flexSpaceBetween;
+  // display: flex;
+  // justify-content: center;
 }
 
 .prdBox {
   width: 296px;
   height: 493px;
+  float: left;
+  margin-left: 10px;
 
   .imgBox {
     position: relative;

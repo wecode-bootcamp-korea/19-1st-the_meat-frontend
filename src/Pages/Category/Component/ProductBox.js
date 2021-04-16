@@ -1,49 +1,70 @@
 import { Component } from 'react';
-import PrdBoxData from './PrdBoxData';
+
 import './ProductBox.scss';
 
 class ProductBox extends Component {
+  constructor() {
+    super();
+    this.state = { PrdBoxData: [] };
+  }
+  componentDidMount() {
+    fetch('http://localhost:3000/data/ProductBoxData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          PrdBoxData: data,
+        });
+      });
+  }
   render() {
+    const { PrdBoxData } = this.state;
     return (
       <div className="bodyCenter">
         <ul>
-          <li className="prdBoxCenter">
-            <div className="prdBox">
-              <div className="imgBox">
-                <a href=" ">
-                  <div className="tagSale">
-                    <div className="slaeText">
-                      <strong>10</strong>
-                      <strong>%</strong>
+          {PrdBoxData.map((el, id) => (
+            <li className="prdBoxCenter">
+              <div className="prdBox" key={id}>
+                <div className="imgBox">
+                  <a href=" ">
+                    <div className="tagSale">
+                      <div className="slaeText">
+                        <strong>{el.discount_rate}</strong>
+                        <strong>%</strong>
+                      </div>
                     </div>
-                  </div>
-                  <img src="/images/meatimg/bossam.jpg" alt="food img"></img>
-                  <div className="cartBox">
-                    <div className="cartCircle">
-                      <a href="http://www.naver.com">
-                        <i class="fas fa-shopping-cart"></i>
-                      </a>
+                    <img src={el.image_url} alt="food img"></img>
+                    <div className="cartBox">
+                      <div className="cartCircle">
+                        <a href="http://www.naver.com">
+                          <i class="fas fa-shopping-cart"></i>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
+                <div className="prdInfo">
+                  <a href=" ">
+                    <p className="prdName">
+                      {el.name}
+                      {/* [고기반찬] 진아가 좋아하는 보쌈정식 */}
+                    </p>
+                    <div className="PriceBox">
+                      <div className="realPrice">
+                        <strong>{el.real_price}</strong>
+                        <span className="won">원</span>
+                      </div>
+                      <div className="price">
+                        <strong>{el.price}</strong>
+                        <span className="won">원</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <div className="prdInfo">
-                <a href=" ">
-                  <p className="prdName">[고기반찬] 진아가 좋아하는 보쌈정식</p>
-                  <div className="PriceBox">
-                    <div className="realPrice">
-                      <strong>9,000</strong>
-                      <span className="won">원</span>
-                    </div>
-                    <div className="price">
-                      <strong>10,000</strong>
-                      <span className="won">원</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </div>
     );

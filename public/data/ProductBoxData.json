@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "진아가 좋아하는 차돌박이",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/bossam.jpg",
+    "status": 1
+  },
+
+  {
+    "id": 2,
+    "name": "지원님이 좋아하는 살살녹는 새우살",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/barbecue.jpg",
+    "status": 2
+  },
+
+  {
+    "id": 3,
+    "name": "민석님이 좋아하는 갈매기살",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/grill1.jpg",
+    "status": 3
+  },
+
+  {
+    "id": 4,
+    "name": "재영님이 좋아하는 당근을 감싼 고기",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/pig.jpg",
+    "status": 4
+  },
+  {
+    "id": 5,
+    "name": "서준님이 좋아하는 삽겹살에 소주",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/food.jpg",
+    "status": 5
+  },
+  {
+    "id": 6,
+    "name": "동헌님이 좋아하는 두툼한 스테이크",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/meat.jpg",
+    "status": 6
+  },
+  {
+    "id": 7,
+    "name": "도현님이 좋아하는 살치살",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/steak3.jpg",
+    "status": 7
+  },
+  {
+    "id": 8,
+    "name": "준식님이 좋아하는 야들야들 채끝살",
+    "price": "10,000원",
+    "discount_rate": "10%",
+    "real_price": "9,000원",
+    "image_url": "/images/meatimg/steak2.jpg",
+    "status": 8
+  }
+]
