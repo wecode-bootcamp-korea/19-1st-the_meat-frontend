@@ -19,7 +19,7 @@ class Category extends Component {
                   {LeftSortBox.map((el, id) => (
                     <li className="ctgInner" key={id}>
                       <a href=" ">
-                        <span>{el.content}</span>
+                        <span>{el.name}</span>
                       </a>
                     </li>
                   ))}
