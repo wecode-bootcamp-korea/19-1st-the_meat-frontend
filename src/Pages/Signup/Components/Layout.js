@@ -10,7 +10,6 @@ class Layout extends Component {
           <em>더미트&</em> 신규 회원가입
         </h1>
         <Form data={inputData} />
-        <button className="SignUpBtn">가입하기</button>
       </form>
     );
   }

@@ -18,6 +18,21 @@ class Form extends Component {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
+  handleSubmit = () => {
+    fetch('', {
+      method: 'POST',
+      body: JSON.stringify({
+        id: this.state.id,
+        password: this.state.password,
+        passwordVerify: this.state.passwordVerify,
+        name: this.state.name,
+        phone: this.state.phone,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => res.console.log('테스트'));
+  };
+
   render() {
     const { data } = this.props;
     return (
@@ -37,6 +52,9 @@ class Form extends Component {
           passwordVerify={this.state.passwordVerify}
           classN="Ptag"
         />
+        <button onClick={this.handleSubmit} className="SignUpBtn">
+          가입하기
+        </button>
       </>
     );
   }
