@@ -46,10 +46,7 @@ class ProductBox extends Component {
                 </div>
                 <div className="prdInfo">
                   <a href=" ">
-                    <p className="prdName">
-                      {el.name}
-                      {/* [고기반찬] 진아가 좋아하는 보쌈정식 */}
-                    </p>
+                    <p className="prdName">{el.name}</p>
                     <div className="PriceBox">
                       <div className="realPrice">
                         <strong>{el.real_price}</strong>

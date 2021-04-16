@@ -5,24 +5,7 @@ import ProductBox from './Component/ProductBox';
 import './Category.scss';
 
 class Category extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = { PrdBoxData: [] };
-  // }
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/data/ProductBoxData.json', {
-  //     method: 'GET',
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       this.setState({
-  //         PrdBoxData: data,
-  //       });
-  //     });
-  // }
-
   render() {
-    // const { PrdBoxData } = this.state;
     return (
       <div className="Category">
         <div className="ctgListWrap">
