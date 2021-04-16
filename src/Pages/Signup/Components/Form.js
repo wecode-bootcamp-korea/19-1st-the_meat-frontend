@@ -7,7 +7,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: '',
+      email: '',
       password: '',
       passwordVerify: '',
       name: '',
@@ -22,7 +22,7 @@ class Form extends Component {
     fetch('', {
       method: 'POST',
       body: JSON.stringify({
-        id: this.state.id,
+        id: this.state.eamil,
         password: this.state.password,
         passwordVerify: this.state.passwordVerify,
         name: this.state.name,

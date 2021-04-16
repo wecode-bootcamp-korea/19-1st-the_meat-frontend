@@ -20,8 +20,8 @@ export default Layout;
 const inputData = [
   {
     type: 'text',
-    text: '아이디',
-    class: 'SignUpId',
+    text: '이메일',
+    class: 'SignUpEmail',
     state: 'id',
   },
   {
