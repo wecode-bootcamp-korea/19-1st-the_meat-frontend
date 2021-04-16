@@ -3,7 +3,24 @@ import SmallCard from '../Component/SmallCard';
 import { Link } from 'react-router-dom';
 import './ArticleDiscount.scss';
 class ArticleDiscount extends Component {
+  constructor() {
+    super();
+    this.state = { cardListData: [] };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/CardList.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          cardListData: data,
+        });
+      });
+  }
   render() {
+    const { cardListData } = this.state;
     return (
       <div className="articleDiscount">
         <div className="articleDiscountBox">
@@ -39,12 +56,9 @@ class ArticleDiscount extends Component {
                 </div>
               </div>
               <div className="dcCardBox">
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
+                {cardListData.map((data, id) => {
+                  return <SmallCard key={id} data={data} />;
+                })}
               </div>
             </div>
           </div>

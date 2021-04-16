@@ -10,29 +10,47 @@
   },
   {
     "id": 2,
-    "name": "칼집이 들어간 소시지",
-    "image_url": "/images/meatimg/grill1.jpg",
-    "price": 0,
-    "discount_rate": 0,
-    "real_price": "4,500",
+    "name": "바베큐 구워서 먹어보세요",
+    "image_url": "/images/meatimg/barbecue.jpg",
+    "price": "12,500",
+    "discount_rate": 10,
+    "real_price": "11,250",
     "status": 1
   },
   {
     "id": 3,
-    "name": "미디엄 레어로 구워진 두꺼운 고기",
-    "image_url": "/images/meatimg/meat.jpg",
-    "price": "13,500",
-    "discount_rate": 10,
-    "real_price": "12,100",
+    "name": "아직 고기가 덜 익었습니다",
+    "image_url": "/images/meatimg/beef.jpg",
+    "price": "13,400",
+    "discount_rate": 15,
+    "real_price": "11,000",
     "status": 1
   },
   {
     "id": 4,
-    "name": "여러 종류의 고기들이 모여있다",
-    "image_url": "/images/meatimg/grill2.jpg",
-    "price": 0,
-    "discount_rate": 0,
+    "name": "맛있는 보쌈 입니다",
+    "image_url": "/images/meatimg/bossam.jpg",
+    "price": "11,900",
+    "discount_rate": 5,
     "real_price": "15,500",
+    "status": 1
+  },
+  {
+    "id": 5,
+    "name": "닭을 통으로 구워버렸어요",
+    "image_url": "/images/meatimg/chicken.jpg",
+    "price": "8,000",
+    "discount_rate": 10,
+    "real_price": "7,200",
+    "status": 1
+  },
+  {
+    "id": 6,
+    "name": "치킨은 언제나 맛있어",
+    "image_url": "/images/meatimg/chicken2.jpg",
+    "price": "13,500",
+    "discount_rate": 10,
+    "real_price": "12,100",
     "status": 1
   }
 ]

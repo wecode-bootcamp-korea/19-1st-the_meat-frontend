@@ -4,27 +4,24 @@ import '../Component/SmallCard.scss';
 
 class SmallCard extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className="smallCard">
         <div className="dcCardImgBox">
           <span className="dcSale">
-            <p className="dcNumber">8 %</p>
+            <p className="dcNumber">{data.discount_rate} %</p>
           </span>
-          <img
-            className="dcImg"
-            src="/images/meatimg/abstract.jpg"
-            alt="고기사진"
-          />
+          <img className="dcImg" src={data.image_url} alt="고기사진" />
         </div>
         <div className="dcInfo">
           <div className="dcInfoContent">
-            <p className="dcName">엄청 엄청 엄청 뜨거운 고기 (100g)</p>
+            <p className="dcName">{data.name}</p>
           </div>
           <div className="dcListPriceBox">
             <p className="dcListPrice">
-              <span className="fontBold">10,900</span>원
+              <span className="fontBold">{data.real_price}</span>원
             </p>
-            <p className="dcListOriginal">11,900원</p>
+            <p className="dcListOriginal">{data.price}</p>
           </div>
           <div className="dcListCartButton">
             <Link to="/" className="cartLink">

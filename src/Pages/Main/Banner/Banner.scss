@@ -1,0 +1,32 @@
+@import '../../../Style/common.scss';
+
+.banner {
+  position: relative;
+  width: 1440px;
+  height: 400px;
+  .leftButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 50%;
+    left: 1%;
+    .fa-angle-left {
+    }
+  }
+  .rightButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 50%;
+    right: 2%;
+    .fa-angle-right {
+    }
+  }
+  .bannerImg {
+    width: 1440px;
+    height: 400px;
+    object-fit: cover;
+  }
+}

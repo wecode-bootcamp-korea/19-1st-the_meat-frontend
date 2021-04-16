@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
-import ArticleImg from '../Main/ArticleImg/ArticleImg';
+import Banner from '../Main/Banner/Banner';
 import ArticleMd from '../Main/ArticleMd/ArticleMd';
 import ArticleDiscount from '../Main/ArticleDiscount/ArticleDiscount';
 import './Main.scss';
@@ -10,7 +10,7 @@ class Main extends Component {
     return (
       <div className="Main">
         <Nav />
-        <ArticleImg />
+        <Banner />
         <ArticleMd />
         <ArticleDiscount />
       </div>

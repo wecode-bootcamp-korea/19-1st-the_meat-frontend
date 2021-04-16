@@ -21,6 +21,7 @@ class ArticleMd extends Component {
   }
   render() {
     const { cardData } = this.state;
+    console.log(cardData);
     return (
       <article className="articleMd">
         <div className="mdTitle">
@@ -30,7 +31,7 @@ class ArticleMd extends Component {
           <ul className="middleUl">
             {MIDDLE.map((el, id) => (
               <li className="middleLi" key={id}>
-                <Link to="/" className="middleLink">
+                <Link to="/" className="middleLink" href="#">
                   {el.content}
                 </Link>
               </li>
