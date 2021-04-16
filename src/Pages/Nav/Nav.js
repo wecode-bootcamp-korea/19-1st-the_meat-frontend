@@ -29,13 +29,13 @@ class Nav extends Component {
           </div>
           <div className="myMeat">
             <i className="far fa-user"></i>
-            <a className="myMeatLink" href="#">
-              마이더고기
-            </a>
+            <Link to="/">
+              <p className="myMeatLink">마이더고기</p>
+            </Link>
             <i className="fas fa-shopping-cart"></i>
-            <a className="myMeatCart" href="#">
-              장바구니
-            </a>
+            <Link to="/">
+              <p className="myMeatCart">장바구니</p>
+            </Link>
             <div className="cartCount">
               <p className="count">0</p>
             </div>
@@ -47,9 +47,9 @@ class Nav extends Component {
               <i className="fas fa-bars"></i>
               {CATEGORYLEFT.map((el, id) => (
                 <li className="categoryLeftLi" key={id}>
-                  <a className="categoryLeftLink" href="#">
+                  <Link to="/" className="categoryLeftLink">
                     {el.content}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -58,9 +58,9 @@ class Nav extends Component {
             <ul className="categoryRightUl">
               {CATEGORYRIGHT.map((el, id) => (
                 <li className="categoryRightLi" key={id}>
-                  <a className="categoryRightLink" href="#">
+                  <Link to="/" className="categoryRightLink">
                     {el.content}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

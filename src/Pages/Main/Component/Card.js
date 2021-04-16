@@ -15,7 +15,7 @@ class Card extends Component {
           ) : null}
           <img className="mdContentsImg" src={data.image_url} alt="추천상품" />
           <div className="mdCartButton">
-            <Link to="/">
+            <Link to="/" className="cartLink">
               <i className="fas fa-shopping-cart"></i>
             </Link>
           </div>

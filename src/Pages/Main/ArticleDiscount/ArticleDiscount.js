@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SmallCard from '../Component/SmallCard';
 import { Link } from 'react-router-dom';
 import './ArticleDiscount.scss';
 class ArticleDiscount extends Component {
@@ -20,8 +21,30 @@ class ArticleDiscount extends Component {
                     className="dcImg"
                     src="./images/meatimg/roastPork.jpg"
                     alt="할인 고기"
-                  ></img>
+                  />
                 </div>
+                <div className="dcInfo">
+                  <p className="dcName">엄청 큰 고기 1KG</p>
+                  <div className="dcPriceBox">
+                    <p className="dcPrice">
+                      <span className="fontBold">12,000</span>원
+                    </p>
+                    <p className="originalPrice">13,500원</p>
+                  </div>
+                  <div className="dcCartButton">
+                    <Link to="/">
+                      <i className="fas fa-shopping-cart"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="dcCardBox">
+                <SmallCard />
+                <SmallCard />
+                <SmallCard />
+                <SmallCard />
+                <SmallCard />
+                <SmallCard />
               </div>
             </div>
           </div>

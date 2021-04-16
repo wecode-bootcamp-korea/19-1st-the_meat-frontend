@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Component/Card';
+import { Link } from 'react-router-dom';
 import './ArticleMd.scss';
 class ArticleMd extends Component {
   constructor() {
@@ -29,9 +30,9 @@ class ArticleMd extends Component {
           <ul className="middleUl">
             {MIDDLE.map((el, id) => (
               <li className="middleLi" key={id}>
-                <a className="middleLink" href="#">
+                <Link to="/" className="middleLink">
                   {el.content}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

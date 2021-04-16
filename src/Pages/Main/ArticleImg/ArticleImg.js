@@ -8,7 +8,7 @@ class ArticleImg extends Component {
           className="mainImg"
           src="/images/meatimg/beef.jpg"
           alt="메인 이미지"
-        ></img>
+        />
       </article>
     );
   }

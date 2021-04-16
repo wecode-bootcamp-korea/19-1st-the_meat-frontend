@@ -1,0 +1,87 @@
+@import '../../../Style/common.scss';
+
+.smallCard {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  width: 384px;
+  height: 170px;
+  margin: 0px 0px 20px 30px;
+  .dcCardImgBox {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    .dcSale {
+      position: absolute;
+      width: 70px;
+      height: 43px;
+      background-color: #51b06a;
+      border-radius: 8px 0;
+      opacity: 0.9;
+      .dcNumber {
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        top: 13px;
+        left: 16px;
+      }
+    }
+    .dcImg {
+      width: 170px;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+  .dcInfo {
+    position: relative;
+    width: 192px;
+    height: 115px;
+    margin-left: 20px;
+    .dcInfoContent {
+      width: 192px;
+      height: 52px;
+      line-height: 25px;
+      .dcName {
+        font-size: 22px;
+      }
+    }
+    .dcListPriceBox {
+      width: 192px;
+      height: 53px;
+      margin-top: 10px;
+      .dcListPrice {
+        font-size: 22px;
+        .fontBold {
+          font-weight: 700;
+        }
+      }
+      .dcListOriginal {
+        margin-top: 8px;
+        color: #b2b2b2;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .dcListCartButton {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      background-color: #ebedea;
+      border: 0;
+      border-radius: 50%;
+      top: 67px;
+      left: 143px;
+      opacity: 0.9;
+      .fa-shopping-cart {
+        position: absolute;
+        color: #787878;
+        font-size: 20px;
+        top: 13px;
+        left: 10px;
+      }
+    }
+  }
+}
