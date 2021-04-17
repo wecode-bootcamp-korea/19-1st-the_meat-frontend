@@ -47,7 +47,8 @@
       width: 200px;
       height: 100px;
       .mainLogo {
-        &:cursor:inherit .logoImg {
+        cursor: pointer;
+        .logoImg {
           width: 200px;
           height: 100px;
           object-fit: cover;
