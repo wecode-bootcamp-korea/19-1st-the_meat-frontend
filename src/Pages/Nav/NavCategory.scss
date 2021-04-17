@@ -1,4 +1,5 @@
 @import '../../Style/common.scss';
+
 .navCategory {
   @extend %flexCenter;
   position: sticky;
@@ -8,19 +9,23 @@
   font-family: $fontFamily;
   top: 0;
   z-index: 1;
+
   .categoryLeft {
     width: 935px;
     height: 26px;
+
     .categoryLeftUl {
       .fa-bars {
         margin-right: 10px;
         color: #333;
         font-size: 20px;
       }
+
       .categoryLeftLi {
         display: inline-block;
         margin-right: 28px;
         color: #333;
+
         .categoryLeftLink {
           color: #333333;
           text-decoration: none;
@@ -28,17 +33,20 @@
       }
     }
   }
+
   .categoryRight {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 346px;
     height: 26px;
+
     .categoryRightUl {
       .categoryRightLi {
         display: inline-block;
         margin-left: 35px;
         color: #333;
+
         .categoryRightLink {
           color: #333333;
           text-decoration: none;

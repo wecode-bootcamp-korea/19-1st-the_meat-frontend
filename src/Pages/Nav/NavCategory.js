@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Nav/NavCategory.scss';
+
 class NavCategory extends Component {
   render() {
     return (
@@ -33,6 +34,7 @@ class NavCategory extends Component {
   }
 }
 export default NavCategory;
+
 const CATEGORYLEFT = [
   { id: 1, content: '카테고리' },
   { id: 2, content: '할인특가' },

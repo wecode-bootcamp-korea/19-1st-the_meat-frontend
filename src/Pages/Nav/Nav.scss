@@ -1,15 +1,19 @@
 @import '../../Style/common.scss';
+
 .nav {
   font-family: $fontFamily;
+
   .navBox {
     @extend %flexSpaceBetween;
     width: 1280px;
     height: 130px;
     margin: 0 auto;
+
     .navSearch {
       position: relative;
       width: 220px;
       height: 40px;
+
       .inputSearch {
         width: 220px;
         height: 40px;
@@ -22,6 +26,7 @@
           outline: none;
         }
       }
+
       .navSearchButton {
         position: absolute;
         width: 52px;
@@ -33,6 +38,7 @@
         &:focus {
           outline: none;
         }
+
         .fa-search {
           width: 20px;
           height: 20px;
@@ -41,9 +47,11 @@
         }
       }
     }
+
     .logo {
       width: 200px;
       height: 100px;
+
       .mainLogo {
         cursor: pointer;
         .logoImg {
@@ -53,14 +61,17 @@
         }
       }
     }
+
     .myMeat {
       @extend %flexCenter;
       width: 230px;
       height: 24px;
+
       .fa-user {
         color: #787878;
         font-size: 24px;
       }
+
       .myMeatLink {
         display: inline-block;
         width: 82px;
@@ -70,10 +81,12 @@
         font-size: 12px;
         text-decoration: none;
       }
+
       .fa-shopping-cart {
         color: #787878;
         font-size: 24px;
       }
+
       .myMeatCart {
         display: inline-block;
         width: 50px;
@@ -83,6 +96,7 @@
         font-size: 12px;
         text-decoration: none;
       }
+
       .cartCount {
         @extend %flexCenter;
         width: 21px;
