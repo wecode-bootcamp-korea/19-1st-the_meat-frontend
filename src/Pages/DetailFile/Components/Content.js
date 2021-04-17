@@ -24,6 +24,10 @@ class Content extends Component {
             +
           </button>
         </div>
+        <div className="total">
+          <span className="totalTitle">합계</span>
+          <span className="totalPrice">{Number(real_price) * count}원</span>
+        </div>
       </div>
     );
   }
