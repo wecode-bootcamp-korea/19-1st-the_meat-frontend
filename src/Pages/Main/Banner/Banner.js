@@ -41,11 +41,6 @@ class Banner extends Component {
   };
 
   render() {
-    console.log('초기상태:', this.state.bannerImg);
-    console.log('currentImage:', this.state.changeImage);
-    // {
-    //   bannerImg[0] && console.log(bannerImg[changeImage].image_url);
-    // }
     const { bannerImg, changeImage } = this.state;
     return (
       <article className="banner">

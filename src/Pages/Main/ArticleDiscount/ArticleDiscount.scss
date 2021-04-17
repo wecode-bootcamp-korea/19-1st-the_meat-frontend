@@ -1,21 +1,19 @@
 @import '../../../Style/common.scss';
 
 .articleDiscount {
-  width: 1440px;
-  height: 760px;
   font-family: $fontFamily;
+
   .articleDiscountBox {
-    width: 1440px;
-    height: 640px;
     padding: 40px 0px 80px 0px;
+
     .discountContents {
       width: 1280px;
       height: 640px;
       margin: 0 auto;
+
       .discountTitle {
-        width: 1280px;
-        height: 36px;
         margin-bottom: 34px;
+
         .discountTitleName {
           color: #333333;
           font-size: 28px;
@@ -23,21 +21,22 @@
           text-align: center;
         }
       }
+
       .discountContentsBox {
         @extend %flexCenter;
-        width: 1280px;
         height: 570px;
+
         .saleBox {
           position: relative;
           border: 1px solid #f7f7f7;
-          width: 420px;
-          height: 550px;
           border-radius: 8px;
+
           .saleImgBox {
             border: 1px solid #f7f7f7;
             width: 420px;
             height: 420px;
             border-radius: 8px;
+
             .dcSale {
               position: absolute;
               width: 70px;
@@ -45,6 +44,7 @@
               background-color: #51b06a;
               border-radius: 8px 0;
               opacity: 0.9;
+
               .dcPercent {
                 position: absolute;
                 color: #fff;
@@ -54,6 +54,7 @@
                 left: 16px;
               }
             }
+
             .dcImg {
               width: 100%;
               height: 100%;
@@ -61,29 +62,31 @@
               object-fit: cover;
             }
           }
+
           .dcInfo {
             position: relative;
-            width: 420px;
             height: 130px;
             padding: 20px;
+
             .dcName {
-              width: 378px;
               height: 26px;
               font-size: 22px;
             }
+
             .dcPriceBox {
-              width: 378px;
-              height: 33px;
               margin-top: 15px;
+
               .dcPrice {
                 display: inline-block;
                 width: auto;
                 height: 26px;
                 font-size: 22px;
+
                 .fontBold {
                   font-weight: 700;
                 }
               }
+
               .originalPrice {
                 display: inline-block;
                 width: auto;
@@ -96,6 +99,7 @@
               }
             }
           }
+
           .dcCartButton {
             position: absolute;
             width: 44px;
@@ -106,6 +110,7 @@
             top: 55px;
             left: 355px;
             opacity: 0.9;
+
             .fa-shopping-cart {
               position: absolute;
               color: #787878;
@@ -116,6 +121,7 @@
           }
         }
       }
+
       .dcCardBox {
         display: flex;
         flex-wrap: wrap;

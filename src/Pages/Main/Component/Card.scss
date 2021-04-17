@@ -1,17 +1,15 @@
 @import '../../../Style/common.scss';
+
 .mdContents {
-  position: relative;
-  width: 300px;
-  height: 440px;
   margin: 0 10px;
   border: 1px solid #f7f7f7;
   border-radius: 10px;
   background-color: #fff;
+
   .mdImgCartBox {
     position: relative;
-    width: 300px;
-    height: 300px;
     border-radius: 10px 10px 0 0;
+
     .mdSale {
       position: absolute;
       width: 70px;
@@ -19,6 +17,7 @@
       background-color: #51b06a;
       border-radius: 8px 0;
       opacity: 0.9;
+
       .mdDiscount {
         position: absolute;
         color: #fff;
@@ -28,12 +27,14 @@
         left: 16px;
       }
     }
+
     .mdContentsImg {
-      width: 299px;
+      width: 300px;
       height: 300px;
       border-radius: 10px 10px 0 0;
       object-fit: cover;
     }
+
     .mdCartButton {
       position: absolute;
       width: 44px;
@@ -44,6 +45,7 @@
       top: 240px;
       left: 240px;
       opacity: 0.9;
+
       .fa-shopping-cart {
         position: absolute;
         color: #787878;
@@ -53,23 +55,24 @@
       }
     }
   }
+
   .mdInfo {
-    width: 276px;
-    height: 107px;
     margin: 12px 12px 20px 12px;
     background-color: #fff;
+
     .mdSubjectBox {
       width: 276px;
       height: 63px;
       line-height: 30px;
+
       .mdSubject {
         font-size: 22px;
       }
     }
+
     .mdPriceBox {
-      width: 276px;
-      height: 33px;
       margin-top: 11px;
+
       .mdPrice {
         display: inline-block;
         width: auto;
@@ -77,13 +80,13 @@
         margin-right: 10px;
         color: #333333;
         font-size: 22px;
+
         .fontBold {
           font-weight: 700;
         }
       }
+
       .priceDiscount {
-        width: 65px;
-        height: 25px;
         margin-top: 2px;
         color: #b2b2b2;
         font-size: 18px;

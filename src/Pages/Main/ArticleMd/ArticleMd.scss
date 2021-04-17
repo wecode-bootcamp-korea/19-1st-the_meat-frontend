@@ -2,15 +2,14 @@
 
 .articleMd {
   font-family: $fontFamily;
-  width: 1440px;
-  height: 713px;
   padding: 82px 0 50px;
   background-color: #f7f7f7;
   font-family: $fontFamily;
+
   .mdTitle {
-    width: 1425px;
     height: 36px;
     padding: 0px 0px 64px 0;
+
     .mdTitleName {
       color: #333333;
       font-size: 28px;
@@ -18,13 +17,13 @@
       text-align: center;
     }
   }
+
   .mdMiddleTitle {
     @extend %flexCenter;
-    width: 1280px;
-    height: 46px;
-    margin: 0 auto;
+
     .middleUl {
       margin-left: 50px;
+
       .middleLi {
         display: inline-block;
         width: auto;
@@ -32,6 +31,7 @@
         &:not(last-child) {
           margin-right: 48px;
         }
+
         .middleLink {
           color: #888;
           font-size: 22px;
@@ -41,10 +41,9 @@
       }
     }
   }
+
   .mdContentsBox {
     @extend %flexCenter;
-    width: 1280px;
-    height: 440px;
     margin: 22px auto 0 auto;
   }
 }

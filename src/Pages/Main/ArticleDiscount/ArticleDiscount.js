@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SmallCard from '../Component/SmallCard';
 import { Link } from 'react-router-dom';
 import './ArticleDiscount.scss';
+
 class ArticleDiscount extends Component {
   constructor() {
     super();
@@ -9,9 +10,7 @@ class ArticleDiscount extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/CardList.json', {
-      method: 'GET',
-    })
+    fetch('/data/CardList.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -19,6 +18,7 @@ class ArticleDiscount extends Component {
         });
       });
   }
+
   render() {
     const { cardListData } = this.state;
     return (
