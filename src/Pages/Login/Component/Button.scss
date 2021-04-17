@@ -1,9 +1,9 @@
 $realOrange: #fe7602;
 
 %buttonSetting {
+  display: flex;
   width: 320px;
   height: 40px;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
@@ -11,15 +11,14 @@ $realOrange: #fe7602;
 
 .loginBTN {
   @extend %buttonSetting;
-  background-color: $realOrange;
   border: none;
   color: white;
+  background-color: $realOrange;
 }
 .signupBTN {
   @extend %buttonSetting;
   color: $realOrange;
   margin-top: 10px;
-  background-color: white;
   border: 1px $realOrange solid;
+  background-color: white;
 }
-// #FE7602

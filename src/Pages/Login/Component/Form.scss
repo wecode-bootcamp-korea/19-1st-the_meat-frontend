@@ -1,16 +1,17 @@
 .loginForm {
+  display: flex;
   width: 360px;
   height: 400px;
+  padding: 40px 55px 40px 55px;
+  border: 1px black solid;
   margin: 0 auto;
   margin-top: 100px;
-  display: flex;
   flex-direction: column;
-  padding: 40px 55px 40px 55px;
   align-items: center;
-  border: 1px black solid;
+
   .loginTitle {
     font-size: 40px;
-    font-weight: bold;
     margin-bottom: 40px;
+    font-weight: bold;
   }
 }
