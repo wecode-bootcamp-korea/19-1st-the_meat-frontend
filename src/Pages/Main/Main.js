@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import Banner from '../Main/Banner/Banner';
 import ArticleMd from '../Main/ArticleMd/ArticleMd';
 import ArticleDiscount from '../Main/ArticleDiscount/ArticleDiscount';
+import ArticleNewProduct from '../Main/ArticleNewProduct/ArticleNewProduct';
 import './Main.scss';
 
 class Main extends Component {
@@ -13,6 +14,7 @@ class Main extends Component {
         <Banner />
         <ArticleMd />
         <ArticleDiscount />
+        <ArticleNewProduct />
       </div>
     );
   }

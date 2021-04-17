@@ -1,0 +1,67 @@
+@import '../../../Style/common.scss';
+
+.articleNewProduct {
+  font-family: $fontFamily;
+
+  .articleNewProductBox {
+    height: 645px;
+    padding: 82px 0px 50px 0px;
+    background-color: #f7f7f7;
+
+    .newProductTitle {
+      color: #333333;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .newProductCardBox {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 1280px;
+      height: 439px;
+      margin: 35px auto 0px auto;
+      overflow: hidden;
+
+      .leftButton {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        border: 0;
+        border-radius: 50%;
+        opacity: 0.8;
+        top: 200px;
+        left: -10px;
+
+        &:focus {
+          outline: none;
+        }
+
+        .fa-angle-left {
+          font-size: 20px;
+        }
+      }
+
+      .rightButton {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        border: 0;
+        border-radius: 50%;
+        opacity: 0.8;
+        top: 200px;
+        right: -20px;
+
+        &:focus {
+          outline: none;
+        }
+
+        .fa-angle-right {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

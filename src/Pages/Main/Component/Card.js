@@ -8,11 +8,11 @@ class Card extends Component {
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">
-          {!!data.discount_rate && (
+          {data.discount_rate ? (
             <span className="mdSale">
               <p className="mdDiscount">{data.discount_rate} %</p>
             </span>
-          )}
+          ) : null}
           <img className="mdContentsImg" src={data.image_url} alt="추천상품" />
           <div className="mdCartButton">
             <Link to="/" className="cartLink">
