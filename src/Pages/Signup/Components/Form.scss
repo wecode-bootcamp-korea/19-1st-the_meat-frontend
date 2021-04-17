@@ -1,17 +1,18 @@
 @import '../SignUp.scss';
 
 input {
-  border: 1px solid rgba($color: #000000, $alpha: 0.2);
   width: 522px;
   height: 54px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 0 18px 0 18px;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
 }
+
 input:focus {
   color: $realOrange;
   border-color: $realOrange;
   outline: none;
 }
+
 input::placeholder {
   font-size: 16px;
 }

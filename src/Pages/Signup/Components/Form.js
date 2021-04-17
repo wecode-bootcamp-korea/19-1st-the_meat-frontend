@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Input from './Input';
-import Ptag from './Ptag';
+import Ptag from './WarningPassword';
 import './Form.scss';
 
 class Form extends Component {

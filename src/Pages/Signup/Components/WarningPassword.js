@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './Ptag.scss';
+import './WarningPassword.scss';
 
 class Ptag extends Component {
   render() {
