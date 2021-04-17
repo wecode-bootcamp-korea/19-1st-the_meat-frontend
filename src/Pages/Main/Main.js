@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
+import NavCategory from '../Nav/NavCategory';
 import Banner from '../Main/Banner/Banner';
 import ArticleMd from '../Main/ArticleMd/ArticleMd';
 import ArticleDiscount from '../Main/ArticleDiscount/ArticleDiscount';
@@ -11,6 +12,7 @@ class Main extends Component {
     return (
       <div className="Main">
         <Nav />
+        <NavCategory />
         <Banner />
         <ArticleMd />
         <ArticleDiscount />
