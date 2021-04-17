@@ -21,7 +21,7 @@ class SmallCard extends Component {
             <p className="dcListPrice">
               <span className="fontBold">{data.real_price}</span>원
             </p>
-            <p className="dcListOriginal">{data.price}</p>
+            <p className="dcListOriginal">{data.price}원</p>
           </div>
           <div className="dcListCartButton">
             <Link to="/" className="cartLink">

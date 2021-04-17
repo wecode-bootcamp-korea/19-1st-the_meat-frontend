@@ -30,7 +30,7 @@ class ArticleMd extends Component {
           <ul className="middleUl">
             {MIDDLE.map((el, id) => (
               <li className="middleLi" key={id}>
-                <Link to="/" className="middleLink" href="#">
+                <Link to="/" className="middleLink">
                   {el.content}
                 </Link>
               </li>
