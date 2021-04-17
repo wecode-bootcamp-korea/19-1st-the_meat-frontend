@@ -1,35 +1,41 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import LeftSortBox from './Component/LeftSortBox';
 import RightSortBox from './Component/RightSortBox';
 import ProductBox from './Component/ProductBox';
 import './Category.scss';
 
 class Category extends Component {
+  goToMain = () => {
+    this.props.history.push('/');
+  };
   render() {
     return (
-      <div className="Category">
-        <div className="ctgListWrap">
-          <div className="ctgPageTitle">
-            <div className="ctgTitle">
+      <div className="category">
+        <div className="categoryListWrap">
+          <div className="categoryPageTitle">
+            <div className="categoryTitle">
               <img src="/images/meatimg/cow.jpg" alt="cow img"></img>
             </div>
             <div className="sortBox">
-              <div className="LeftCtgType">
-                <ul className="ctgType">
-                  {LeftSortBox.map((el, id) => (
-                    <li className="ctgInner" key={id}>
-                      <a href=" ">
+              <div className="leftcategoryType">
+                <ul className="categoryType">
+                  {LeftSortBox.map((el, idx) => (
+                    <li className="categoryInner" key={idx}>
+                      <a href=" " onClick={this.goToMain}>
                         <span>{el.name}</span>
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="LightCtgType">
-                <ul className="ctgSort">
-                  {RightSortBox.map((el, id) => (
-                    <li className="" key={id}>
-                      <a href=" ">{el.content}</a>
+              <div className="lightCategoryType">
+                <ul className="categorySort">
+                  {RightSortBox.map((el, idx) => (
+                    <li className="" key={idx}>
+                      <a href=" " onClick={this.goToMain}>
+                        {el.content}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -43,4 +49,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default withRouter(Category);

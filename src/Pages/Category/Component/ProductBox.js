@@ -1,34 +1,36 @@
 import { Component } from 'react';
-
+import { withRouter } from 'react-router-dom';
 import './ProductBox.scss';
 
 class ProductBox extends Component {
   constructor() {
     super();
-    this.state = { PrdBoxData: [] };
+    this.state = { ProductBoxData: [] };
   }
+
+  goToMain = () => {
+    this.props.history.push('/');
+  };
+
   componentDidMount() {
-    fetch('http://localhost:3000/data/ProductBoxData.json', {
-      method: 'GET',
-    })
+    fetch('http://localhost:3000/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          PrdBoxData: data,
+          ProductBoxData: data,
         });
       });
   }
   render() {
-    const { PrdBoxData } = this.state;
-    console.log(PrdBoxData);
+    const { ProductBoxData } = this.state;
     return (
       <div className="bodyCenter">
         <ul>
-          {PrdBoxData.map((el, id) => (
+          {ProductBoxData.map((el, idx) => (
             <li className="prdBoxCenter">
-              <div className="prdBox" key={id}>
+              <div className="prdBox" key={idx}>
                 <div className="imgBox">
-                  <a href=" ">
+                  <a href=" " onClick={this.goToMain}>
                     {!!el.discount_rate && (
                       <div className="tagSale">
                         <div className="slaeText">
@@ -39,7 +41,7 @@ class ProductBox extends Component {
                     <img src={el.image_url} alt="food img"></img>
                     <div className="cartBox">
                       <div className="cartCircle">
-                        <a href="http://www.naver.com">
+                        <a href=" " onClick={this.goToMain}>
                           <i class="fas fa-shopping-cart"></i>
                         </a>
                       </div>
@@ -47,7 +49,7 @@ class ProductBox extends Component {
                   </a>
                 </div>
                 <div className="prdInfo">
-                  <a href=" ">
+                  <a href=" " onClick={this.goToMain}>
                     <p className="prdName">{el.name}</p>
                     <div className="PriceBox">
                       <div className="realPrice">
@@ -72,4 +74,4 @@ class ProductBox extends Component {
   }
 }
 
-export default ProductBox;
+export default withRouter(ProductBox);

@@ -1,11 +1,11 @@
 @import '../../Style/common.scss';
 
-.ctgListWrap {
+.categoryListWrap {
   width: 1280px;
   height: 90px;
   margin: 0 auto;
 
-  .ctgTitle {
+  .categoryTitle {
     padding: 10px 0 10px;
     align-items: center;
     font-family: $fontFamily;
@@ -23,41 +23,41 @@
   padding: 10px 0 15px;
 }
 
-.LeftCtgType {
+.leftcategoryType {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  .ctgType {
-    list-style: none;
+  .categoryType {
     display: flex;
+    list-style: none;
   }
 
-  .ctgInner {
+  .categoryInner {
     cursor: pointer;
     &:hover span {
-      text-decoration: underline;
       color: $greenColor;
+      text-decoration: underline;
       transition: 0.3s;
     }
   }
 
   a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
   }
   span {
     padding-left: 10px;
-    font-family: $fontFamily;
     font-size: 10px;
+    font-family: $fontFamily;
   }
 }
 
-.LightCtgType {
+.lightCategoryType {
   a {
-    text-decoration: none;
-    font-family: $fontFamily;
-    font-size: 10px;
     color: black;
+    font-size: 10px;
+    font-family: $fontFamily;
+    text-decoration: none;
   }
 }
