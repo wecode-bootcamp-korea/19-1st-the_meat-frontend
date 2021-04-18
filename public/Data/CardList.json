@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "엄청 엄청 엄청 뜨거운 고기 (100g)",
+    "image_url": "/images/meatimg/abstract.jpg",
+    "price": "11,900",
+    "discount_rate": 8,
+    "real_price": "10,900",
+    "status": 1
+  },
+  {
+    "id": 2,
+    "name": "바베큐 구워서 먹어보세요",
+    "image_url": "/images/meatimg/barbecue.jpg",
+    "price": "12,500",
+    "discount_rate": 10,
+    "real_price": "11,250",
+    "status": 1
+  },
+  {
+    "id": 3,
+    "name": "아직 고기가 덜 익었습니다",
+    "image_url": "/images/meatimg/beef.jpg",
+    "price": "13,400",
+    "discount_rate": 15,
+    "real_price": "11,000",
+    "status": 1
+  },
+  {
+    "id": 4,
+    "name": "맛있는 보쌈 입니다",
+    "image_url": "/images/meatimg/bossam.jpg",
+    "price": "11,900",
+    "discount_rate": 5,
+    "real_price": "15,500",
+    "status": 1
+  },
+  {
+    "id": 5,
+    "name": "닭을 통으로 구워버렸어요",
+    "image_url": "/images/meatimg/chicken.jpg",
+    "price": "8,000",
+    "discount_rate": 10,
+    "real_price": "7,200",
+    "status": 1
+  },
+  {
+    "id": 6,
+    "name": "치킨은 언제나 맛있어",
+    "image_url": "/images/meatimg/chicken2.jpg",
+    "price": "13,500",
+    "discount_rate": 10,
+    "real_price": "12,100",
+    "status": 1
+  }
+]
