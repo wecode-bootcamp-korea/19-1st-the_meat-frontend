@@ -22,10 +22,10 @@ class Category extends Component {
   };
 
   sortHandler = sortId => {
-    this.setState({ sortId: true });
+    this.setState({ display: true });
   };
+
   render() {
-    console.log(this.currentId);
     return (
       <div className="category">
         <div className="categoryListWrap">
@@ -52,17 +52,19 @@ class Category extends Component {
                   인기순&nbsp;
                   <i class="fas fa-chevron-down"></i>
                 </div>
-                <ul className="categorySort">
-                  {RightSortBox.map((category, id) => (
-                    <li
-                      className=""
-                      key={id}
-                      onClick={() => this.clickHandler(id + 1)}
-                    >
-                      {category.content}
-                    </li>
-                  ))}
-                </ul>
+                {this.state.display && (
+                  <ul className="categorySort">
+                    {RightSortBox.map((category, id) => (
+                      <li
+                        className=""
+                        key={id}
+                        onClick={() => this.clickHandler(id + 1)}
+                      >
+                        {category.content}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           </div>
