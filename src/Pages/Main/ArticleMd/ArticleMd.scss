@@ -28,22 +28,14 @@
         display: inline-block;
         width: auto;
         height: 46px;
+        color: #888;
+        font-size: 22px;
+        text-align: center;
+        text-decoration: none;
         &:not(last-child) {
           margin-right: 48px;
         }
-
-        .middleLink {
-          color: #888;
-          font-size: 22px;
-          text-align: center;
-          text-decoration: none;
-        }
       }
     }
-  }
-
-  .mdContentsBox {
-    @extend %flexCenter;
-    margin: 22px auto 0 auto;
   }
 }

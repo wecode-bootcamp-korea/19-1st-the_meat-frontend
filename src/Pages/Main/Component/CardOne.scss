@@ -1,0 +1,6 @@
+@import '../../../Style/common.scss';
+
+.cardOne {
+  @extend %flexCenter;
+  margin: 22px auto 0 auto;
+}
