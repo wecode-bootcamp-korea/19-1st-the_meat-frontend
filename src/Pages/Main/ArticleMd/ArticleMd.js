@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CardOne from '../Component/CardOne';
 import CardTwo from '../Component/CardTwo';
+import CardThree from '../Component/CardThree';
+import CardFour from '../Component/CardFour';
 import './ArticleMd.scss';
 
 class ArticleMd extends Component {
@@ -34,16 +36,20 @@ class ArticleMd extends Component {
             ))}
           </ul>
         </div>
-        <div className="mdContentsBox">
-          <CardOne />
-          <CardTwo />
-        </div>
+        <div className="mdContentsBox">{MAPPING_OBJ[this.state.currentId]}</div>
       </article>
     );
   }
 }
 
 export default ArticleMd;
+
+const MAPPING_OBJ = {
+  1: <CardOne />,
+  2: <CardTwo />,
+  3: <CardThree />,
+  4: <CardFour />,
+};
 
 const MDCATEGORY = [
   '오늘은 이거 어때요?',

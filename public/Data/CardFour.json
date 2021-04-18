@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "고기는 왜 당근을 감싸고 있을까?",
+    "image_url": "/images/meatimg/tandoori.jpg",
+    "price": "7,980",
+    "discount_rate": 20,
+    "real_price": "6,380",
+    "status": 1
+  },
+  {
+    "id": 2,
+    "name": "칼집이 들어간 소시지",
+    "image_url": "/images/meatimg/steak2.jpg",
+    "price": 0,
+    "discount_rate": 0,
+    "real_price": "4,500",
+    "status": 1
+  },
+  {
+    "id": 3,
+    "name": "미디엄 레어로 구워진 두꺼운 고기",
+    "image_url": "/images/meatimg/chicken2.jpg",
+    "price": "13,500",
+    "discount_rate": 10,
+    "real_price": "12,100",
+    "status": 1
+  },
+  {
+    "id": 4,
+    "name": "여러 종류의 고기들이 모여있다",
+    "image_url": "/images/meatimg/grill2.jpg",
+    "price": 0,
+    "discount_rate": 0,
+    "real_price": "15,500",
+    "status": 1
+  }
+]

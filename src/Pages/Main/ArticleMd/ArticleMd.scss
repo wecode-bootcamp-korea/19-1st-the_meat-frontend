@@ -25,6 +25,7 @@
       margin-left: 50px;
 
       .middleLi {
+        position: relative;
         display: inline-block;
         width: auto;
         height: 46px;
@@ -32,6 +33,14 @@
         font-size: 22px;
         text-align: center;
         text-decoration: none;
+        .active {
+          color: $greenColor;
+        }
+        &:hover {
+          color: $greenColor;
+          transition: 0.8s;
+        }
+
         &:not(last-child) {
           margin-right: 48px;
         }

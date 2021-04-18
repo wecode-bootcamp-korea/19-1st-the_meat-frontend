@@ -9,7 +9,7 @@ class CardThree extends Component {
   }
 
   componentDidMount() {
-    fetch('/data/Card.json')
+    fetch('/data/CardThree.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
