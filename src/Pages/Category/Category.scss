@@ -48,16 +48,40 @@
   }
   span {
     padding-left: 10px;
-    font-size: 10px;
+    font-size: 13px;
     font-family: $fontFamily;
   }
 }
 
-.lightCategoryType {
-  a {
-    color: black;
+.lightCategoryTypeActive {
+  position: relative;
+  max-width: 50%;
+
+  .rightSortText {
     font-size: 10px;
-    font-family: $fontFamily;
+    cursor: pointer;
     text-decoration: none;
+  }
+
+  li {
+    color: black;
+    font-family: $fontFamily;
+    font-size: 10px;
+    line-height: 2.2;
+    text-decoration: none;
+  }
+
+  .categorySort {
+    position: absolute;
+    height: 160px;
+    width: 88px;
+    font-family: $fontFamily;
+    top: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 5px 5px #f6f6f6;
+    padding: 10px 14px;
+    z-index: 10;
   }
 }

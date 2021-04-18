@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "이름지어보아라!",
+    "price": "20,000",
+    "discount_rate": 10,
+    "real_price": "18,000",
+    "image_url": "/images/meatimg/chicken.jpg",
+    "status": 1
+  },
+
+  {
+    "id": 2,
+    "name": "오늘은 일요일이지롱",
+    "price": 0,
+    "discount_rate": 0,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/chicken2.jpg",
+    "status": 2
+  },
+
+  {
+    "id": 3,
+    "name": "점심으로 불백 맛있었당",
+    "price": "30,000",
+    "discount_rate": 20,
+    "real_price": "24,000",
+    "image_url": "/images/meatimg/chickenBreast.jpg",
+    "status": 3
+  },
+
+  {
+    "id": 4,
+    "name": "오늘 무조건 끝내야지",
+    "price": "10,000",
+    "discount_rate": 10,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/pig.jpg",
+    "status": 4
+  },
+  {
+    "id": 5,
+    "name": "아이 캔 두잇 오예",
+    "price": "10,000",
+    "discount_rate": 10,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/steak3.jpg",
+    "status": 5
+  },
+  {
+    "id": 6,
+    "name": "은근 재미있는 리액트",
+    "price": "10,000",
+    "discount_rate": 10,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/meat.jpg",
+    "status": 6
+  },
+  {
+    "id": 7,
+    "name": "세상에 오늘이 벌써 일요일",
+    "price": "10,000",
+    "discount_rate": 10,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/roastPork.jpg",
+    "status": 7
+  },
+  {
+    "id": 8,
+    "name": "고기는 진리인 듯",
+    "price": "10,000",
+    "discount_rate": 10,
+    "real_price": "9,000",
+    "image_url": "/images/meatimg/steak1.jpg",
+    "status": 8
+  }
+]
