@@ -13,6 +13,7 @@ class Category extends Component {
     super();
     this.state = {
       currentId: 1,
+      display: false,
     };
   }
 
@@ -21,9 +22,10 @@ class Category extends Component {
   };
 
   sortHandler = sortId => {
-    console.log(this.sortHandler);
+    this.setState({ sortId: true });
   };
   render() {
+    console.log(this.currentId);
     return (
       <div className="category">
         <div className="categoryListWrap">
@@ -34,11 +36,11 @@ class Category extends Component {
             <div className="sortBox">
               <div className="leftcategoryType">
                 <ul className="categoryType">
-                  {LeftSortBox.map((category, idx) => (
+                  {LeftSortBox.map((category, id) => (
                     <li
                       className="categoryInner"
-                      key={idx}
-                      onClick={() => this.clickHandler(idx + 1)}
+                      key={id}
+                      onClick={() => this.clickHandler(id + 1)}
                     >
                       <span>{category.name}</span>
                     </li>
@@ -51,11 +53,11 @@ class Category extends Component {
                   <i class="fas fa-chevron-down"></i>
                 </div>
                 <ul className="categorySort">
-                  {RightSortBox.map((category, idx) => (
+                  {RightSortBox.map((category, id) => (
                     <li
                       className=""
-                      key={idx}
-                      onClick={() => this.clickHandler(idx + 1)}
+                      key={id}
+                      onClick={() => this.clickHandler(id + 1)}
                     >
                       {category.content}
                     </li>

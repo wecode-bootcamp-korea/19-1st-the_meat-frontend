@@ -26,9 +26,9 @@ class ProductBoxThird extends Component {
     return (
       <div className="bodyCenter">
         <ul>
-          {ProductBoxData.map((el, idx) => (
-            <li className="prdBoxCenter">
-              <div className="prdBox" key={idx}>
+          {ProductBoxData.map((el, id) => (
+            <li className="prdBoxCenter" key={id}>
+              <div className="prdBox">
                 <div className="imgBox">
                   <a href=" " onClick={this.goToMain}>
                     {!!el.discount_rate && (
