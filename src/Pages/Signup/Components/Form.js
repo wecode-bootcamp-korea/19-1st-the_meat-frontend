@@ -19,22 +19,23 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
   handleSubmit = () => {
-    fetch('', {
+    fetch('http://192.168.0.250:8000/users/users', {
       method: 'POST',
       body: JSON.stringify({
-        id: this.state.eamil,
+        email: this.state.email,
         password: this.state.password,
-        passwordVerify: this.state.passwordVerify,
+        confirm_password: this.state.passwordVerify,
         name: this.state.name,
-        phone: this.state.phone,
+        phone_number: this.state.phone,
       }),
     })
       .then(res => res.json())
-      .then(res => res.console.log('테스트'));
+      .then(data => console.log(data));
   };
 
   render() {
     const { data } = this.props;
+    console.log(this.state);
     return (
       <>
         {data.map((elements, id) => (

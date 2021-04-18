@@ -22,7 +22,7 @@ const inputData = [
     type: 'text',
     text: '이메일',
     class: 'SignUpEmail',
-    state: 'id',
+    state: 'email',
   },
   {
     type: 'password',
