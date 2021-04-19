@@ -4,6 +4,7 @@ import Image from './Image';
 import Button from './Button';
 import Content from './Content';
 import './Layout.scss';
+let a = 1;
 
 class Layout extends Component {
   constructor() {
@@ -14,8 +15,16 @@ class Layout extends Component {
       real_price: '',
       unit: '',
       count: 1,
+      current: 0,
     };
   }
+  // componentDidMount() {
+  //   fetch(`http://10.58.3.1:8000/products/detail/${this.state.current}`, {
+  //     method: 'GET',
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => console.log(data));
+  // }
   buttonHandler = e => {
     if (e.target.className === 'minusButton') {
       this.setState({

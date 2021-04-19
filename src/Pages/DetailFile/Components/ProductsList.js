@@ -3,15 +3,13 @@ import './ProductList.scss';
 
 class ProductsList extends Component {
   render() {
+    const { img, name, id, price } = this.props;
     return (
-      <li className="productList">
-        <img
-          src="https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg"
-          className="productImg"
-        />
-        <h1 className="productTitle">쿼카짱</h1>
+      <li id={id} className="productList">
+        <img src={img} className="productImg" />
+        <h1 className="productTitle">{name}</h1>
         <div className="productOption">
-          <span className="productPrice">10000원</span>
+          <span className="productPrice">{price}</span>
           <button className="productBacket">🧺</button>
         </div>
       </li>
