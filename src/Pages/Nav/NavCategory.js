@@ -29,21 +29,17 @@ class NavCategory extends Component {
             <div className="categoryBox">
               {categoryData.map((category, id) => (
                 <li key={id} className="category">
-                  <Link to="/">
-                    <img
-                      className="categoryImg"
-                      src={category.image}
-                      alt="소고기"
-                    />
-                    {category.name}
-                  </Link>
+                  <img
+                    className="categoryImg"
+                    src={category.image}
+                    alt="소고기"
+                  />
+                  {category.name}
                   <ul className="subCategoryBox">
                     {categoryData[0].subcategory.map((subcategory, id) => (
-                      <Link to="/">
-                        <li key={id} className="subCategory">
-                          {subcategory.content}
-                        </li>
-                      </Link>
+                      <li key={id} className="subCategory">
+                        <Link to="/">{subcategory.content}</Link>
+                      </li>
                     ))}
                   </ul>
                 </li>
