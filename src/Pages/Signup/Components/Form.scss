@@ -8,8 +8,8 @@ input {
 }
 
 input:focus {
-  color: $realOrange;
   border-color: $realOrange;
+  color: $realOrange;
   outline: none;
 }
 
