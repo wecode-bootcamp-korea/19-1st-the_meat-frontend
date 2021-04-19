@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Component/Card';
-import '../Component/CardOne.scss';
-// import CardOne from '../Component/CardOne';
-// import CardTwo from '../Component/CardTwo';
-// import CardThree from '../Component/CardThree';
-// import CardFour from '../Component/CardFour';
+//import '../Component/CardOne.scss';
 import './ArticleMd.scss';
 
 class ArticleMd extends Component {
@@ -24,10 +20,6 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
-    // const { currentId } = this.state;
-    // this.setState({ currentId: id });
-    console.log(id);
-
     fetch(`http://10.58.2.57:8000/products?category=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
@@ -39,9 +31,6 @@ class ArticleMd extends Component {
   };
 
   render() {
-    // console.log(this.state.currentId);
-    // console.log('sfsdfsdfs: ', MDCATEGORY[this.state.currentId].name);
-
     return (
       <article className="articleMd">
         <div className="mdTitle">
@@ -71,15 +60,7 @@ class ArticleMd extends Component {
     );
   }
 }
-
 export default ArticleMd;
-
-// const MAPPING_OBJ = {
-//   1: <CardOne />,
-//   2: <CardTwo />,
-//   3: <CardThree />,
-//   4: <CardFour />,
-// };
 
 const MDCATEGORY = [
   {
