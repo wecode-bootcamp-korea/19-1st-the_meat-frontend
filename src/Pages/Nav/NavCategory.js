@@ -20,11 +20,6 @@ class NavCategory extends Component {
 
   render() {
     const { categoryData } = this.state;
-    console.log('현재categoryData:', categoryData);
-    {
-      categoryData[0] &&
-        console.log('0번째', categoryData[0].subcategory[0].content);
-    }
     return (
       <div className="navCategory">
         <div className="categoryLeft">
