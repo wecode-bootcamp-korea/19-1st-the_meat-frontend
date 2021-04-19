@@ -20,6 +20,7 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
+    console.log(id);
     fetch(`http://10.58.2.57:8000/products?category=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
