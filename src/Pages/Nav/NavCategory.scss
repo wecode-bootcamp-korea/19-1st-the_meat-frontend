@@ -17,14 +17,19 @@
     .categoryLeftUl {
       .fa-bars {
         margin-right: 10px;
-        color: #333;
+        color: #333333;
         font-size: 20px;
+      }
+      .category {
+        display: inline-block;
+        margin-right: 28px;
+        color: #333333;
       }
 
       .categoryLeftLi {
         display: inline-block;
         margin-right: 28px;
-        color: #333;
+        color: #333333;
 
         .categoryLeftLink {
           color: #333333;

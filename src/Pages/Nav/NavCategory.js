@@ -9,6 +9,7 @@ class NavCategory extends Component {
         <div className="categoryLeft">
           <ul className="categoryLeftUl">
             <i className="fas fa-bars"></i>
+            <li className="category">카테고리</li>
             {CATEGORYLEFT.map((el, id) => (
               <li className="categoryLeftLi" key={id}>
                 <Link to="/" className="categoryLeftLink">
@@ -36,14 +37,13 @@ class NavCategory extends Component {
 export default NavCategory;
 
 const CATEGORYLEFT = [
-  { id: 1, content: '카테고리' },
-  { id: 2, content: '할인특가' },
-  { id: 3, content: '신상품' },
-  { id: 4, content: '베스트' },
-  { id: 5, content: '더고기정육관' },
-  { id: 6, content: '이달의맛집' },
-  { id: 7, content: '7데이' },
-  { id: 8, content: '정기식단' },
+  { id: 1, content: '할인특가' },
+  { id: 2, content: '신상품' },
+  { id: 3, content: '베스트' },
+  { id: 4, content: '더고기정육관' },
+  { id: 5, content: '이달의맛집' },
+  { id: 6, content: '7데이' },
+  { id: 7, content: '정기식단' },
 ];
 const CATEGORYRIGHT = [
   { id: 1, content: '로그인' },
