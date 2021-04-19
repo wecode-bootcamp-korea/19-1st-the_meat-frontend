@@ -12,13 +12,13 @@ $realOrange: #fe7602;
 .loginBTN {
   @extend %buttonSetting;
   border: none;
-  color: white;
   background-color: $realOrange;
+  color: white;
 }
 .signupBTN {
   @extend %buttonSetting;
-  color: $realOrange;
   margin-top: 10px;
   border: 1px $realOrange solid;
   background-color: white;
+  color: $realOrange;
 }
