@@ -3,7 +3,7 @@ import './NoproductMessage.scss';
 export default class NoproductMessage extends Component {
   render() {
     return (
-      <div>
+      <div className="MessageBody">
         <div className="noProductMessage">
           <div className="message">
             <i class="far fa-question-circle"></i>
