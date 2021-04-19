@@ -14,10 +14,12 @@ class Form extends Component {
       phone: '',
     };
   }
+
   handleInput = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
+
   handleSubmit = () => {
     fetch('http://192.168.0.250:8000/users/users', {
       method: 'POST',
