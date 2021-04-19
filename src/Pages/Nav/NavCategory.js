@@ -19,7 +19,12 @@ class NavCategory extends Component {
   }
 
   render() {
-    console.log(this.state.categoryData);
+    const { categoryData } = this.state;
+    console.log('현재categoryData:', categoryData);
+    {
+      categoryData[0] &&
+        console.log('0번째', categoryData[0].subcategory[0].content);
+    }
     return (
       <div className="navCategory">
         <div className="categoryLeft">
@@ -27,27 +32,28 @@ class NavCategory extends Component {
             <i className="fas fa-bars"></i>
             <li className="parentCategory">카테고리</li>
             <div className="categoryBox">
-              <li className="category">
-                <img
-                  className="categoryImg"
-                  src="/images/meatimg/소고기.jpg"
-                  alt="소고기"
-                />
-                소
-                <div className="subCategoryBox">
-                  <li className="subCategory">소고기1</li>
-                  <li className="subCategory">소고기2</li>
-                </div>
-              </li>
-              <li className="subCategory">돼지</li>
-              <li className="subCategory">닭</li>
-              <li className="subCategory">염소</li>
-              <li className="subCategory">양</li>
-              <li className="subCategory">왕돼지</li>
-              <li className="subCategory">채소</li>
-              <li className="subCategory">소스</li>
+              {categoryData.map((category, id) => (
+                <li key={id} className="category">
+                  <Link to="/">
+                    <img
+                      className="categoryImg"
+                      src={category.image}
+                      alt="소고기"
+                    />
+                    {category.name}
+                  </Link>
+                  <ul className="subCategoryBox">
+                    {categoryData[0].subcategory.map((subcategory, id) => (
+                      <Link to="/">
+                        <li key={id} className="subCategory">
+                          {subcategory.content}
+                        </li>
+                      </Link>
+                    ))}
+                  </ul>
+                </li>
+              ))}
             </div>
-
             {CATEGORYLEFT.map((el, id) => (
               <li className="categoryLeftLi" key={id}>
                 <Link to="/" className="categoryLeftLink">
