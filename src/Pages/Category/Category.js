@@ -6,6 +6,7 @@ import ProductBox from './Component/ProductBox';
 import ProductBoxSecond from './Component/ProductBoxSecond';
 import ProductBoxThird from './Component/ProductBoxThird';
 import NoproductMessage from './Component/NoproductMessage';
+
 import './Category.scss';
 
 class Category extends Component {
@@ -69,7 +70,7 @@ class Category extends Component {
             </div>
           </div>
         </div>
-        {MAPPING_OBJ[this.state.currentId]}
+        <div className="productBody">{MAPPING_OBJ[this.state.currentId]}</div>
       </div>
     );
   }
