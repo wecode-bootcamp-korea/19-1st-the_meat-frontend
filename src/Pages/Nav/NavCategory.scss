@@ -15,15 +15,43 @@
     height: 26px;
 
     .categoryLeftUl {
+      position: relative;
       .fa-bars {
         margin-right: 10px;
         color: #333333;
         font-size: 20px;
       }
-      .category {
+
+      .parentCategory {
         display: inline-block;
         margin-right: 28px;
         color: #333333;
+      }
+
+      .categoryBox {
+        border: 1px solid black;
+        position: absolute;
+        width: 150px;
+        height: 500px;
+        top: 30px;
+        left: -10px;
+        .category {
+          border: 1px solid black;
+          .categoryImg {
+            width: 20px;
+            height: 20px;
+          }
+          .subCategoryBox {
+            border: 1px solid black;
+            position: absolute;
+            width: 150px;
+            height: 500px;
+            top: 0px;
+            left: 150px;
+            .subCategory {
+            }
+          }
+        }
       }
 
       .categoryLeftLi {

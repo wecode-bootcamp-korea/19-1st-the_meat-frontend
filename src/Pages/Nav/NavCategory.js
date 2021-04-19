@@ -25,7 +25,29 @@ class NavCategory extends Component {
         <div className="categoryLeft">
           <ul className="categoryLeftUl">
             <i className="fas fa-bars"></i>
-            <li className="category">카테고리</li>
+            <li className="parentCategory">카테고리</li>
+            <div className="categoryBox">
+              <li className="category">
+                <img
+                  className="categoryImg"
+                  src="/images/meatimg/소고기.jpg"
+                  alt="소고기"
+                />
+                소
+                <div className="subCategoryBox">
+                  <li className="subCategory">소고기1</li>
+                  <li className="subCategory">소고기2</li>
+                </div>
+              </li>
+              <li className="subCategory">돼지</li>
+              <li className="subCategory">닭</li>
+              <li className="subCategory">염소</li>
+              <li className="subCategory">양</li>
+              <li className="subCategory">왕돼지</li>
+              <li className="subCategory">채소</li>
+              <li className="subCategory">소스</li>
+            </div>
+
             {CATEGORYLEFT.map((el, id) => (
               <li className="categoryLeftLi" key={id}>
                 <Link to="/" className="categoryLeftLink">
