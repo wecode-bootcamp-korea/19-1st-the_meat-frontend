@@ -3,7 +3,23 @@ import { Link } from 'react-router-dom';
 import '../Nav/NavCategory.scss';
 
 class NavCategory extends Component {
+  constructor() {
+    super();
+    this.state = { categoryData: [] };
+  }
+
+  componentDidMount() {
+    fetch('/data/CategoryList.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          categoryData: data,
+        });
+      });
+  }
+
   render() {
+    console.log(this.state.categoryData);
     return (
       <div className="navCategory">
         <div className="categoryLeft">

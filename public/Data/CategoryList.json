@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "image": "/images/meatimg/소고기.jpg",
+    "소": ["소고기1", "소고기2", "소고기3", "소고기4", "소고기5"]
+  },
+  {
+    "id": 2,
+    "image": "/images/meatimg/돼지고기.jpg",
+    "돼지": ["돼지고기1", "돼지고기2", "돼지고기3"]
+  },
+  {
+    "id": 3,
+    "image": "/images/meatimg/닭고기.jpg",
+    "닭": ["닭고기1", "닭고기2", "닭고기3"]
+  },
+  {
+    "id": 4,
+    "image": "/images/meatimg/양고기.jpg",
+    "양": ["양고기1", "양고기2", "양고기3", "양고기4"]
+  },
+  {
+    "id": 5,
+    "image": "/images/meatimg/염소고기.jpg",
+    "염소": ["염소고기1", "염소고기2"]
+  },
+  {
+    "id": 6,
+    "image": "/images/meatimg/한돈.jpg",
+    "돼지2": ["왕돼지1", "왕돼지2"]
+  },
+  {
+    "id": 7,
+    "image": "/images/meatimg/채소류.jpg",
+    "채소": ["채소1", "채소2"]
+  },
+  {
+    "id": 8,
+    "image": "/images/meatimg/.jpg",
+    "소스": ["소스1"]
+  }
+]
