@@ -60,10 +60,13 @@
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
+    border: 0;
+    outline: 0;
+    background-color: #fff;
 
-    .fa-chevron-down:hover {
-      transform: rotate(-180deg);
-    }
+    // .fa-chevron-down:hover {
+    //   transform: rotate(-180deg);
+    // }
   }
 
   .categorySort {

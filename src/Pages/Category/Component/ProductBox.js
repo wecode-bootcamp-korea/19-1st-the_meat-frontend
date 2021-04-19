@@ -13,10 +13,12 @@ class ProductBox extends Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/ProductBoxData.json')
+    // fetch('http://10.58.2.57:8000/products/category/5')
+    fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
+          // ProductBoxData: data.MESSAGE,
           ProductBoxData: data,
         });
       });
@@ -56,7 +58,7 @@ class ProductBox extends Component {
                         <strong>{el.real_price}</strong>
                         <span className="won">원</span>
                       </div>
-                      {!!el.price && (
+                      {!el.price && (
                         <div className="price">
                           <strong>{el.price}</strong>
                           <span className="won">원</span>

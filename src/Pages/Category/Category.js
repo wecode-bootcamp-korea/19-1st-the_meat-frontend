@@ -22,8 +22,8 @@ class Category extends Component {
     this.setState({ currentId });
   };
 
-  sortHandler = sortId => {
-    this.setState({ display: true });
+  sortHandler = () => {
+    this.setState({ display: !this.state.display });
   };
 
   render() {
@@ -49,10 +49,10 @@ class Category extends Component {
                 </ul>
               </div>
               <div className="lightCategoryTypeActive">
-                <div className="rightSortText" onClick={this.sortHandler}>
+                <button className="rightSortText" onClick={this.sortHandler}>
                   인기순&nbsp;
                   <i class="fas fa-chevron-down"></i>
-                </div>
+                </button>
                 {this.state.display && (
                   <ul className="categorySort">
                     {RightSortBox.map((category, id) => (
