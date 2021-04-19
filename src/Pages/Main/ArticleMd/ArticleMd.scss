@@ -33,6 +33,8 @@
         font-size: 22px;
         text-align: center;
         text-decoration: none;
+        cursor: pointer;
+
         .active {
           color: $greenColor;
         }

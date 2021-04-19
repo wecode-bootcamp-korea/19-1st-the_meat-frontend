@@ -9,11 +9,11 @@ class CardOne extends Component {
   }
 
   componentDidMount() {
-    fetch('/data/Card.json')
+    fetch('http://10.58.2.57:8000/products?category=소')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          cardData: data,
+          cardData: data.result,
         });
       });
   }
