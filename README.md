@@ -10,8 +10,26 @@
 - 이재영
 - 홍진아
 
+---
+
 ## 🐼 BackEnd
 
 - 신지원
 - 윤서준
 - 유동헌
+
+---
+
+## 🐤 Skill
+
+### 🐶 FrontEnd
+
+- javscript
+- react
+- scss
+- html
+
+### 🐼 BackEnd
+
+- python
+- django
