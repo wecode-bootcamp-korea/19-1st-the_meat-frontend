@@ -5,8 +5,8 @@ import './Layout.scss';
 class Layout extends Component {
   render() {
     return (
-      <form className="SignUpForm">
-        <h1 className="SignUpTitle">
+      <form className="signUpForm">
+        <h1 className="signUpTitle">
           <em>더미트&</em> 신규 회원가입
         </h1>
         <Form data={inputData} />

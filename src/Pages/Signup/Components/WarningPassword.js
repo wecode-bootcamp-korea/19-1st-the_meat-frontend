@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './WarningPassword.scss';
 
-class Ptag extends Component {
+class WarningPassword extends Component {
   render() {
     const { password, passwordVerify, classN } = this.props;
     return (
@@ -16,4 +16,4 @@ class Ptag extends Component {
   }
 }
 
-export default Ptag;
+export default WarningPassword;

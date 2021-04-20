@@ -1,6 +1,6 @@
 @import '../SignUp.scss';
 
-.SignUpForm {
+.signUpForm {
   display: flex;
   width: 562px;
   height: 600px;
@@ -10,7 +10,7 @@
   border: 1px solid rgba($color: #000000, $alpha: 0.2);
   flex-direction: column;
 
-  .SignUpTitle {
+  .signUpTitle {
     padding: 40px 0 40px 0;
     font-size: 30px;
     font-weight: bold;

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Input from './Input';
-import Ptag from './WarningPassword';
+import WarningPassword from './WarningPassword';
 import './Form.scss';
 
 class Form extends Component {
@@ -20,24 +20,21 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = () => {
-    fetch('http://192.168.0.250:8000/users/users', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password,
-        confirm_password: this.state.passwordVerify,
-        name: this.state.name,
-        phone_number: this.state.phone,
-      }),
-    })
-      .then(res => res.json())
-      .then(data => console.log(data));
-  };
+  // handleSubmit = () => { 백이랑 통신용
+  //   fetch('http://192.168.0.250:8000/users/users', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: this.state.email,
+  //       password: this.state.password,
+  //       confirm_password: this.state.passwordVerify,
+  //       name: this.state.name,
+  //       phone_number: this.state.phone,
+  //     }),
+  //   }).then(res => res.json());
+  // };
 
   render() {
     const { data } = this.props;
-    console.log(this.state);
     return (
       <>
         {data.map((elements, id) => (
@@ -50,10 +47,10 @@ class Form extends Component {
             handleInput={this.handleInput}
           />
         ))}
-        <Ptag
+        <WarningPassword
           password={this.state.password}
           passwordVerify={this.state.passwordVerify}
-          classN="Ptag"
+          classN="warningPassword"
         />
         <button onClick={this.handleSubmit} className="SignUpBtn">
           가입하기
