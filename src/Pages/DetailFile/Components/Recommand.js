@@ -6,30 +6,29 @@ class Recommand extends React.Component {
   constructor() {
     super();
     this.state = {
-      value: 0,
+      margin: 0,
     };
+    this.testRef = React.createRef();
   }
-  nextButton = () => {
+  componentDidUpdate() {
+    this.testRef.current.style.transform = `translateX(${this.state.margin}%)`;
+    console.log(this.testRef.current.style);
+  }
+  test = () => {
     this.setState({
-      value: this.state.value + 100,
+      margin: this.state.margin + 1,
     });
   };
-  x;
-  prevButton = () => {
+  testt = () => {
     this.setState({
-      value: this.state.value - 100,
+      margin: this.state.margin - 1,
     });
   };
   render() {
-    // if(this.state.value == )
-    console.log(this.state);
     return (
       <div className="recommandProducts">
         <h1 className="recommandTitle">추천제품</h1>
-        <ul
-          style={{ transform: `translate(+${this.state.value}%)` }}
-          className="recommandProductList"
-        >
+        <ul ref={this.testRef} className="recommandProductList">
           {data.map((elements, id) => (
             <ProductsList
               key={id}
@@ -40,8 +39,8 @@ class Recommand extends React.Component {
             />
           ))}
         </ul>
-        <button onClick={this.prevButton}>왼</button>
-        <button onClick={this.nextButton}>오</button>
+        <button onClick={this.test}>왼</button>
+        <button onClick={this.testt}>오</button>
       </div>
     );
   }

@@ -4,7 +4,6 @@ import Image from './Image';
 import Button from './Button';
 import Content from './Content';
 import './Layout.scss';
-let a = 1;
 
 class Layout extends Component {
   constructor() {
@@ -23,7 +22,6 @@ class Layout extends Component {
   //     method: 'GET',
   //   })
   //     .then(res => res.json())
-  //     .then(data => console.log(data));
   // }
   buttonHandler = e => {
     if (e.target.className === 'minusButton') {
