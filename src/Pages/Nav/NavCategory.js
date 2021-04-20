@@ -38,7 +38,9 @@ class NavCategory extends Component {
                   <ul className="subCategoryBox">
                     {categoryData[0].subcategory.map((subcategory, id) => (
                       <li key={id} className="subCategory">
-                        <Link to="/">{subcategory.content}</Link>
+                        <Link to="/" className="subCategoryLink">
+                          {subcategory.content}
+                        </Link>
                       </li>
                     ))}
                   </ul>
