@@ -9,20 +9,25 @@ class Layout extends Component {
   constructor() {
     super();
     this.state = {
-      image_url: '',
-      name: '',
-      real_price: '',
-      unit: '',
+      detailData: {},
       count: 1,
       current: 0,
     };
   }
-  // componentDidMount() {
+  // componentDidMount() { 백이랑 연결 테스트중
   //   fetch(`http://10.58.3.1:8000/products/detail/${this.state.current}`, {
   //     method: 'GET',
   //   })
   //     .then(res => res.json())
   // }
+  componentDidUpdate() {
+    if (this.state.count < 0) {
+      this.setState({
+        count: 0,
+      });
+      alert('수량은 0이하로 안됩니다.');
+    }
+  }
   buttonHandler = e => {
     if (e.target.className === 'minusButton') {
       this.setState({
@@ -40,29 +45,20 @@ class Layout extends Component {
       .then(res => res.json())
       .then(data =>
         this.setState({
-          image_url: data.image_url,
-          name: data.name,
-          real_price: data.real_price,
-          unit: data.unit,
+          detailData: data,
         })
       );
   }
   render() {
-    if (this.state.count < 0) {
-      this.setState({
-        count: 0,
-      });
-      alert('수량은 0이하로 안됩니다.');
-    }
     return (
       <div className="productDetail">
-        <Image image={this.state.image_url} />
+        <Image image={this.state.detailData.image_url} />
         <div className="productContent">
-          <Title name={this.state.name} />
+          <Title name={this.state.detailData.name} />
           <Content
             buttonHandler={this.buttonHandler}
-            unit={this.state.unit}
-            real_price={this.state.real_price}
+            unit={this.state.detailData.unit}
+            real_price={this.state.detailData.real_price}
             count={this.state.count}
           />
           {buttonInfo.map((elements, id) => (

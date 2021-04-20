@@ -6,7 +6,7 @@ class ProductsList extends Component {
     const { img, name, id, price } = this.props;
     return (
       <li id={id} className="productList">
-        <img src={img} className="productImg" />
+        <img src={img} className="productImg" alt={name} />
         <h1 className="productTitle">{name}</h1>
         <div className="productOption">
           <span className="productPrice">{price}</span>

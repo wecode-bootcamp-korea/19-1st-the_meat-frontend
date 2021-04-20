@@ -1,46 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductsList from './ProductsList';
+import Slider from '../../Slider/Slider';
 import './Recommand.scss';
 
 class Recommand extends React.Component {
   constructor() {
     super();
+    this.sliderRef = React.createRef();
     this.state = {
-      margin: 0,
+      slide: 0,
     };
-    this.testRef = React.createRef();
   }
   componentDidUpdate() {
-    this.testRef.current.style.transform = `translateX(${this.state.margin}%)`;
-    console.log(this.testRef.current.style);
+    this.sliderRef.current.style.transform = `translateX(${this.state.slide}%)`;
   }
-  test = () => {
+  changeSlider = data => {
     this.setState({
-      margin: this.state.margin + 1,
-    });
-  };
-  testt = () => {
-    this.setState({
-      margin: this.state.margin - 1,
+      slide: data,
     });
   };
   render() {
     return (
       <div className="recommandProducts">
         <h1 className="recommandTitle">추천제품</h1>
-        <ul ref={this.testRef} className="recommandProductList">
+        <ul ref={this.sliderRef} className="recommandProductList">
           {data.map((elements, id) => (
             <ProductsList
               key={id}
-              id={id}
               img={elements.img}
               name={elements.name}
               price={elements.price}
             />
           ))}
         </ul>
-        <button onClick={this.test}>왼</button>
-        <button onClick={this.testt}>오</button>
+        <Slider changeSlider={this.changeSlider} />
       </div>
     );
   }

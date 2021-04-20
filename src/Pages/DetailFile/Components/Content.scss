@@ -3,59 +3,42 @@
   margin: 30px 0 0 20px;
   align-items: center;
 }
-
-.productPrice {
-  @extend %defaultContent;
-  .priceTitle {
-    margin-right: 50px;
-  }
-
-  .price {
-    font-size: 30px;
-  }
+%defaultQuantity {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
 }
-.productUnit {
-  @extend %defaultContent;
+.contentComponent {
+  .productPrice,
+  .productUnit,
+  .productQuantity,
+  .total {
+    @extend %defaultContent;
 
-  .unitTitle {
-    margin-right: 50px;
-  }
+    .priceTitle,
+    .unitTitle,
+    .quantityTitle,
+    .totalTitle {
+      margin-right: 50px;
+    }
 
-  .unit {
-    font-size: 30px;
-  }
-}
-.productQuantity {
-  @extend %defaultContent;
+    .price,
+    .unit,
+    .totalPrice {
+      font-size: 30px;
+    }
 
-  .quantityTitle {
-    margin-right: 50px;
-  }
+    .quantity {
+      @extend %defaultQuantity;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  .quantity {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .minusButton,
-  .plusButton {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-}
-
-.total {
-  @extend %defaultContent;
-  .totalTitle {
-    margin-right: 50px;
-  }
-  .totalPrice {
-    font-size: 30px;
+    .minusButton,
+    .plusButton {
+      @extend %defaultQuantity;
+      font-weight: bold;
+    }
   }
 }
