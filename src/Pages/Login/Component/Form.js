@@ -13,20 +13,17 @@ class Form extends Component {
   }
 
   buttonClick = e => {
-    if (e.target.id == 1) {
+    if (e.target.id === 1) {
       this.props.history.push('/signup');
     }
-    if (e.target.id == 0) {
+    if (e.target.id === 0) {
       fetch('http://192.168.0.250:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
           email: this.state.id,
           password: this.state.pw,
         }),
-      })
-        .then(res => res.json())
-        .then(res => console.log('test'));
-      // .then(this.props.history.push('/'));
+      }).then(res => res.json());
     }
   };
 
@@ -41,7 +38,7 @@ class Form extends Component {
     return (
       <div className="loginForm">
         <h1 className="loginTitle">로그인</h1>
-        <div className="LoginInput">
+        <div className="loginInput">
           {inputData.map((elements, id) => (
             <Input
               key={id}
@@ -53,7 +50,7 @@ class Form extends Component {
             />
           ))}
         </div>
-        <div className="LoginButton">
+        <div className="loginButton">
           {buttonData.map((elements, id) => (
             <Button
               key={id}

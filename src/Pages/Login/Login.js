@@ -7,8 +7,8 @@ class Login extends Component {
     return (
       <div className="Login">
         <Form
-          inputData={inputData}
-          buttonData={buttonData}
+          inputData={LoginForm}
+          buttonData={LoginInput}
           history={this.props.history}
         />
       </div>
@@ -18,7 +18,7 @@ class Login extends Component {
 
 export default Login;
 
-const inputData = [
+const LoginForm = [
   {
     type: 'text',
     text: '아이디',
@@ -33,7 +33,7 @@ const inputData = [
   },
 ];
 
-const buttonData = [
+const LoginInput = [
   {
     text: '로그인',
     classN: 'loginBTN',

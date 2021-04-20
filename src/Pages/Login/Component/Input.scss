@@ -9,14 +9,12 @@
   margin-bottom: 30px;
   font-weight: bold;
 }
-.idInput {
-  @extend %inputSize;
-  @extend %inputCenter;
-}
+.idInput,
 .pwInput {
   @extend %inputSize;
   @extend %inputCenter;
 }
+
 .idInput::placeholder,
 .pwInput::placeholder {
   font-size: 18px;
