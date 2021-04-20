@@ -29,15 +29,17 @@ class NavCategory extends Component {
   };
 
   outsideCategory = () => {
+    const { isMouse } = this.state;
+
     this.setState({
-      isMouse: !this.state.isMouse,
+      isMouse: !isMouse,
     });
     console.log('outside:', this.state.isMouse);
   };
 
   render() {
-    const { categoryData } = this.state;
-    console.log('최종isMouse:', this.state.isMouse);
+    const { categoryData, isMouse } = this.state;
+    console.log('이걸로 움직여isMouse:', this.state.isMouse);
     return (
       <div className="navCategory">
         <div className="categoryLeft">
@@ -50,7 +52,7 @@ class NavCategory extends Component {
             >
               카테고리
             </li>
-            {this.state.isMouse && (
+            {isMouse && (
               <div className="categoryBox">
                 {categoryData.map((category, id) => (
                   <li key={id} className="category">
