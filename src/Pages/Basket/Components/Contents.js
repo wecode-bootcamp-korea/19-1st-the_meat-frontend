@@ -7,13 +7,25 @@ import Amount from './ContentsComponents/Amount';
 import './Contents.scss';
 
 class Contents extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+  updateCount = a => {
+    // this.setState({
+    //   count: this.state.count + 1,
+    // });
+    console.log(a);
+  };
   render() {
     return (
       <ul className="basketContents">
         <Image />
         <Title />
         <Price />
-        <Count />
+        <Count updateCount={this.updateCount} />
         <Amount />
       </ul>
     );
