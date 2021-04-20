@@ -23,7 +23,9 @@ class Form extends Component {
           email: this.state.id,
           password: this.state.pw,
         }),
-      }).then(res => res.json());
+      })
+        .then(res => res.json())
+        .then(key => localStorage.setItem('local', key));
     }
   };
 
