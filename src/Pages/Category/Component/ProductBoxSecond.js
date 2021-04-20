@@ -5,7 +5,7 @@ import './ProductBox.scss';
 class ProductBoxSecond extends Component {
   constructor() {
     super();
-    this.state = { ProductBoxData: [] };
+    this.state = { productBoxData: [] };
   }
 
   goToMain = () => {
@@ -13,20 +13,20 @@ class ProductBoxSecond extends Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/ProductBoxDataSecond.json')
+    fetch('/data/ProductBoxDataSecond.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          ProductBoxData: data,
+          productBoxData: data,
         });
       });
   }
   render() {
-    const { ProductBoxData } = this.state;
+    const { productBoxData } = this.state;
     return (
       <div className="bodyCenter">
         <ul>
-          {ProductBoxData.map((el, id) => (
+          {productBoxData.map((el, id) => (
             <li className="prdBoxCenter" key={id}>
               <div className="prdBox">
                 <div className="imgBox">

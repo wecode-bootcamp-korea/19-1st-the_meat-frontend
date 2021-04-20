@@ -99,9 +99,7 @@
 .productBody {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 1280px;
-  // border: solid 1px;
+  flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 10px;
 }

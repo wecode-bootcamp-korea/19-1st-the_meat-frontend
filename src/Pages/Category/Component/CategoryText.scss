@@ -1,0 +1,38 @@
+// @import '../../../Style/common.scss';
+.prdInfo {
+  width: 296px;
+  height: 197px;
+  margin: 10px 0 0 5px;
+
+  .prdName {
+    color: black;
+  }
+
+  .PriceBox {
+    margin-top: 30px;
+    color: black;
+    // font-family: $fontFamily;
+    font-weight: 700;
+    .won {
+      font-weight: normal;
+    }
+
+    .realPrice {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  .price {
+    color: #dfd7cd;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: line-through;
+  }
+}
+
+.prdInfo {
+  a {
+    text-decoration: none;
+  }
+}
