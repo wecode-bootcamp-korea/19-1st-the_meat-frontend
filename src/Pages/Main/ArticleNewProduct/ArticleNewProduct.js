@@ -9,11 +9,11 @@ class ArticleNewProduct extends Component {
   }
 
   componentDidMount() {
-    fetch('/data/CardNew.json')
+    fetch('http://10.58.2.57:8000/products?new=1')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          cardData: data,
+          cardData: data.result,
         });
       });
   }

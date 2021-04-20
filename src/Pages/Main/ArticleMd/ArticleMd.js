@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Card from '../Component/Card';
-//import '../Component/CardOne.scss';
 import './ArticleMd.scss';
 
 class ArticleMd extends Component {
@@ -10,7 +9,7 @@ class ArticleMd extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.58.2.57:8000/products?category=${MDCATEGORY[0].name}`)
+    fetch(`http://10.58.2.57:8000/products?pick=${MDCATEGORY[0].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -20,8 +19,7 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
-    console.log(id);
-    fetch(`http://10.58.2.57:8000/products?category=${MDCATEGORY[id].name}`)
+    fetch(`http://10.58.2.57:8000/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
         console.log(data.result);
