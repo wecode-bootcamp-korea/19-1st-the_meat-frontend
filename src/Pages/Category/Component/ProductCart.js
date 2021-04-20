@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import './CategoryCart.scss';
+import './ProductCart.scss';
 
-export default class CategoryCart extends Component {
+export default class ProductCart extends Component {
   render() {
     const { goToMain } = this.props;
     return (

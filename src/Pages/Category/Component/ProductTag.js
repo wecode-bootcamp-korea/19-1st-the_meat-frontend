@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import './CategoryTag.scss';
+import './ProductTag.scss';
 
-export default class CategoryTag extends Component {
+export default class ProductTag extends Component {
   render() {
     const { discount_rate } = this.props;
     return (

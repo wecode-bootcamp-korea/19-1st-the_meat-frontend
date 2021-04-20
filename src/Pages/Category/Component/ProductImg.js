@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import './CategoryImg.scss';
+import './ProductImg.scss';
 
-export default class CategoryImg extends Component {
+export default class ProductImg extends Component {
   render() {
     const { image_url, goToMain } = this.props;
     return (

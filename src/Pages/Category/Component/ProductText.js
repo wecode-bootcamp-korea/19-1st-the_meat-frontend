@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import './CategoryText.scss';
+import './ProductText.scss';
 
-export default class CategoryText extends Component {
+export default class ProductText extends Component {
   render() {
     const { name, price, real_price, goToMain } = this.props;
     return (

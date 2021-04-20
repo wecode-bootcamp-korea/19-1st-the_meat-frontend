@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import CategoryTag from './CategoryTag';
-import CategoryCart from './CategoryCart';
-import CategoryImg from './CategoryImg';
-import CategoryText from './CategoryText';
+import ProductTag from './ProductTag';
+import ProductCart from './ProductCart';
+import ProductImg from './ProductImg';
+import ProductText from './ProductText';
 import './Product.scss';
 
 export default class Product extends Component {
@@ -22,11 +22,11 @@ export default class Product extends Component {
           <li className="prdBoxCenter" key={id}>
             <div className="prdBox">
               <div className="imgBox">
-                <CategoryTag discount_rate={discount_rate} />
-                <CategoryImg image_url={image_url} goToMain={goToMain} />
-                <CategoryCart goToMain={goToMain} />
+                <ProductTag discount_rate={discount_rate} />
+                <ProductImg image_url={image_url} goToMain={goToMain} />
+                <ProductCart goToMain={goToMain} />
               </div>
-              <CategoryText
+              <ProductText
                 goToMain={goToMain}
                 name={name}
                 real_price={real_price}
