@@ -20,6 +20,7 @@ class Category extends Component {
   }
 
   componentDidMount() {
+    console.log(123213);
     // fetch('http://10.58.2.57:8000/products/category/5')
     fetch('/data/ProductBoxData.json')
       .then(res => res.json())
@@ -90,9 +91,9 @@ class Category extends Component {
           </div>
         </div>
         <div className="productBody">
-          {productBoxData.map((data, id) => (
-            <Product key={id} data={data} />
-          ))}
+          {productBoxData.map((data, id) => {
+            return <Product key={id} data={data} />;
+          })}
         </div>
         {/* <div className="productBody">{MAPPING_OBJ[this.state.currentId]}</div> */}
       </div>

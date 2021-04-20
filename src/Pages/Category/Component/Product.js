@@ -16,6 +16,7 @@ export default class Product extends Component {
       image_url,
       goToMain,
     } = this.props.data;
+
     return (
       <div className="bodyCenter">
         <ul>
