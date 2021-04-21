@@ -5,6 +5,7 @@ import './Card.scss';
 class Card extends Component {
   render() {
     const { data } = this.props;
+    console.log(this.props.data);
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">
@@ -28,7 +29,7 @@ class Card extends Component {
             <p className="mdPrice">
               <span className="fontBold">{data.real_price}</span>원
             </p>
-            {!!data.price && (
+            {!!data.original_price && (
               <span className="priceDiscount">{data.original_price}원</span>
             )}
           </div>
