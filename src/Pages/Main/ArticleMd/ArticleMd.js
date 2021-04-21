@@ -35,7 +35,6 @@ class ArticleMd extends Component {
   toggleClass(id) {
     console.log('handleId:', this.state.handleId);
     this.setState({
-      // handleClass: !this.state.handleClass,
       handleId: id,
     });
   }

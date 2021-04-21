@@ -27,9 +27,10 @@
       .middleLi {
         position: relative;
         display: inline-block;
-        width: auto;
-        height: 46px;
+        width: 100px;
+        height: 20px;
         color: #888;
+        border-radius: 5px;
         font-size: 22px;
         text-align: center;
         text-decoration: none;
@@ -48,10 +49,11 @@
       .middleChange {
         position: relative;
         display: inline-block;
-        width: auto;
-        height: 46px;
+        width: 80px;
+        height: 26px;
         color: #fff;
         background-color: $greenColor;
+        border-radius: 5px;
         font-size: 22px;
         text-align: center;
         text-decoration: none;
