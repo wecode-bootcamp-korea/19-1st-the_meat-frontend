@@ -1,9 +1,15 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import './Signup.scss';
+import Layout from './Components/Layout';
 
-class Signup extends Component {
+class SignUp extends Component {
   render() {
-    return <div className="Signup"></div>;
+    return (
+      <div className="SignUp">
+        <Layout />
+      </div>
+    );
   }
 }
 
-export default Signup;
+export default SignUp;
