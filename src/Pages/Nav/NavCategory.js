@@ -22,23 +22,12 @@ class NavCategory extends Component {
       });
   }
 
-  insideCategory = e => {
-    this.setState({
-      handleSub: true,
-      index: e.target.id,
-    });
-  };
-
-  outsideCategory = () => {
-    this.setState({
-      handleSub: false,
-    });
-  };
-
   handleCategory = e => {
+    const { id } = e.target;
     if (e.type === 'mouseenter') {
       this.setState({
         handleSub: true,
+        index: id,
       });
     }
     if (e.type === 'mouseleave') {
@@ -49,8 +38,8 @@ class NavCategory extends Component {
   };
 
   render() {
-    const { categoryData, handleSub } = this.state;
-    console.log(typeof this.state.index);
+    const { categoryData, handleSub, index } = this.state;
+    const { handleCategory } = this;
     return (
       <div className="navCategory">
         <div className="categoryLeft">
@@ -58,8 +47,8 @@ class NavCategory extends Component {
             <i className="fas fa-bars"></i>
             <li
               className="parentCategory"
-              onMouseEnter={this.handleCategory}
-              onMouseLeave={this.handleCategory}
+              onMouseEnter={handleCategory}
+              onMouseLeave={handleCategory}
             >
               카테고리
               {handleSub && (
@@ -70,8 +59,8 @@ class NavCategory extends Component {
                         key={category.id}
                         id={idx}
                         className="category"
-                        onMouseEnter={this.insideCategory}
-                        onMouseLeave={this.outsideCategory}
+                        onMouseEnter={handleCategory}
+                        onMouseLeave={handleCategory}
                       >
                         <img
                           className="categoryImg"
@@ -79,23 +68,21 @@ class NavCategory extends Component {
                           alt="소고기"
                         />
                         {category.name}
-                        {categoryData[this.state.index] &&
-                          idx === Number(this.state.index) && (
-                            <div className="subCategoryBox">
-                              {categoryData[this.state.index].subcategory.map(
-                                (subcategory, id) => {
-                                  console.log(subcategory);
-                                  return (
-                                    <div key={id} className="subCategory">
-                                      <Link to="/" className="subCategoryLink">
-                                        {subcategory.content}
-                                      </Link>
-                                    </div>
-                                  );
-                                }
-                              )}
-                            </div>
-                          )}
+                        {categoryData[index] && idx === Number(index) && (
+                          <div className="subCategoryBox">
+                            {categoryData[index].subcategory.map(
+                              (subcategory, id) => {
+                                return (
+                                  <div key={id} className="subCategory">
+                                    <Link to="/" className="subCategoryLink">
+                                      {subcategory.content}
+                                    </Link>
+                                  </div>
+                                );
+                              }
+                            )}
+                          </div>
+                        )}
                       </div>
                     );
                   })}
@@ -103,24 +90,28 @@ class NavCategory extends Component {
               )}
             </li>
 
-            {CATEGORYLEFT.map((el, id) => (
-              <li className="categoryLeftLi" key={id}>
-                <Link to="/" className="categoryLeftLink">
-                  {el.content}
-                </Link>
-              </li>
-            ))}
+            {CATEGORYLEFT.map((el, id) => {
+              return (
+                <li className="categoryLeftLi" key={id}>
+                  <Link to="/" className="categoryLeftLink">
+                    {el.content}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="categoryRight">
           <ul className="categoryRightUl">
-            {CATEGORYRIGHT.map((el, id) => (
-              <li className="categoryRightLi" key={id}>
-                <Link to="/" className="categoryRightLink">
-                  {el.content}
-                </Link>
-              </li>
-            ))}
+            {CATEGORYRIGHT.map((el, id) => {
+              return (
+                <li className="categoryRightLi" key={id}>
+                  <Link to="/" className="categoryRightLink">
+                    {el.content}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
