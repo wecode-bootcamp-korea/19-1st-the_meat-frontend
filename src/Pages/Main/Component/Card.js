@@ -29,7 +29,7 @@ class Card extends Component {
               <span className="fontBold">{data.real_price}</span>원
             </p>
             {!!data.price && (
-              <span className="priceDiscount">{data.price}원</span>
+              <span className="priceDiscount">{data.original_price}원</span>
             )}
           </div>
         </div>

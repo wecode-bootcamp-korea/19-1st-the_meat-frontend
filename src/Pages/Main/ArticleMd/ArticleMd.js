@@ -9,7 +9,7 @@ class ArticleMd extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.58.2.57:8000/products?pick=${MDCATEGORY[0].name}`)
+    fetch(`http://10.58.1.83:8000/products?pick=${MDCATEGORY[0].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -19,7 +19,7 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
-    fetch(`http://10.58.2.57:8000/products?pick=${MDCATEGORY[id].name}`)
+    fetch(`http://10.58.1.83:8000/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
         console.log(data.result);
