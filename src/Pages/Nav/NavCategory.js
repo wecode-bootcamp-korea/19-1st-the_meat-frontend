@@ -64,11 +64,8 @@ class NavCategory extends Component {
                     {categoryData[this.state.index] && (
                       <ul className="subCategoryBox">
                         {categoryData[this.state.index - 1].subcategory.map(
-                          subcategory => (
-                            <li
-                              key={subcategory.subcategoryid}
-                              className="subCategory"
-                            >
+                          (subcategory, id) => (
+                            <li key={id} className="subCategory">
                               <Link to="/" className="subCategoryLink">
                                 {subcategory.content}
                               </Link>
