@@ -50,6 +50,7 @@ class NavCategory extends Component {
 
   render() {
     const { categoryData, handleSub } = this.state;
+    console.log(typeof this.state.index);
     return (
       <div className="navCategory">
         <div className="categoryLeft">
@@ -63,11 +64,11 @@ class NavCategory extends Component {
               카테고리
               {handleSub && (
                 <div className="categoryBox">
-                  {categoryData.map(category => {
+                  {categoryData.map((category, idx) => {
                     return (
                       <div
                         key={category.id}
-                        id={category.id}
+                        id={idx}
                         className="category"
                         onMouseEnter={this.insideCategory}
                         onMouseLeave={this.outsideCategory}
@@ -78,22 +79,23 @@ class NavCategory extends Component {
                           alt="소고기"
                         />
                         {category.name}
-                        {categoryData[this.state.index] && (
-                          <ul className="subCategoryBox">
-                            {categoryData[this.state.index - 1].subcategory.map(
-                              (subcategory, id) => {
-                                console.log(subcategory);
-                                return (
-                                  <li key={id} className="subCategory">
-                                    <Link to="/" className="subCategoryLink">
-                                      {subcategory.content}
-                                    </Link>
-                                  </li>
-                                );
-                              }
-                            )}
-                          </ul>
-                        )}
+                        {categoryData[this.state.index] &&
+                          idx === Number(this.state.index) && (
+                            <div className="subCategoryBox">
+                              {categoryData[this.state.index].subcategory.map(
+                                (subcategory, id) => {
+                                  console.log(subcategory);
+                                  return (
+                                    <div key={id} className="subCategory">
+                                      <Link to="/" className="subCategoryLink">
+                                        {subcategory.content}
+                                      </Link>
+                                    </div>
+                                  );
+                                }
+                              )}
+                            </div>
+                          )}
                       </div>
                     );
                   })}
