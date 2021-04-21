@@ -15,6 +15,9 @@ class Count extends Component {
       });
     }
   }
+  sendCount = () => {
+    this.props.updateCount(this.state.count);
+  };
   minusCount = () => {
     this.setState({
       count: this.state.count - 1,
@@ -26,7 +29,6 @@ class Count extends Component {
     });
   };
   render() {
-    const { updateCount } = this.props;
     return (
       <li className="contentsCount">
         <div className="countButton">
@@ -34,7 +36,7 @@ class Count extends Component {
           <div className="countValue">{this.state.count}</div>
           <button onClick={this.plusCount} className="plusButton"></button>
         </div>
-        <button onClick={updateCount} className="countUpdate"></button>
+        <button onClick={this.sendCount} className="countUpdate"></button>
       </li>
     );
   }

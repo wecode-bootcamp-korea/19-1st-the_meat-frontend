@@ -14,12 +14,12 @@ class Contents extends Component {
     };
   }
   updateCount = a => {
-    // this.setState({
-    //   count: this.state.count + 1,
-    // });
-    console.log(a);
+    this.setState({
+      count: a,
+    });
   };
   render() {
+    console.log(this.state.count);
     return (
       <ul className="basketContents">
         <Image />
