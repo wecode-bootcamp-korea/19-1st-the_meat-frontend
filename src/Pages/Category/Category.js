@@ -9,6 +9,8 @@ import Product from './Component/Product';
 
 import './Category.scss';
 
+const LIMIT = 8;
+
 class Category extends Component {
   constructor() {
     super();
@@ -20,20 +22,37 @@ class Category extends Component {
   }
 
   componentDidMount() {
-    console.log(123213);
-    // fetch('http://10.58.2.57:8000/products/category/5')
-    fetch('/data/ProductBoxData.json')
+    this.getAllCategoriesData();
+  }
+
+  getAllCategoriesData = () => {
+    fetch('http://10.58.1.83:8000/products?category=소')
+      // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          // productBoxData: data.MESSAGE,
-          productBoxData: data,
+          // productBoxData: data,
+          productBoxData: data.result,
         });
       });
-  }
+  };
 
-  goToMain = () => {
-    this.history.push('/');
+  handleClick = id => {
+    const offset = 2;
+    // console.log(e.target.data.id);
+    const query = `limit=${LIMIT}&offset=${offset}`;
+    console.log(query);
+
+    fetch(`http://10.58.1.83:8000/products?sub_category=${id}&&${query}`)
+      // fetch(`http://localhost:3000/data/${query}.json`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          productBoxData: data.result,
+          // productBoxData: data,
+        });
+      });
+    console.log('pass');
   };
 
   clickHandler = currentId => {
@@ -46,7 +65,8 @@ class Category extends Component {
 
   render() {
     const { productBoxData } = this.state;
-    console.log(this.state.productBoxData);
+    console.log(this.handleClick);
+
     return (
       <div className="category">
         <div className="categoryListWrap">
@@ -57,11 +77,16 @@ class Category extends Component {
             <div className="sortBox">
               <div className="leftcategoryType">
                 <ul className="categoryType">
-                  {LeftSortBox.map((category, id) => (
+                  {LeftSortBox.map((category, idx) => (
                     <li
                       className="categoryInner"
-                      key={id}
-                      onClick={() => this.clickHandler(id + 1)}
+                      key={idx}
+                      // onClick={() => this.clickHandler(idx + 1)}
+                      onClick={() =>
+                        idx === 0
+                          ? this.getAllCategoriesData()
+                          : this.handleClick(category.name)
+                      }
                     >
                       <span>{category.name}</span>
                     </li>
@@ -75,15 +100,17 @@ class Category extends Component {
                 </button>
                 {this.state.display && (
                   <ul className="categorySort">
-                    {RightSortBox.map((category, id) => (
-                      <li
-                        className=""
-                        key={id}
-                        onClick={() => this.clickHandler(id + 1)}
-                      >
-                        {category.content}
-                      </li>
-                    ))}
+                    {RightSortBox.map((category, idx) => {
+                      return (
+                        <li
+                          className=""
+                          key={idx}
+                          onClick={() => this.clickHandler(idx + 1)}
+                        >
+                          {category.content}
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
               </div>
@@ -91,25 +118,13 @@ class Category extends Component {
           </div>
         </div>
         <div className="productBody">
-          {productBoxData.map((data, id) => {
-            return <Product key={id} data={data} />;
+          {productBoxData.map((data, idx) => {
+            return <Product key={idx} data={data} />;
           })}
         </div>
-        {/* <div className="productBody">{MAPPING_OBJ[this.state.currentId]}</div> */}
       </div>
     );
   }
 }
 
 export default withRouter(Category);
-
-// const MAPPING_OBJ = {
-//   1: <Product />,
-//   2: <ProductBoxSecond />,
-//   3: <ProductBoxThird />,
-//   4: <NoproductMessage />,
-//   5: <NoproductMessage />,
-//   6: <NoproductMessage />,
-//   7: <NoproductMessage />,
-//   8: <NoproductMessage />,
-// };

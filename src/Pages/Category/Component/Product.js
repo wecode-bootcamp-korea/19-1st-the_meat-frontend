@@ -10,7 +10,7 @@ export default class Product extends Component {
     const {
       id,
       name,
-      price,
+      original_price,
       discount_rate,
       real_price,
       image_url,
@@ -31,7 +31,7 @@ export default class Product extends Component {
                 goToMain={goToMain}
                 name={name}
                 real_price={real_price}
-                price={price}
+                price={original_price}
               />
             </div>
           </li>
