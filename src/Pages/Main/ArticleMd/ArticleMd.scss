@@ -35,13 +35,27 @@
         text-decoration: none;
         cursor: pointer;
 
-        .active {
-          color: $greenColor;
-        }
         &:hover {
           color: $greenColor;
           transition: 0.8s;
         }
+
+        &:not(last-child) {
+          margin-right: 48px;
+        }
+      }
+
+      .middleChange {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 46px;
+        color: #fff;
+        background-color: $greenColor;
+        font-size: 22px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
 
         &:not(last-child) {
           margin-right: 48px;

@@ -5,7 +5,7 @@ import './ArticleMd.scss';
 class ArticleMd extends Component {
   constructor() {
     super();
-    this.state = { cardData: [] };
+    this.state = { cardData: [], handleClass: true, handleId: '' };
   }
 
   componentDidMount() {
@@ -19,15 +19,26 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
+    console.log('changeClass:', this.state.handleClass);
     fetch(`http://10.58.1.83:8000/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
-      .then(data => {
-        console.log(data.result);
-        this.setState({
-          cardData: data.result,
-        });
-      });
+      .then(
+        data => {
+          this.setState({
+            cardData: data.result,
+          });
+        },
+        () => this.toggleClass(id)
+      );
   };
+
+  toggleClass(id) {
+    console.log('handleId:', this.state.handleId);
+    this.setState({
+      // handleClass: !this.state.handleClass,
+      handleId: id,
+    });
+  }
 
   render() {
     return (
@@ -39,7 +50,11 @@ class ArticleMd extends Component {
           <ul className="middleUl">
             {MDCATEGORY.map((category, id) => (
               <li
-                className="middleLi"
+                className={
+                  this.state.handleClass && this.state.handleId === id
+                    ? 'middleChange'
+                    : 'middleLi'
+                }
                 key={category.name}
                 onClick={() => this.clickHandler(id)}
               >
