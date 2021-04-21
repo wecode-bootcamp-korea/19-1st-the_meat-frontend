@@ -3,9 +3,10 @@ import './Amount.scss';
 
 class Amount extends Component {
   render() {
+    const { price, count } = this.props;
     return (
       <li className="contentsAmount">
-        <h2 className="amount">100,000원</h2>
+        <h2 className="amount">{price * count}원</h2>
       </li>
     );
   }

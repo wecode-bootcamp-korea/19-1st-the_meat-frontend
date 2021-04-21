@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Layout from './Components/Layout';
-import './Basket.scss';
 
 class Basket extends Component {
   render() {

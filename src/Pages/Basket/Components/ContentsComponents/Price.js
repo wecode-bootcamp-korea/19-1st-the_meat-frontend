@@ -5,7 +5,7 @@ class Price extends Component {
   render() {
     return (
       <li className="contentsPrice">
-        <p>100,000원</p>
+        <p>{Number(this.props.price)}원</p>
       </li>
     );
   }

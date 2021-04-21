@@ -5,7 +5,7 @@ class Count extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 1,
+      count: this.props.count,
     };
   }
   componentDidUpdate() {
@@ -16,6 +16,7 @@ class Count extends Component {
     }
   }
   sendCount = () => {
+    console.log(this.state);
     this.props.updateCount(this.state.count);
   };
   minusCount = () => {
@@ -32,11 +33,17 @@ class Count extends Component {
     return (
       <li className="contentsCount">
         <div className="countButton">
-          <button onClick={this.minusCount} className="minusButton"></button>
+          <button onClick={this.minusCount} className="minusButton">
+            -
+          </button>
           <div className="countValue">{this.state.count}</div>
-          <button onClick={this.plusCount} className="plusButton"></button>
+          <button onClick={this.plusCount} className="plusButton">
+            +
+          </button>
         </div>
-        <button onClick={this.sendCount} className="countUpdate"></button>
+        <button onClick={this.sendCount} className="countUpdate">
+          수정하기
+        </button>
       </li>
     );
   }
