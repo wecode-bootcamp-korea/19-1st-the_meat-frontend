@@ -12,10 +12,13 @@
 
   .categoryLeft {
     width: 935px;
-    height: 26px;
+    height: 100%;
 
     .categoryLeftUl {
+      display: flex;
+      align-items: center;
       position: relative;
+      height: 100%;
       .fa-bars {
         margin-right: 10px;
         color: #333333;
@@ -24,6 +27,8 @@
 
       .parentCategory {
         display: inline-block;
+        line-height: 100%;
+        vertical-align: middle;
         margin-right: 28px;
         color: #333333;
       }
@@ -33,7 +38,7 @@
         position: absolute;
         width: 150px;
         height: 500px;
-        top: 30px;
+        top: 45px;
         left: -10px;
         .category {
           border: 1px solid black;
@@ -47,7 +52,7 @@
             width: 150px;
             height: 500px;
             top: 0px;
-            left: 150px;
+            left: 147px;
 
             .subCategory {
               .subCategoryLink {
