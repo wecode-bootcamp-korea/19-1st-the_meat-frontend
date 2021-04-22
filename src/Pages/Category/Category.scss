@@ -1,102 +1,104 @@
 @import '../../Style/common.scss';
 
-.categoryListWrap {
-  width: 1280px;
-  height: 90px;
-  margin: 0 auto;
+.category {
+  .categoryListWrap {
+    width: 1280px;
+    height: 90px;
+    margin: 0 auto;
 
-  .categoryTitle {
-    padding: 10px 0 10px;
-    align-items: center;
-    font-family: $fontFamily;
-    img {
-      width: 100px;
-      height: 50px;
-      margin-left: 10px;
-    }
-  }
-}
-
-.sortBox {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0 15px;
-}
-
-.leftcategoryType {
-  flex-direction: row;
-  justify-content: space-between;
-
-  .categoryType {
-    display: flex;
-    list-style: none;
-  }
-
-  .categoryInner {
-    cursor: pointer;
-    &:hover span {
-      color: $greenColor;
-      text-decoration: underline;
-      transition: 0.3s;
-    }
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  span {
-    padding-left: 10px;
-    font-size: 16px;
-    font-family: $fontFamily;
-  }
-}
-
-.lightCategoryTypeActive {
-  position: relative;
-  max-width: 50%;
-
-  .rightSortText {
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    border: 0;
-    outline: 0;
-    background-color: #fff;
-  }
-
-  .categorySort {
-    position: absolute;
-    height: 160px;
-    width: 88px;
-    font-family: $fontFamily;
-    top: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px #f6f6f6;
-    padding: 10px 14px;
-    z-index: 10;
-
-    li {
-      color: black;
+    .categoryTitle {
+      padding: 10px 0 10px;
+      align-items: center;
       font-family: $fontFamily;
-      font-size: 10px;
-      line-height: 2.2;
-      text-decoration: none;
-      cursor: pointer;
-      &:hover {
-        color: $greenColor;
-        transition: 0.3s;
+      img {
+        width: 100px;
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
+
+    .sortBox {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0 15px;
+    }
+
+    .leftcategoryType {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .categoryType {
+        display: flex;
+        list-style: none;
+      }
+
+      .categoryInner {
+        cursor: pointer;
+        &:hover span {
+          color: $greenColor;
+          text-decoration: underline;
+          transition: 0.3s;
+        }
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      span {
+        padding-left: 10px;
+        font-size: 16px;
+        font-family: $fontFamily;
+      }
+    }
+
+    .lightCategoryTypeActive {
+      position: relative;
+      max-width: 50%;
+
+      .rightSortText {
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        border: 0;
+        outline: 0;
+        background-color: #fff;
+      }
+
+      .categorySort {
+        position: absolute;
+        height: 160px;
+        width: 88px;
+        font-family: $fontFamily;
+        top: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 10px 5px 5px #f6f6f6;
+        padding: 10px 14px;
+        z-index: 10;
+
+        li {
+          color: black;
+          font-family: $fontFamily;
+          font-size: 10px;
+          line-height: 2.2;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            color: $greenColor;
+            transition: 0.3s;
+          }
+        }
       }
     }
   }
-}
 
-.productBody {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 1310px;
-  margin: 0 auto;
-  margin-top: 10px;
+  .productBody {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1310px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
 }
