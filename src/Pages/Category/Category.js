@@ -12,7 +12,7 @@ class Category extends Component {
   constructor() {
     super();
     this.state = {
-      currentId: 1,
+      // currentId: 1,
       display: false,
       productBoxData: [],
     };
@@ -23,13 +23,13 @@ class Category extends Component {
   }
 
   getAllCategoriesData = () => {
-    // fetch(`http://10.58.5.64:8000/products?category=소`)
-    fetch('/data/ProductBoxData.json')
+    fetch(`http://10.58.5.64:8000/products?category=소`)
+      // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          productBoxData: data,
-          // productBoxData: data.result,
+          // productBoxData: data,
+          productBoxData: data.result,
         });
       });
   };
@@ -48,15 +48,16 @@ class Category extends Component {
       });
   };
 
-  clickHandler = content => {
-    // fetch(`http://10.58.5.64:8000/products?category=${content}`)
-
-    fetch('/data/ProductBoxData.json')
+  clickHandler = filter => {
+    fetch(
+      `http://10.58.5.64:8000/products/filter?category=소&content=${filter}`
+    )
+      // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          // productBoxData: data.result,
-          productBoxData: data,
+          productBoxData: data.result,
+          // productBoxData: data,
         });
       });
   };
@@ -100,14 +101,14 @@ class Category extends Component {
                 </button>
                 {this.state.display && (
                   <ul className="categorySort">
-                    {RightSortBox.map((category, idx) => {
+                    {RightSortBox.map((category, id) => {
                       return (
                         <li
                           className=""
-                          key={idx}
-                          onClick={() => this.clickHandler()}
+                          key={id}
+                          onClick={() => this.clickHandler(category.filter)}
                         >
-                          {category.content}
+                          {category.filter}
                         </li>
                       );
                     })}
