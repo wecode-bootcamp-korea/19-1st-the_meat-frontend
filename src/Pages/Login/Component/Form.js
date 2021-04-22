@@ -13,11 +13,8 @@ class Form extends Component {
   }
 
   buttonClick = e => {
-    if (e.target.id === 1) {
-      this.props.history.push('/signup');
-    }
-    if (e.target.id === 0) {
-      fetch('http://192.168.0.250:8000/users/login', {
+    if (e.target.id == 0) {
+      fetch('http://10.58.5.214:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
           email: this.state.id,
@@ -25,7 +22,10 @@ class Form extends Component {
         }),
       })
         .then(res => res.json())
-        .then(key => localStorage.setItem('local', key));
+        .then(key => localStorage.setItem('local', key.token));
+    }
+    if (e.target.id == 1) {
+      this.props.history.push('/signup');
     }
   };
 
@@ -35,6 +35,7 @@ class Form extends Component {
       [name]: value,
     });
   };
+
   render() {
     const { inputData, buttonData } = this.props;
     return (
