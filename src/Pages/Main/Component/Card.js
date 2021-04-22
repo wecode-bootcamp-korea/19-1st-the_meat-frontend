@@ -8,7 +8,7 @@ class Card extends Component {
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">
-          {!!data.discount_rate && (
+          {data.discount_rate !== 0 && (
             <span className="mdSale">
               <p className="mdDiscount">{data.discount_rate} %</p>
             </span>
@@ -28,7 +28,7 @@ class Card extends Component {
             <p className="mdPrice">
               <span className="fontBold">{data.real_price}</span>원
             </p>
-            {!!data.original_price && (
+            {Number(data.original_price) !== 0 && (
               <span className="priceDiscount">{data.original_price}원</span>
             )}
           </div>
