@@ -12,7 +12,6 @@ class Category extends Component {
   constructor() {
     super();
     this.state = {
-      // currentId: 1,
       display: false,
       productBoxData: [],
     };
@@ -37,7 +36,6 @@ class Category extends Component {
   handleClick = id => {
     const offset = 2;
     const query = `limit=${LIMIT}&offset=${offset}`;
-
     fetch(`http://10.58.5.64:8000/products?sub_category=${id}&&${query}`)
       .then(res => res.json())
       .then(data => {
@@ -49,9 +47,7 @@ class Category extends Component {
   };
 
   clickHandler = filter => {
-    fetch(
-      `http://10.58.5.64:8000/products/filter?category=소&content=${filter}`
-    )
+    fetch(`http://10.58.5.64:8000/products/filter?category=소&filter=${filter}`)
       // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
