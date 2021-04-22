@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "image": "/images/meatimg/소고기.jpg",
+    "name": "소고기",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "등심"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "안심"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "채끝"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "갈비"
+      },
+      {
+        "subcategoryid": 5,
+        "content": "토시살"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/images/meatimg/돼지고기.jpg",
+    "name": "돼지고기",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "삼겹살"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "항정살"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "갈매기살"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "목살"
+      },
+      {
+        "subcategoryid": 5,
+        "content": "갈비"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/images/meatimg/닭고기.jpg",
+    "name": "닭고기",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "닭다리"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "가슴살"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "날개"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/images/meatimg/양고기.jpg",
+    "name": "양고기",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "앞다리"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "뒷다리"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/images/meatimg/염소고기.jpg",
+    "name": "염소고기",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "앞다리"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "뒷다리"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "갈비"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "몸톰"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/images/meatimg/한돈.jpg",
+    "name": "왕돼지",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "왕고기"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "대왕고기"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/images/meatimg/채소류.jpg",
+    "name": "채소",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "상추"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "깻잎"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/images/meatimg/소스류.jpg",
+    "name": "소스",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "매콤소스"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "달콤소스"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "소금"
+      }
+    ]
+  }
+]

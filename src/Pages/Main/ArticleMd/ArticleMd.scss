@@ -1,0 +1,49 @@
+@import '../../../Style/common.scss';
+
+.articleMd {
+  font-family: $fontFamily;
+  padding: 82px 0 50px;
+  background-color: #f7f7f7;
+  font-family: $fontFamily;
+
+  .mdTitle {
+    height: 36px;
+    padding: 0px 0px 64px 0;
+
+    .mdTitleName {
+      color: #333333;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .mdMiddleTitle {
+    @extend %flexCenter;
+
+    .middleUl {
+      margin-left: 50px;
+
+      .middleLi {
+        display: inline-block;
+        width: auto;
+        height: 46px;
+        &:not(last-child) {
+          margin-right: 48px;
+        }
+
+        .middleLink {
+          color: #888;
+          font-size: 22px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .mdContentsBox {
+    @extend %flexCenter;
+    margin: 22px auto 0 auto;
+  }
+}
