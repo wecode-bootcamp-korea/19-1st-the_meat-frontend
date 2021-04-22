@@ -13,7 +13,7 @@ class Form extends Component {
   }
 
   buttonClick = e => {
-    if (e.target.id == 0) {
+    if (Number(e.target.id) === 0) {
       fetch('http://10.58.5.214:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
@@ -25,7 +25,7 @@ class Form extends Component {
         .then(key => localStorage.setItem('local', key.token));
     }
 
-    if (e.target.id == 1) {
+    if (Number(e.target.id) === 1) {
       this.props.history.push('/signup');
     }
   };
