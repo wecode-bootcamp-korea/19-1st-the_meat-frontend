@@ -1,7 +1,74 @@
+%defaultCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .basketContents {
   display: flex;
   width: 100%;
   height: 100%;
   padding: 10px 0 20px 0;
   list-style-type: none;
+
+  .delete {
+    @extend %defaultCenter;
+    font-size: 30px;
+  }
+
+  .contentsPrice {
+    @extend %defaultCenter;
+    width: 280px;
+  }
+
+  .contentsImage {
+    @extend %defaultCenter;
+  }
+
+  .contentsImage > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contentsTitle {
+    @extend %defaultCenter;
+    width: 300px;
+  }
+
+  .contentsAmount {
+    @extend %defaultCenter;
+    width: 200px;
+    margin-left: 20px;
+  }
+
+  .contentsCount {
+    @extend %defaultCenter;
+    width: 160px;
+    flex-direction: column;
+
+    .countButton {
+      display: flex;
+
+      .countValue {
+        @extend %defaultCenter;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .minusButton,
+      .plusButton {
+        width: 40px;
+        height: 40px;
+        border: none;
+      }
+    }
+
+    .countUpdate {
+      width: 120px;
+      height: 20px;
+      margin-top: 10px;
+      border: none;
+    }
+  }
 }

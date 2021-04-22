@@ -8,7 +8,9 @@ class Order extends Component {
           주문 합계금액
           <p>{this.props.orderAmount}원</p>
         </div>
-        <button class="allOrder">주문하기</button>
+        <button onClick={this.props.orderHandler} className="allOrder">
+          주문하기
+        </button>
       </div>
     );
   }

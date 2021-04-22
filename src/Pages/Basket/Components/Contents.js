@@ -15,16 +15,17 @@ class Contents extends Component {
       id: this.props.id,
     };
   }
+
   updateCount = count => {
     this.setState({
       count: count,
     });
-    fetch('http://10.58.6.101:8000/orders/cart', {
+    fetch('http://10.58.6.181:8000/orders/cart', {
       method: 'PATCH',
       body: JSON.stringify({
         user_id: 1, //개수 수정시 백과 통신
         id: this.state.id,
-        quantity: a,
+        quantity: count,
       }),
     })
       .then(res => res.json())

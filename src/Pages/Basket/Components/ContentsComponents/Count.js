@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import './Count.scss';
 
 class Count extends Component {
   constructor(props) {
@@ -15,19 +14,23 @@ class Count extends Component {
       });
     }
   }
+
   sendCount = () => {
     this.props.updateCount(this.state.count);
   };
+
   minusCount = () => {
     this.setState({
       count: this.state.count - 1,
     });
   };
+
   plusCount = () => {
     this.setState({
       count: this.state.count + 1,
     });
   };
+
   render() {
     return (
       <li className="contentsCount">
