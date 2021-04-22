@@ -3,9 +3,6 @@ import { withRouter } from 'react-router-dom';
 import LeftSortBox from './Component/LeftSortBox';
 import RightSortBox from './Component/RightSortBox';
 import Product from './Component/Product';
-// import ProductBoxSecond from './Component/ProductBoxSecond';
-// import ProductBoxThird from './Component/ProductBoxThird';
-// import NoproductMessage from './Component/NoproductMessage';
 
 import './Category.scss';
 
@@ -53,9 +50,7 @@ class Category extends Component {
 
   clickHandler = content => {
     // fetch(`http://10.58.5.64:8000/products?category=${content}`)
-    // fetch(
-    //   `http://10.58.5.64:8000/products/filter?category=소&filter={RightSortBox[id].content}`
-    // )
+
     fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
@@ -72,7 +67,6 @@ class Category extends Component {
 
   render() {
     const { productBoxData } = this.state;
-    console.log(this.handleClick);
 
     return (
       <div className="category">
@@ -88,7 +82,6 @@ class Category extends Component {
                     <li
                       className="categoryInner"
                       key={idx}
-                      // onClick={() => this.clickHandler(idx + 1)}
                       onClick={() =>
                         idx === 0
                           ? this.getAllCategoriesData()
