@@ -41,10 +41,8 @@ class Category extends Component {
     const offset = 2;
     // console.log(e.target.data.id);
     const query = `limit=${LIMIT}&offset=${offset}`;
-    console.log(query);
 
     fetch(`http://10.58.1.83:8000/products?sub_category=${id}&&${query}`)
-      // fetch(`http://localhost:3000/data/${query}.json`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -55,8 +53,19 @@ class Category extends Component {
     console.log('pass');
   };
 
-  clickHandler = currentId => {
-    this.setState({ currentId });
+  clickHandler = id => {
+    // console.log('pass');
+    // this.setState({ currentId });
+    // fetch(`http://10.58.5.64:8000/products?pick=${RightSortBox[id].content}`)
+    fetch('/data/ProductBoxData.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          // productBoxData: data.result,
+          productBoxData: data,
+        });
+      });
+    console.log('pass');
   };
 
   sortHandler = () => {
@@ -105,7 +114,7 @@ class Category extends Component {
                         <li
                           className=""
                           key={idx}
-                          onClick={() => this.clickHandler(idx + 1)}
+                          onClick={() => this.clickHandler()}
                         >
                           {category.content}
                         </li>
