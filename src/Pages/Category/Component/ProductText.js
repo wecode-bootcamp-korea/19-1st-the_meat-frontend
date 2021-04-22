@@ -12,7 +12,7 @@ export default class ProductText extends Component {
             <strong>{real_price}</strong>
             <span className="won">원</span>
           </div>
-          {!!price && (
+          {Number(price) !== 0 && (
             <div className="price">
               <strong>{price}</strong>
               <span className="won">원</span>

@@ -1,5 +1,4 @@
 import { Component } from 'react';
-
 import './ProductCart.scss';
 
 export default class ProductCart extends Component {

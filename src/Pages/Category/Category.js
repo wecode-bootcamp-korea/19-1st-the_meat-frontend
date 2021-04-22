@@ -70,7 +70,7 @@ class Category extends Component {
         <div className="categoryListWrap">
           <div className="categoryPageTitle">
             <div className="categoryTitle">
-              <img src="/images/meatimg/cow.jpg" alt="cow img"></img>
+              <img src="/images/meatimg/cow.jpg" alt="cow img" />
             </div>
             <div className="sortBox">
               <div className="leftcategoryType">
