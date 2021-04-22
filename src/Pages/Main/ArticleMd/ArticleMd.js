@@ -22,7 +22,6 @@ class ArticleMd extends Component {
     fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data.result);
         this.setState({
           cardData: data.result,
         });
