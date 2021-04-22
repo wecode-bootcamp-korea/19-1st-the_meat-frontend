@@ -5,6 +5,7 @@ import Price from './ContentsComponents/Price';
 import Count from './ContentsComponents/Count';
 import Amount from './ContentsComponents/Amount';
 import Delete from './ContentsComponents/Delete';
+import { DEFAULT } from '../../../config';
 import './Contents.scss';
 
 class Contents extends Component {
@@ -14,13 +15,14 @@ class Contents extends Component {
       count: this.props.count,
       id: this.props.id,
     };
+    console.log(DEFAULT);
   }
 
   updateCount = count => {
     this.setState({
       count: count,
     });
-    fetch('http://10.58.6.181:8000/orders/cart', {
+    fetch(`${DEFAULT}/orders/cart`, {
       method: 'PATCH',
       body: JSON.stringify({
         user_id: 1, //개수 수정시 백과 통신
