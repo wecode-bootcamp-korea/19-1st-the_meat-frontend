@@ -36,7 +36,7 @@ class Recommand extends React.Component {
     return (
       <div className="recommandProducts">
         <h1 className="recommandTitle">추천제품</h1>
-        <ul ref={this.sliderRef} className="recommandProductList">
+        {/* <ul ref={this.sliderRef} className="recommandProductList">
           {data.map((elements, id) => (
             <ProductsList
               key={id}
@@ -45,7 +45,7 @@ class Recommand extends React.Component {
               price={elements.price}
             />
           ))}
-        </ul>
+        </ul> */}
         <Slider changeSlider={this.changeSlider} />
       </div>
     );
