@@ -13,11 +13,11 @@ class Recommand extends React.Component {
   }
 
   componentDidMount() {
-    fetch('', {})
+    fetch('http://10.58.6.181:8000/products?discount=1')
       .then(res => res.json())
       .then(data =>
         this.setState({
-          data: data,
+          data: data.result,
         })
       );
   }
@@ -33,19 +33,21 @@ class Recommand extends React.Component {
   };
 
   render() {
+    const { data } = this.state;
     return (
       <div className="recommandProducts">
         <h1 className="recommandTitle">추천제품</h1>
-        {/* <ul ref={this.sliderRef} className="recommandProductList">
-          {data.map((elements, id) => (
-            <ProductsList
-              key={id}
-              img={elements.img}
-              name={elements.name}
-              price={elements.price}
-            />
-          ))}
-        </ul> */}
+        <ul ref={this.sliderRef} className="recommandProductList">
+          {this.state.data !== undefined &&
+            data.map((elements, id) => (
+              <ProductsList
+                key={id}
+                img={elements.image_url}
+                name={elements.name}
+                price={elements.real_price}
+              />
+            ))}
+        </ul>
         <Slider changeSlider={this.changeSlider} />
       </div>
     );

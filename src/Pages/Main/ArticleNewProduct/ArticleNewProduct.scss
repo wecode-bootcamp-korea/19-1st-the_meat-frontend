@@ -1,0 +1,28 @@
+@import '../../../Style/common.scss';
+
+.articleNewProduct {
+  font-family: $fontFamily;
+
+  .articleNewProductBox {
+    height: 645px;
+    padding: 60px 0px 50px 0px;
+    background-color: #f7f7f7;
+
+    .newProductTitle {
+      color: #333333;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .newProductCardBox {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 1280px;
+      height: 439px;
+      margin: 35px auto 0px auto;
+    }
+  }
+}

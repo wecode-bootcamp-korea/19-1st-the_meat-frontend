@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
 import Card from '../Component/Card';
-import { Link } from 'react-router-dom';
 import './ArticleMd.scss';
 
 class ArticleMd extends Component {
   constructor() {
     super();
-    this.state = { cardData: [] };
+    this.state = { cardData: [], handleClass: true, handleId: '' };
   }
 
   componentDidMount() {
-    fetch('/data/Card.json')
+    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[0].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
-          cardData: data,
+          cardData: data.result,
         });
       });
   }
 
+  clickHandler = id => {
+    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[id].name}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          cardData: data.result,
+        });
+      });
+    this.toggleClass(id);
+  };
+
+  toggleClass(id) {
+    this.setState({
+      handleId: id + 1,
+    });
+  }
+
   render() {
-    const { cardData } = this.state;
     return (
       <article className="articleMd">
         <div className="mdTitle">
@@ -28,30 +43,49 @@ class ArticleMd extends Component {
         </div>
         <div className="mdMiddleTitle">
           <ul className="middleUl">
-            {MIDDLE.map((el, id) => (
-              <li className="middleLi" key={id}>
-                <Link to="/" className="middleLink">
-                  {el.content}
-                </Link>
+            {MDCATEGORY.map((category, id) => (
+              <li
+                className={
+                  this.state.handleClass && this.state.handleId === category.id
+                    ? 'middleChange'
+                    : 'middleLi'
+                }
+                key={category.name}
+                onClick={() => this.clickHandler(id)}
+              >
+                {category.name}
               </li>
             ))}
           </ul>
         </div>
         <div className="mdContentsBox">
-          {cardData.map((data, id) => {
-            return <Card key={id} data={data} />;
-          })}
+          <div className="cardOne">
+            {this.state.cardData.map((data, id) => {
+              return <Card key={id} data={data} />;
+            })}
+          </div>
         </div>
       </article>
     );
   }
 }
-
 export default ArticleMd;
 
-const MIDDLE = [
-  { id: 1, content: '오늘은 이거 어때요?' },
-  { id: 2, content: '느리게 만든 감칠맛' },
-  { id: 3, content: '오늘은 고기 굽는날!' },
-  { id: 4, content: '고기는 언제나 옳다' },
+const MDCATEGORY = [
+  {
+    id: 1,
+    name: '소',
+  },
+  {
+    id: 2,
+    name: '돼지',
+  },
+  {
+    id: 3,
+    name: '닭',
+  },
+  {
+    id: 4,
+    name: '양',
+  },
 ];

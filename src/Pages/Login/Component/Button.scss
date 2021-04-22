@@ -8,17 +8,18 @@ $realOrange: #fe7602;
   justify-content: center;
   font-weight: bold;
 }
-
-.loginBTN {
-  @extend %buttonSetting;
-  border: none;
-  background-color: $realOrange;
-  color: white;
-}
-.signupBTN {
-  @extend %buttonSetting;
-  margin-top: 10px;
-  border: 1px $realOrange solid;
-  background-color: white;
-  color: $realOrange;
+.loginForm {
+  .loginBTN {
+    @extend %buttonSetting;
+    border: none;
+    background-color: $realOrange;
+    color: white;
+  }
+  .signupBTN {
+    @extend %buttonSetting;
+    margin-top: 10px;
+    border: 1px $realOrange solid;
+    background-color: white;
+    color: $realOrange;
+  }
 }

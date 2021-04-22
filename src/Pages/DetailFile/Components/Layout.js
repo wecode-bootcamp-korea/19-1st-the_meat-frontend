@@ -9,17 +9,20 @@ class Layout extends Component {
   constructor() {
     super();
     this.state = {
-      detailData: {},
       count: 1,
       current: 0,
     };
   }
-  // componentDidMount() { 백이랑 연결 테스트중
-  //   fetch(`http://10.58.3.1:8000/products/detail/${this.state.current}`, {
-  //     method: 'GET',
-  //   })
-  //     .then(res => res.json())
-  // }
+  componentDidMount() {
+    //백이랑 연결 테스트중
+    fetch(`http://10.58.6.181:8000/products/${this.state.current}`)
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          data: data.result,
+        })
+      );
+  }
   componentDidUpdate() {
     if (this.state.count < 0) {
       this.setState({
@@ -40,41 +43,47 @@ class Layout extends Component {
         count: this.state.count + 1,
       });
     }
+    if (e.target.className === 'bascket') {
+      fetch(`http://10.58.6.181:8000/orders/cart`, {
+        method: 'POST',
+        body: JSON.stringify({
+          user_id: 1,
+          quantity: this.state.count,
+          id: this.state.data.id,
+        }),
+      })
+        .then(res => res.json())
+        .then(error => console.log(error));
+    }
   };
 
-  componentDidMount() {
-    fetch('data/Data.json', {})
-      .then(res => res.json())
-      .then(data =>
-        this.setState({
-          detailData: data,
-        })
-      );
-  }
-
   render() {
+    const { data } = this.state;
     return (
-      <div className="productDetail">
-        <Image image={this.state.detailData.image_url} />
-        <div className="productContent">
-          <Title name={this.state.detailData.name} />
-          <Content
-            buttonHandler={this.buttonHandler}
-            unit={this.state.detailData.unit}
-            real_price={this.state.detailData.real_price}
-            count={this.state.count}
-          />
-          {buttonInfo.map((elements, id) => (
-            <Button
-              key={id}
-              id={id}
-              text={elements.text}
-              classN={elements.classN}
+      data !== undefined && (
+        <div className="productDetail">
+          <Image image={this.state.data.image_url} />
+          <div className="productContent">
+            <Title name={data.name} />
+            <Content
               buttonHandler={this.buttonHandler}
+              unit={data.unit}
+              real_price={data.real_price}
+              count={this.state.count}
             />
-          ))}
+
+            {buttonInfo.map((elements, id) => (
+              <Button
+                key={id}
+                id={id}
+                text={elements.text}
+                classN={elements.classN}
+                buttonHandler={this.buttonHandler}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )
     );
   }
 }

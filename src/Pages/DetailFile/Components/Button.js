@@ -3,9 +3,9 @@ import './Button.scss';
 
 class Button extends Component {
   render() {
-    const { id, text, classN } = this.props;
+    const { buttonHandler, id, text, classN } = this.props;
     return (
-      <button id={id} className={classN}>
+      <button onClick={buttonHandler} id={id} className={classN}>
         {text}
       </button>
     );
