@@ -9,13 +9,16 @@
   margin-bottom: 30px;
   font-weight: bold;
 }
-.idInput,
-.pwInput {
-  @extend %inputSize;
-  @extend %inputCenter;
-}
 
-.idInput::placeholder,
-.pwInput::placeholder {
-  font-size: 18px;
+.Login {
+  .idInput,
+  .pwInput {
+    @extend %inputSize;
+    @extend %inputCenter;
+  }
+
+  .idInput::placeholder,
+  .pwInput::placeholder {
+    font-size: 18px;
+  }
 }

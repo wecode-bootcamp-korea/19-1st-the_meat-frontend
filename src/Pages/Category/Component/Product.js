@@ -22,6 +22,8 @@ class Product extends Component {
       goToMain,
     } = this.props.data;
 
+    // console.log('ddddd: ', this.props.data);
+
     return (
       <div className="bodyCenter">
         <ul>
@@ -36,7 +38,8 @@ class Product extends Component {
                 goToMain={goToMain}
                 name={name}
                 real_price={real_price}
-                price={original_price}
+                original_price={original_price}
+                discount_rate={discount_rate}
               />
             </div>
           </li>

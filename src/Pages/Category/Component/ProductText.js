@@ -3,18 +3,25 @@ import './ProductText.scss';
 
 export default class ProductText extends Component {
   render() {
-    const { name, price, real_price, goToMain } = this.props;
+    const {
+      name,
+      original_price,
+      real_price,
+      goToMain,
+      discount_rate,
+    } = this.props;
+
     return (
       <div className="prdInfo" onClick={goToMain}>
         <p className="prdName">{name} </p>
         <div className="PriceBox">
           <div className="realPrice">
-            <strong>{real_price}</strong>
+            <strong>{real_price.toLocaleString()}</strong>
             <span className="won">원</span>
           </div>
-          {Number(price) !== 0 && (
+          {discount_rate !== 0 && (
             <div className="price">
-              <strong>{price}</strong>
+              <strong>{original_price.toLocaleString()}</strong>
               <span className="won">원</span>
             </div>
           )}
