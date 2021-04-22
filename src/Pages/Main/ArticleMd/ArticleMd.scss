@@ -25,25 +25,51 @@
       margin-left: 50px;
 
       .middleLi {
+        position: relative;
         display: inline-block;
-        width: auto;
-        height: 46px;
+        width: 100px;
+        height: 20px;
+        color: #888;
+        border-radius: 5px;
+        font-size: 22px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $greenColor;
+          transition: 0.8s;
+        }
+
         &:not(last-child) {
           margin-right: 48px;
         }
+      }
 
-        .middleLink {
-          color: #888;
-          font-size: 22px;
-          text-align: center;
-          text-decoration: none;
+      .middleChange {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 26px;
+        color: #fff;
+        background-color: $greenColor;
+        border-radius: 5px;
+        font-size: 22px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:not(last-child) {
+          margin-right: 48px;
         }
       }
     }
   }
 
   .mdContentsBox {
-    @extend %flexCenter;
-    margin: 22px auto 0 auto;
+    .cardOne {
+      @extend %flexCenter;
+      margin: 22px auto 0 auto;
+    }
   }
 }
