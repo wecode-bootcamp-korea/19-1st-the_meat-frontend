@@ -1,0 +1,44 @@
+%defaultContent {
+  display: flex;
+  margin: 30px 0 0 20px;
+  align-items: center;
+}
+%defaultQuantity {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+.contentComponent {
+  .productPrice,
+  .productUnit,
+  .productQuantity,
+  .total {
+    @extend %defaultContent;
+
+    .priceTitle,
+    .unitTitle,
+    .quantityTitle,
+    .totalTitle {
+      margin-right: 50px;
+    }
+
+    .price,
+    .unit,
+    .totalPrice {
+      font-size: 30px;
+    }
+
+    .quantity {
+      @extend %defaultQuantity;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .minusButton,
+    .plusButton {
+      @extend %defaultQuantity;
+      font-weight: bold;
+    }
+  }
+}
