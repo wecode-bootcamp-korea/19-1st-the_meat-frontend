@@ -5,7 +5,6 @@ import './Card.scss';
 class Card extends Component {
   render() {
     const { data } = this.props;
-    console.log(this.props.data);
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">

@@ -28,12 +28,6 @@ class ArticleNewProduct extends Component {
             {cardData.map((data, id) => {
               return <Card key={id} data={data} />;
             })}
-            <button className="leftButton" onClick={this.leftClick}>
-              <i className="fas fa-angle-left"></i>
-            </button>
-            <button className="rightButton" onClick={this.rightClick}>
-              <i className="fas fa-angle-right"></i>
-            </button>
           </div>
         </div>
       </div>

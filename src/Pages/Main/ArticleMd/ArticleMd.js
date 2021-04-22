@@ -9,7 +9,7 @@ class ArticleMd extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.58.1.83:8000/products?pick=${MDCATEGORY[0].name}`)
+    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[0].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -19,21 +19,17 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
-    console.log('changeClass:', this.state.handleClass);
-    fetch(`http://10.58.1.83:8000/products?pick=${MDCATEGORY[id].name}`)
+    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
-      .then(
-        data => {
-          this.setState({
-            cardData: data.result,
-          });
-        },
-        () => this.toggleClass(id)
-      );
+      .then(data => {
+        this.setState({
+          cardData: data.result,
+        });
+      });
+    this.toggleClass(id);
   };
 
   toggleClass(id) {
-    console.log('handleId:', this.state.handleId);
     this.setState({
       handleId: id,
     });
@@ -50,7 +46,7 @@ class ArticleMd extends Component {
             {MDCATEGORY.map((category, id) => (
               <li
                 className={
-                  this.state.handleClass && this.state.handleId === id
+                  this.state.handleClass && this.state.handleId === category.id
                     ? 'middleChange'
                     : 'middleLi'
                 }
@@ -86,7 +82,7 @@ const MDCATEGORY = [
   },
   {
     id: 3,
-    name: '말',
+    name: '닭',
   },
   {
     id: 4,
