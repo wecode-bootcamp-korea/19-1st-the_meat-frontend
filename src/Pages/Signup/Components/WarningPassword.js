@@ -7,7 +7,7 @@ class WarningPassword extends Component {
     return (
       <>
         {password !== passwordVerify && (
-          <div>
+          <div className="warningPassword">
             <p className={classN}>비밀번호를 확인해주세요.</p>
           </div>
         )}

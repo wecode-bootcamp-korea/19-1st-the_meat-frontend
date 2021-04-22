@@ -5,6 +5,7 @@ import './Card.scss';
 class Card extends Component {
   render() {
     const { data } = this.props;
+    console.log(data.original_price);
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">
@@ -26,10 +27,15 @@ class Card extends Component {
           </div>
           <div className="mdPriceBox">
             <p className="mdPrice">
-              <span className="fontBold">{data.real_price}</span>원
+              <span className="fontBold">
+                {data.real_price.toLocaleString()}
+              </span>
+              원
             </p>
-            {Number(data.original_price) !== 0 && (
-              <span className="priceDiscount">{data.original_price}원</span>
+            {data.original_price !== 0 && (
+              <span className="priceDiscount">
+                {data.original_price.toLocaleString()}원
+              </span>
             )}
           </div>
         </div>
