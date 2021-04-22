@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "image": "/images/meatimg/소고기.jpg",
+    "name": "소",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "소고기1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "소고기2"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "소고기3"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "소고기4"
+      },
+      {
+        "subcategoryid": 5,
+        "content": "소고기5"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/images/meatimg/돼지고기.jpg",
+    "name": "돼지",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "돼지고기1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "돼지고기2"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "돼지고기3"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "돼지고기4"
+      },
+      {
+        "subcategoryid": 5,
+        "content": "돼지고기5"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/images/meatimg/닭고기.jpg",
+    "name": "닭",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "닭고기1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "닭고기2"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "닭고기3"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "닭고기4"
+      },
+      {
+        "subcategoryid": 5,
+        "content": "닭고기5"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/images/meatimg/양고기.jpg",
+    "name": "양",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "양고기1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "양고기2"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/images/meatimg/염소고기.jpg",
+    "name": "염소",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "염소고기1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "염소고기2"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "염소고기3"
+      },
+      {
+        "subcategoryid": 4,
+        "content": "염소고기4"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/images/meatimg/한돈.jpg",
+    "name": "왕돼지",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "왕돼지1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "왕돼지2"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/images/meatimg/채소류.jpg",
+    "name": "채소",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "채소1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "채소2"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/images/meatimg/소스류.jpg",
+    "name": "소스",
+    "subcategory": [
+      {
+        "subcategoryid": 1,
+        "content": "소스1"
+      },
+      {
+        "subcategoryid": 2,
+        "content": "소스2"
+      },
+      {
+        "subcategoryid": 3,
+        "content": "소스3"
+      }
+    ]
+  }
+]

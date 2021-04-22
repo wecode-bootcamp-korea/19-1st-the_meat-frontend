@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
-import Banner from '../Main/Banner/Banner';
-import ArticleMd from '../Main/ArticleMd/ArticleMd';
-import ArticleDiscount from '../Main/ArticleDiscount/ArticleDiscount';
+import NavCategory from '../Nav/NavCategory';
 import './Main.scss';
 
 class Main extends Component {
@@ -10,9 +8,7 @@ class Main extends Component {
     return (
       <div className="Main">
         <Nav />
-        <Banner />
-        <ArticleMd />
-        <ArticleDiscount />
+        <NavCategory />
       </div>
     );
   }
