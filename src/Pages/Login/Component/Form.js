@@ -24,6 +24,7 @@ class Form extends Component {
         .then(res => res.json())
         .then(key => localStorage.setItem('local', key.token));
     }
+
     if (e.target.id == 1) {
       this.props.history.push('/signup');
     }
