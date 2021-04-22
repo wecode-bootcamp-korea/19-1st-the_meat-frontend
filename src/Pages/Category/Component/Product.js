@@ -1,11 +1,15 @@
 import { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import ProductTag from './ProductTag';
 import ProductCart from './ProductCart';
 import ProductImg from './ProductImg';
 import ProductText from './ProductText';
 import './Product.scss';
 
-export default class Product extends Component {
+class Product extends Component {
+  goToDetail = () => {
+    this.props.history.push('/detailfile');
+  };
   render() {
     const {
       id,
@@ -16,11 +20,10 @@ export default class Product extends Component {
       image_url,
       goToMain,
     } = this.props.data;
-
     return (
       <div className="bodyCenter">
         <ul>
-          <li className="prdBoxCenter" key={id}>
+          <li className="prdBoxCenter" key={id} onClick={this.goToDetail}>
             <div className="prdBox">
               <div className="imgBox">
                 <ProductTag discount_rate={discount_rate} />
@@ -40,3 +43,4 @@ export default class Product extends Component {
     );
   }
 }
+export default withRouter(Product);

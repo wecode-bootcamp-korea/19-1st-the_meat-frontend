@@ -26,23 +26,22 @@ class Category extends Component {
   }
 
   getAllCategoriesData = () => {
-    fetch('http://10.58.1.83:8000/products?category=소')
-      // fetch('/data/ProductBoxData.json')
+    // fetch(`http://10.58.5.64:8000/products?category=소`)
+    fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          // productBoxData: data,
-          productBoxData: data.result,
+          productBoxData: data,
+          // productBoxData: data.result,
         });
       });
   };
 
   handleClick = id => {
     const offset = 2;
-    // console.log(e.target.data.id);
     const query = `limit=${LIMIT}&offset=${offset}`;
 
-    fetch(`http://10.58.1.83:8000/products?sub_category=${id}&&${query}`)
+    fetch(`http://10.58.5.64:8000/products?sub_category=${id}&&${query}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -50,13 +49,13 @@ class Category extends Component {
           // productBoxData: data,
         });
       });
-    console.log('pass');
   };
 
-  clickHandler = id => {
-    // console.log('pass');
-    // this.setState({ currentId });
-    // fetch(`http://10.58.5.64:8000/products?pick=${RightSortBox[id].content}`)
+  clickHandler = content => {
+    // fetch(`http://10.58.5.64:8000/products?category=${content}`)
+    // fetch(
+    //   `http://10.58.5.64:8000/products/filter?category=소&filter={RightSortBox[id].content}`
+    // )
     fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
@@ -65,7 +64,6 @@ class Category extends Component {
           productBoxData: data,
         });
       });
-    console.log('pass');
   };
 
   sortHandler = () => {
