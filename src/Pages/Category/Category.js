@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import LeftSortBox from './Component/LeftSortBox';
 import RightSortBox from './Component/RightSortBox';
 import Product from './Component/Product';
-
+import { API } from '../../config';
 import './Category.scss';
 
 const LIMIT = 8;
@@ -22,7 +22,7 @@ class Category extends Component {
   }
 
   getAllCategoriesData = () => {
-    fetch(`http://10.58.5.64:8000/products?category=소`)
+    fetch(`${API}/products?category=소`)
       // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
@@ -36,7 +36,7 @@ class Category extends Component {
   handleClick = id => {
     const offset = 2;
     const query = `limit=${LIMIT}&offset=${offset}`;
-    fetch(`http://10.58.5.64:8000/products?sub_category=${id}&&${query}`)
+    fetch(`${API}/products?sub_category=${id}&&${query}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -47,8 +47,7 @@ class Category extends Component {
   };
 
   clickHandler = filter => {
-    fetch(`http://10.58.5.64:8000/products/filter?category=소&filter=${filter}`)
-      // fetch('/data/ProductBoxData.json')
+    fetch(`${API}/products/filter?category=소&filter=${filter}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
