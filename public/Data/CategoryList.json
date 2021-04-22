@@ -2,119 +2,111 @@
   {
     "id": 1,
     "image": "/images/meatimg/소고기.jpg",
-    "name": "소",
+    "name": "소고기",
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "소고기1"
+        "content": "등심"
       },
       {
         "subcategoryid": 2,
-        "content": "소고기2"
+        "content": "안심"
       },
       {
         "subcategoryid": 3,
-        "content": "소고기3"
+        "content": "채끝"
       },
       {
         "subcategoryid": 4,
-        "content": "소고기4"
+        "content": "갈비"
       },
       {
         "subcategoryid": 5,
-        "content": "소고기5"
+        "content": "토시살"
       }
     ]
   },
   {
     "id": 2,
     "image": "/images/meatimg/돼지고기.jpg",
-    "name": "돼지",
+    "name": "돼지고기",
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "돼지고기1"
+        "content": "삼겹살"
       },
       {
         "subcategoryid": 2,
-        "content": "돼지고기2"
+        "content": "항정살"
       },
       {
         "subcategoryid": 3,
-        "content": "돼지고기3"
+        "content": "갈매기살"
       },
       {
         "subcategoryid": 4,
-        "content": "돼지고기4"
+        "content": "목살"
       },
       {
         "subcategoryid": 5,
-        "content": "돼지고기5"
+        "content": "갈비"
       }
     ]
   },
   {
     "id": 3,
     "image": "/images/meatimg/닭고기.jpg",
-    "name": "닭",
+    "name": "닭고기",
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "닭고기1"
+        "content": "닭다리"
       },
       {
         "subcategoryid": 2,
-        "content": "닭고기2"
+        "content": "가슴살"
       },
       {
         "subcategoryid": 3,
-        "content": "닭고기3"
-      },
-      {
-        "subcategoryid": 4,
-        "content": "닭고기4"
-      },
-      {
-        "subcategoryid": 5,
-        "content": "닭고기5"
+        "content": "날개"
       }
     ]
   },
   {
     "id": 4,
     "image": "/images/meatimg/양고기.jpg",
-    "name": "양",
+    "name": "양고기",
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "양고기1"
+        "content": "앞다리"
       },
       {
         "subcategoryid": 2,
-        "content": "양고기2"
+        "content": "뒷다리"
       }
     ]
   },
   {
     "id": 5,
     "image": "/images/meatimg/염소고기.jpg",
-    "name": "염소",
+    "name": "염소고기",
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "염소고기1"
+        "content": "앞다리"
       },
       {
         "subcategoryid": 2,
-        "content": "염소고기2"
+        "content": "뒷다리"
       },
       {
         "subcategoryid": 3,
-        "content": "염소고기3"
+        "content": "갈비"
       },
       {
         "subcategoryid": 4,
-        "content": "염소고기4"
+        "content": "몸톰"
       }
     ]
   },
@@ -125,11 +117,11 @@
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "왕돼지1"
+        "content": "왕고기"
       },
       {
         "subcategoryid": 2,
-        "content": "왕돼지2"
+        "content": "대왕고기"
       }
     ]
   },
@@ -140,11 +132,11 @@
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "채소1"
+        "content": "상추"
       },
       {
         "subcategoryid": 2,
-        "content": "채소2"
+        "content": "깻잎"
       }
     ]
   },
@@ -155,15 +147,15 @@
     "subcategory": [
       {
         "subcategoryid": 1,
-        "content": "소스1"
+        "content": "매콤소스"
       },
       {
         "subcategoryid": 2,
-        "content": "소스2"
+        "content": "달콤소스"
       },
       {
         "subcategoryid": 3,
-        "content": "소스3"
+        "content": "소금"
       }
     ]
   }
