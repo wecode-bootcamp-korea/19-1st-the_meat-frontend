@@ -9,6 +9,7 @@ class Recommand extends React.Component {
     this.sliderRef = React.createRef();
     this.state = {
       slide: 0,
+      data: [],
     };
   }
 
