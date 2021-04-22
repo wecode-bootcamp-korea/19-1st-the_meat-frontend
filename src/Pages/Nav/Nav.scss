@@ -1,0 +1,110 @@
+@import '../../Style/common.scss';
+
+.nav {
+  font-family: $fontFamily;
+
+  .navBox {
+    @extend %flexSpaceBetween;
+    width: 1280px;
+    height: 130px;
+    margin: 0 auto;
+
+    .navSearch {
+      position: relative;
+      width: 220px;
+      height: 40px;
+
+      .inputSearch {
+        width: 220px;
+        height: 40px;
+        padding: 0px 45px 0px 15px;
+        background: #f7f7f7;
+        border-radius: 20px;
+        border: 1px solid #dbdbdb;
+        font-size: 14px;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .navSearchButton {
+        position: absolute;
+        width: 52px;
+        height: 43px;
+        background: none;
+        border: 0;
+        top: 0px;
+        left: 173px;
+        &:focus {
+          outline: none;
+        }
+
+        .fa-search {
+          width: 20px;
+          height: 20px;
+          color: #787878;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .logo {
+      width: 200px;
+      height: 100px;
+
+      .mainLogo {
+        cursor: pointer;
+        .logoImg {
+          width: 200px;
+          height: 100px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .myMeat {
+      @extend %flexCenter;
+      width: 230px;
+      height: 24px;
+
+      .fa-user {
+        color: #787878;
+        font-size: 24px;
+      }
+
+      .myMeatLink {
+        display: inline-block;
+        width: 82px;
+        height: 16px;
+        padding: 5px 15px 0px 5px;
+        color: #333;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .fa-shopping-cart {
+        color: #787878;
+        font-size: 24px;
+      }
+
+      .myMeatCart {
+        display: inline-block;
+        width: 50px;
+        height: 16px;
+        padding: 5px 0px 0px 5px;
+        color: #333;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .cartCount {
+        @extend %flexCenter;
+        width: 21px;
+        height: 21px;
+        color: #fff;
+        background-color: $orangeColor;
+        border-radius: 50%;
+      }
+    }
+  }
+}
