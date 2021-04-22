@@ -1,0 +1,23 @@
+.cartBox {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 260px;
+  left: 250px;
+  text-align: center;
+
+  .cartCircle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    background-color: #f2f2ef;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  i {
+    padding: 7px 2px 0 0;
+    color: #c7c4c0;
+  }
+}
