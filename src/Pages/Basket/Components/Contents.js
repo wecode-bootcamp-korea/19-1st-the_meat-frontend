@@ -13,15 +13,12 @@ class Contents extends Component {
     this.state = {
       count: this.props.count,
       id: this.props.id,
-      sum: 0,
     };
   }
-  updateCount = a => {
-    console.log(a);
+  updateCount = count => {
     this.setState({
-      count: a,
+      count: count,
     });
-    console.log(this.state);
     fetch('http://10.58.6.101:8000/orders/cart', {
       method: 'PATCH',
       body: JSON.stringify({
@@ -31,14 +28,9 @@ class Contents extends Component {
       }),
     })
       .then(res => res.json())
-      .then(res =>
-        this.setState({
-          sum: res,
-        })
-      );
-
-    this.props.updateCountSum(this.state.sum);
+      .then(data => this.props.updateCountSum(data.sum));
   };
+
   render() {
     const { deleteHandler, count, image, title, id, price } = this.props;
     return (
@@ -47,11 +39,7 @@ class Contents extends Component {
         <Title title={title} />
         <Price price={price} />
         <Count count={count} updateCount={this.updateCount} />
-        <Amount
-          test={this.props.orderHandler}
-          price={price}
-          count={this.state.count}
-        />
+        <Amount price={price} count={this.state.count} />
         <Delete id={id} deleteHandler={deleteHandler} />
       </ul>
     );

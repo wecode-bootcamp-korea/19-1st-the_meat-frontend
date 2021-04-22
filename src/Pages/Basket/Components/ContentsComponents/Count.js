@@ -16,7 +16,6 @@ class Count extends Component {
     }
   }
   sendCount = () => {
-    console.log(this.state);
     this.props.updateCount(this.state.count);
   };
   minusCount = () => {
