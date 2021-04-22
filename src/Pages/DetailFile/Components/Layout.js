@@ -28,6 +28,7 @@ class Layout extends Component {
       alert('수량은 0이하로 안됩니다.');
     }
   }
+
   buttonHandler = e => {
     if (e.target.className === 'minusButton') {
       this.setState({
@@ -40,6 +41,7 @@ class Layout extends Component {
       });
     }
   };
+
   componentDidMount() {
     fetch('data/Data.json', {})
       .then(res => res.json())
@@ -49,6 +51,7 @@ class Layout extends Component {
         })
       );
   }
+
   render() {
     return (
       <div className="productDetail">
@@ -75,6 +78,7 @@ class Layout extends Component {
     );
   }
 }
+
 export default Layout;
 
 const buttonInfo = [

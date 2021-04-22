@@ -11,14 +11,27 @@ class Recommand extends React.Component {
       slide: 0,
     };
   }
+
+  componentDidMount() {
+    fetch('', {})
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          data: data,
+        })
+      );
+  }
+
   componentDidUpdate() {
     this.sliderRef.current.style.transform = `translateX(${this.state.slide}%)`;
   }
+
   changeSlider = data => {
     this.setState({
       slide: data,
     });
   };
+
   render() {
     return (
       <div className="recommandProducts">
@@ -40,54 +53,3 @@ class Recommand extends React.Component {
 }
 
 export default Recommand;
-
-const data = [
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 10000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 90000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 70000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 60000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 20000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 30000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 40000,
-  },
-  {
-    img:
-      'https://www.happy-ali.com/wp-content/uploads/2020/08/quokka1-1024x1024.jpg',
-    name: '쿼카짱',
-    price: 50000,
-  },
-];

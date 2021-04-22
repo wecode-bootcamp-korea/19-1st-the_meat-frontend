@@ -16,6 +16,7 @@ class Slider extends React.Component {
       this.setState({ slide: -100 });
     }
   }
+
   leftHandler = () => {
     this.setState({
       slide: this.state.slide - 100,
@@ -29,6 +30,7 @@ class Slider extends React.Component {
     });
     this.props.changeSlider(this.state.slide);
   };
+
   render() {
     return (
       <div className="slider">
