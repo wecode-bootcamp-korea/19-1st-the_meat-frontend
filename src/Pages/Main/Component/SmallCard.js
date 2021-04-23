@@ -4,7 +4,7 @@ import '../Component/SmallCard.scss';
 
 class SmallCard extends Component {
   render() {
-    const { data } = this.props;
+    const { data, id, basketHandler } = this.props;
     return (
       <div className="smallCard">
         <div className="dcCardImgBox">
@@ -23,10 +23,10 @@ class SmallCard extends Component {
             </p>
             <p className="dcListOriginal">{data.original_price}원</p>
           </div>
-          <div className="dcListCartButton">
-            <Link to="/" className="cartLink">
-              <i className="fas fa-shopping-cart"></i>
-            </Link>
+          <div id={id} onClick={basketHandler} className="dcListCartButton">
+            <div className="cartLink">
+              <i id={id} className="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>

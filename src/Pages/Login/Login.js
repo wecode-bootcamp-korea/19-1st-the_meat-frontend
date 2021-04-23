@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Form from './Component/Form';
 import './Login.scss';
+import Nav from '../Nav/Nav';
+import NavCategory from '../Nav/NavCategory';
 
 class Login extends Component {
   render() {
     return (
       <div className="Login">
+        <Nav />
+        <NavCategory />
         <Form
           inputData={LoginForm}
           buttonData={LoginInput}

@@ -9,7 +9,7 @@ class Layout extends Component {
         <h1 className="signUpTitle">
           <em>더미트&</em> 신규 회원가입
         </h1>
-        <Form data={inputData} />
+        <Form data={inputData} history={this.props.history} />
       </form>
     );
   }

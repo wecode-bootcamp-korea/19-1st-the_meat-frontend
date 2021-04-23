@@ -7,10 +7,10 @@ import ProductText from './ProductText';
 import './Product.scss';
 
 class Product extends Component {
-  goToDetail = () => {
-    this.props.history.push('/detailfile');
+  goToDetail = e => {
+    console.log(e.target.id);
+    this.props.history.push('/detailfile/');
   };
-
   render() {
     const {
       id,
@@ -22,20 +22,25 @@ class Product extends Component {
       goToMain,
     } = this.props.data;
 
-    // console.log('ddddd: ', this.props.data);
-
     return (
       <div className="bodyCenter">
         <ul>
-          <li className="prdBoxCenter" key={id} onClick={this.goToDetail}>
+          <li className="prdBoxCenter" key={id}>
             <div className="prdBox">
               <div className="imgBox">
                 <ProductTag discount_rate={discount_rate} />
-                <ProductImg image_url={image_url} goToMain={goToMain} />
-                <ProductCart goToMain={goToMain} />
+                <ProductImg
+                  id={this.props.id}
+                  goToMain={this.goToDetail}
+                  image_url={image_url}
+                />
+                <ProductCart
+                  basketHandler={this.props.basketHandler}
+                  id={this.props.id}
+                />
               </div>
               <ProductText
-                goToMain={goToMain}
+                goToMain={this.goToDetail}
                 name={name}
                 real_price={real_price}
                 original_price={original_price}

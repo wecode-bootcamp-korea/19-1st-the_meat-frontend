@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Component/Card';
 import './ArticleMd.scss';
-
+import { API } from '../../../config';
 class ArticleMd extends Component {
   constructor() {
     super();
@@ -9,7 +9,7 @@ class ArticleMd extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[0].name}`)
+    fetch(`${API}/products?pick=${MDCATEGORY[0].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -19,7 +19,7 @@ class ArticleMd extends Component {
   }
 
   clickHandler = id => {
-    fetch(`http://10.58.5.64:8000/products?pick=${MDCATEGORY[id].name}`)
+    fetch(`${API}/products?pick=${MDCATEGORY[id].name}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -34,6 +34,19 @@ class ArticleMd extends Component {
       handleId: id + 1,
     });
   }
+
+  basketHandler = e => {
+    fetch(`${API}/orders/cart`, {
+      method: 'POST',
+      body: JSON.stringify({
+        user_id: 1,
+        quantity: 1,
+        id: e.target.id,
+      }),
+    })
+      .then(res => res.json())
+      .then(error => console.log(error));
+  };
 
   render() {
     return (
@@ -61,7 +74,14 @@ class ArticleMd extends Component {
         <div className="mdContentsBox">
           <div className="cardOne">
             {this.state.cardData.map((data, id) => {
-              return <Card key={id} data={data} />;
+              return (
+                <Card
+                  basketHandler={this.basketHandler}
+                  key={id}
+                  data={data}
+                  id={data.id}
+                />
+              );
             })}
           </div>
         </div>

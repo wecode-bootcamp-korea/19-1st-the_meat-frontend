@@ -5,7 +5,8 @@ import RightSortBox from './Component/RightSortBox';
 import Product from './Component/Product';
 import { API } from '../../config';
 import './Category.scss';
-
+import Nav from '../Nav/Nav';
+import NavCategory from '../Nav/NavCategory';
 const LIMIT = 8;
 
 class Category extends Component {
@@ -23,11 +24,9 @@ class Category extends Component {
 
   getAllCategoriesData = () => {
     fetch(`${API}/products?category=소`)
-      // fetch('/data/ProductBoxData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
-          // productBoxData: data,
           productBoxData: data.result,
         });
       });
@@ -41,7 +40,6 @@ class Category extends Component {
       .then(data => {
         this.setState({
           productBoxData: data.result,
-          // productBoxData: data,
         });
       });
   };
@@ -52,7 +50,6 @@ class Category extends Component {
       .then(data => {
         this.setState({
           productBoxData: data.result,
-          // productBoxData: data,
         });
       });
   };
@@ -61,11 +58,25 @@ class Category extends Component {
     this.setState({ display: !this.state.display });
   };
 
+  basketHandler = e => {
+    fetch(`${API}/orders/cart`, {
+      method: 'POST',
+      body: JSON.stringify({
+        user_id: 1,
+        quantity: 1,
+        id: e.target.id,
+      }),
+    })
+      .then(res => res.json())
+      .then(error => console.log(error));
+  };
+
   render() {
     const { productBoxData } = this.state;
-
     return (
       <div className="category">
+        <Nav />
+        <NavCategory />
         <div className="categoryListWrap">
           <div className="categoryPageTitle">
             <div className="categoryTitle">
@@ -115,7 +126,14 @@ class Category extends Component {
         </div>
         <div className="productBody">
           {productBoxData.map((data, idx) => {
-            return <Product key={idx} data={data} />;
+            return (
+              <Product
+                basketHandler={this.basketHandler}
+                id={data.id}
+                key={idx}
+                data={data}
+              />
+            );
           })}
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import ProductsList from './ProductsList';
 import Slider from '../../Slider/Slider';
 import './Recommand.scss';
-
+import { API } from '../../../config';
 class Recommand extends React.Component {
   constructor() {
     super();
@@ -14,7 +14,7 @@ class Recommand extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://10.58.6.181:8000/products?discount=1')
+    fetch(`${API}/products?discount=1`)
       .then(res => res.json())
       .then(data =>
         this.setState({
