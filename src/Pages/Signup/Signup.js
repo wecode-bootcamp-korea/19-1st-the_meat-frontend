@@ -6,7 +6,7 @@ class SignUp extends Component {
   render() {
     return (
       <div className="SignUp">
-        <Layout />
+        <Layout history={this.props.history} />
       </div>
     );
   }

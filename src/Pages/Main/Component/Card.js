@@ -4,8 +4,7 @@ import './Card.scss';
 
 class Card extends Component {
   render() {
-    const { data } = this.props;
-    console.log(data.original_price);
+    const { data, id, basketHandler } = this.props;
     return (
       <div className="mdContents">
         <div className="mdImgCartBox">
@@ -15,10 +14,10 @@ class Card extends Component {
             </span>
           )}
           <img className="mdContentsImg" src={data.image_url} alt="추천상품" />
-          <div className="mdCartButton">
-            <Link to="/" className="cartLink">
-              <i className="fas fa-shopping-cart"></i>
-            </Link>
+          <div onClick={basketHandler} id={id} className="mdCartButton">
+            <div className="cartLink">
+              <i id={id} className="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
         <div className="mdInfo">

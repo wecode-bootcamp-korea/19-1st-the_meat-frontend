@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Order from './Order';
 import Contents from './Contents';
-import { DEFAULT } from '../../../config';
+import { API } from '../../../config';
 
 let orderId = [];
 class Form extends Component {
@@ -10,7 +10,7 @@ class Form extends Component {
     this.state = {};
   }
   componentDidMount() {
-    fetch(`${DEFAULT}/orders/cart`, {})
+    fetch(`${API}/orders/cart`, {})
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -21,7 +21,7 @@ class Form extends Component {
   }
 
   deleteHandler = id => {
-    fetch(`${DEFAULT}/orders/cart`, {
+    fetch(`${API}/orders/cart`, {
       method: 'PUT',
       body: JSON.stringify({
         user_id: 1,
@@ -47,7 +47,7 @@ class Form extends Component {
     this.state.data.map(element => {
       orderId.push(element.id);
     }); //주문하기 버튼
-    fetch(`${DEFAULT}/orders/buy`, {
+    fetch(`${API}/orders/buy`, {
       method: 'POST',
       body: JSON.stringify({
         user_id: 1,

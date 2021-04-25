@@ -34,7 +34,7 @@ class Nav extends Component {
               <p className="myMeatLink">마이더고기</p>
             </Link>
             <i className="fas fa-shopping-cart"></i>
-            <Link to="/">
+            <Link to="/basket">
               <p className="myMeatCart">장바구니</p>
             </Link>
             <div className="cartCount">

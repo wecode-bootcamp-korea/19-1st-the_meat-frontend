@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SmallCard from '../Component/SmallCard';
 import { Link } from 'react-router-dom';
 import './ArticleDiscount.scss';
-
+import { API } from '../../../config';
 class ArticleDiscount extends Component {
   constructor() {
     super();
@@ -10,7 +10,7 @@ class ArticleDiscount extends Component {
   }
 
   componentDidMount() {
-    fetch('http://10.58.5.64:8000/products?discount=1')
+    fetch(`${API}/products?discount=1`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -18,6 +18,19 @@ class ArticleDiscount extends Component {
         });
       });
   }
+
+  basketHandler = e => {
+    fetch(`${API}/orders/cart`, {
+      method: 'POST',
+      body: JSON.stringify({
+        user_id: 1,
+        quantity: 1,
+        id: e.target.id,
+      }),
+    })
+      .then(res => res.json())
+      .then(error => console.log(error));
+  };
 
   render() {
     const { cardListData } = this.state;
@@ -49,15 +62,20 @@ class ArticleDiscount extends Component {
                     <p className="originalPrice">13,500원</p>
                   </div>
                   <div className="dcCartButton">
-                    <Link to="/">
-                      <i className="fas fa-shopping-cart"></i>
-                    </Link>
+                    <i className="fas fa-shopping-cart"></i>
                   </div>
                 </div>
               </div>
               <div className="dcCardBox">
                 {cardListData.map((data, id) => {
-                  return <SmallCard key={id} data={data} />;
+                  return (
+                    <SmallCard
+                      basketHandler={this.basketHandler}
+                      key={id}
+                      data={data}
+                      id={data.id}
+                    />
+                  );
                 })}
               </div>
             </div>

@@ -3,11 +3,14 @@ import './ProductCart.scss';
 
 export default class ProductCart extends Component {
   render() {
-    const { goToMain } = this.props;
     return (
-      <div className="cartBox">
+      <div
+        onClick={this.props.basketHandler}
+        id={this.props.id}
+        className="cartBox"
+      >
         <div className="cartCircle">
-          <i className="fas fa-shopping-cart" onClick={goToMain}></i>
+          <i id={this.props.id} className="fas fa-shopping-cart"></i>
         </div>
       </div>
     );

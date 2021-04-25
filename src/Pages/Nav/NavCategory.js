@@ -74,7 +74,10 @@ class NavCategory extends Component {
                               (subcategory, id) => {
                                 return (
                                   <div key={id} className="subCategory">
-                                    <Link to="/" className="subCategoryLink">
+                                    <Link
+                                      to="/category"
+                                      className="subCategoryLink"
+                                    >
                                       {subcategory.content}
                                     </Link>
                                   </div>
@@ -106,7 +109,7 @@ class NavCategory extends Component {
             {CATEGORYRIGHT.map((el, id) => {
               return (
                 <li className="categoryRightLi" key={id}>
-                  <Link to="/" className="categoryRightLink">
+                  <Link to={el.login} className="categoryRightLink">
                     {el.content}
                   </Link>
                 </li>
@@ -130,7 +133,7 @@ const CATEGORYLEFT = [
   { id: 7, content: '정기식단' },
 ];
 const CATEGORYRIGHT = [
-  { id: 1, content: '로그인' },
-  { id: 2, content: '회원가입' },
+  { id: 1, content: '로그인', login: 'login' },
+  { id: 2, content: '회원가입', login: 'signup' },
   { id: 3, content: '이벤트/혜택' },
 ];

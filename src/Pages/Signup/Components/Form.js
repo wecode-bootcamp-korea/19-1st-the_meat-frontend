@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Input from './Input';
 import WarningPassword from './WarningPassword';
 import './Form.scss';
-
+import { API } from '../../../config';
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -20,18 +20,25 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
 
-  // handleSubmit = () => { 백이랑 통신용
-  //   fetch('http://192.168.0.250:8000/users/users', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: this.state.email,
-  //       password: this.state.password,
-  //       confirm_password: this.state.passwordVerify,
-  //       name: this.state.name,
-  //       phone_number: this.state.phone,
-  //     }),
-  //   }).then(res => res.json());
-  // };
+  handleSubmit = e => {
+    e.preventDefault();
+    fetch(`${API}/users/users`, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+        confirm_password: this.state.passwordVerify,
+        name: this.state.name,
+        phone_number: this.state.phone,
+      }),
+    })
+      .then(res => res.json())
+      .then(test => {
+        if (test.message) {
+          this.props.history.push('/login');
+        }
+      });
+  };
 
   render() {
     const { data } = this.props;

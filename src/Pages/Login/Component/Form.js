@@ -2,7 +2,7 @@ import { Component } from 'react';
 import './Form.scss';
 import Input from './Input';
 import Button from './Button';
-
+import { API } from '../../../config';
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +14,7 @@ class Form extends Component {
 
   buttonClick = e => {
     if (Number(e.target.id) === 0) {
-      fetch('http://10.58.5.214:8000/users/login', {
+      fetch(`${API}/users/login`, {
         method: 'POST',
         body: JSON.stringify({
           email: this.state.id,
@@ -22,7 +22,12 @@ class Form extends Component {
         }),
       })
         .then(res => res.json())
-        .then(key => localStorage.setItem('local', key.token));
+        .then(key => {
+          if (key.message == 'SUCCESS') {
+            localStorage.setItem('key', key.token);
+            this.props.history.push('/');
+          }
+        });
     }
 
     if (Number(e.target.id) === 1) {

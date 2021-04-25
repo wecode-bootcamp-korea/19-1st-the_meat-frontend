@@ -4,7 +4,7 @@ import Image from './Image';
 import Button from './Button';
 import Content from './Content';
 import './Layout.scss';
-
+import { API } from '../../../config';
 class Layout extends Component {
   constructor() {
     super();
@@ -15,7 +15,7 @@ class Layout extends Component {
   }
   componentDidMount() {
     //백이랑 연결 테스트중
-    fetch(`http://10.58.6.181:8000/products/${this.state.current}`)
+    fetch(`${API}/products/${this.state.current}`)
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -44,7 +44,7 @@ class Layout extends Component {
       });
     }
     if (e.target.className === 'bascket') {
-      fetch(`http://10.58.6.181:8000/orders/cart`, {
+      fetch(`${API}/orders/cart`, {
         method: 'POST',
         body: JSON.stringify({
           user_id: 1,
