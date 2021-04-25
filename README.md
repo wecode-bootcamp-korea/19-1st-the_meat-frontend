@@ -26,10 +26,14 @@
 
 - javscript
 - react
-- scss
 - html
+- scss
+- css
 
 ### 🐼 BackEnd
 
 - python
 - django
+- Bcrypt
+- Jwt
+- Mysql
